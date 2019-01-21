@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main" id="app">
+        <div class="header">
+            <img src="./images/logoMain.jpg" alt="" class="logo">
+            <div class="contain">
+                <div class="title" v-bind='this.title'>
+                    {{this.title}}
+                </div>
+                <div class="search">
+                    <div class="searchLabel">
+                        Busqueda
+                    </div>
+                    <input type="text" v-model="search">
+                </div>
+            </div>
+            <div class="discounts">
+                <div class="discountTitle">Precios por Cantidad</div>
+                <div class="amount" v-for="item in discounts">
+
+                    <div>{{item.amount}}</div>
+                    <div class="equals"> = </div>
+                    <div>${{item.price}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="item" v-for="item in filteredItems">
+                <img :src="`${item.url}`" class="productImage">
+                <div class="title">{{item.name}}</div>
+                <div class="price">{{item.price}}</div>
+                <div class="setAmount">
+                    <div class="remove" v-on:click="removeItem(item)">-</div>
+                    <input type="number" step="any" class="amount" v-on:input="updateValue(item)" v-model="item.amount" />
+                    <div class="add" v-on:click="addItem(item)">+</div>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="veggieCart">
+                <div class="price">Precio por unidad de verdura = ${{this.price}}</div>
+                <div class="price">Cantidad de unidades = {{this.cartItems}}</div>
+                <div class="item" v-for="item in cart">
+                    <div class="name">{{item.name}}</div>
+                    <div class="amount">X {{item.amount}}</div>
+                    <div class="total">$ {{item.total}}</div>
+                </div>
+            </div>
+            <div class="cartTotal">Total = $ {{cartTotal}}</div>
+            <div class="confirm" v-on:click="saveSale(cart)">Confirm</div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBglbKOL_Ntls_USfZ8gRFT2yt2mKbmshE",
+            authDomain: "mundoverde-836c0.firebaseapp.com",
+            databaseURL: "https://mundoverde-836c0.firebaseio.com",
+            projectId: "mundoverde-836c0",
+            storageBucket: "bucket.appspot.com",
+            messagingSenderId: "472369472507"
+        };
+
+        firebase.initializeApp(config);
+
+        // Get a reference to the database service
+        var database = firebase.database();
+
+
+    </script>
+</body>
+
+</html>
