@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
 
 </head>
-
 <body>
     <div class="main" id="app">
         <div class="header">
@@ -54,21 +52,30 @@
                 <div class="price">Cantidad de unidades = {{this.cartItems}}</div>
                 <div class="item" v-for="item in cart" v-if="item.type == 'veggie'">
                     <div class="name">{{item.name}}</div>
-                    <div class="amount">X {{item.amount}}</div>
-                    <div class="total">$ {{item.total}}</div>
+                    <div class="amount">{{item.amount}} =</div>
+                    <div class="total"> ${{item.total}}</div>
                 </div>
             </div>
             <div class="fruitCart">
                 <div class="fruits">Frutas</div>
                 <div class="item" v-for="item in cart" v-if="item.type == 'fruit'">
                     <div class="name">{{item.name}}</div>
-                    <div class="amount">X {{item.amount}}</div>
-                    <div class="total">$ {{item.total}}</div>
+                    <div class="amount">${{ item.price }} * {{item.amount}} =</div>
+                    <div class="total"> ${{item.total}}</div>
                 </div>
             </div>
-            <div class="cartTotal">Total = $ {{cartTotal}}</div>
+            <div class="cartTotal">Total = ${{cartTotal}}</div>
             <div class="confirm" v-on:click="saveSale(cart)">Confirm</div>
         </div>
+        <form method="post" action="hatechamp@gmail.com" style="display:none;">
+                <div class="item" v-for="item in cart">
+                    <input name="name" v-model="item.name" value="item.name">
+                    <input name="amount" v-model="item.amount" value="item.amount">
+                    <input name="price" v-model="item.price" value="item.price">
+                    <input name="total" v-model="item.total" value="item.total">
+                </div>
+                <input type="submit" value="Mandar Pedido"/>
+        </form>
     </div>
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
@@ -90,8 +97,6 @@
         // Get a reference to the database service
         var database = firebase.database();
 
-
     </script>
 </body>
-
 </html>

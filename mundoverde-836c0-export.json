@@ -1,0 +1,201 @@
+{
+  "21-1-2019" : {
+    "-LWmAxHitDAM-3U2g60I" : [ {
+      "cantidad" : 1,
+      "pago" : 50,
+      "precio" : 50,
+      "variedad" : "Rabanito (PAQ)"
+    }, {
+      "cantidad" : 2,
+      "pago" : 100,
+      "precio" : 50,
+      "variedad" : "Brocoli (Unidad)"
+    }, {
+      "cantidad" : 0.5,
+      "pago" : 35,
+      "precio" : 70,
+      "variedad" : "Ciruela (Kg)"
+    } ],
+    "-LWmI25qpX22DStotGnd" : [ {
+      "cantidad" : 4,
+      "fecha" : "21-1-2019",
+      "pago" : 164,
+      "precio" : 41,
+      "variedad" : "Tomate (Kg)"
+    }, {
+      "cantidad" : 4,
+      "fecha" : "21-1-2019",
+      "pago" : 164,
+      "precio" : 41,
+      "variedad" : "Acelga (PAQ)"
+    }, {
+      "cantidad" : 5,
+      "fecha" : "21-1-2019",
+      "pago" : 205,
+      "precio" : 41,
+      "variedad" : "Zanahoria (PAQ)"
+    }, {
+      "cantidad" : 5,
+      "fecha" : "21-1-2019",
+      "pago" : 205,
+      "precio" : 41,
+      "variedad" : "Remolacha (PAQ)"
+    }, {
+      "cantidad" : 8,
+      "fecha" : "21-1-2019",
+      "pago" : 328,
+      "precio" : 41,
+      "variedad" : "Rucula (PAQ)"
+    }, {
+      "cantidad" : 5,
+      "fecha" : "21-1-2019",
+      "pago" : 205,
+      "precio" : 41,
+      "variedad" : "Papa (Kg)"
+    }, {
+      "cantidad" : 3,
+      "fecha" : "21-1-2019",
+      "pago" : 123,
+      "precio" : 41,
+      "variedad" : "Choclo x 3"
+    }, {
+      "cantidad" : 6,
+      "fecha" : "21-1-2019",
+      "pago" : 246,
+      "precio" : 41,
+      "variedad" : "Morron (Kg)"
+    }, {
+      "cantidad" : 5,
+      "fecha" : "21-1-2019",
+      "pago" : 205,
+      "precio" : 41,
+      "variedad" : "Perejil (Kg)"
+    }, {
+      "cantidad" : 7,
+      "fecha" : "21-1-2019",
+      "pago" : 287,
+      "precio" : 41,
+      "variedad" : "Aji Vinagre (1/2 Kg)"
+    }, {
+      "cantidad" : 7,
+      "fecha" : "21-1-2019",
+      "pago" : 287,
+      "precio" : 41,
+      "variedad" : "Nabo (Kg)"
+    }, {
+      "cantidad" : 7,
+      "fecha" : "21-1-2019",
+      "pago" : 287,
+      "precio" : 41,
+      "variedad" : "Repollo (Unidad)"
+    }, {
+      "cantidad" : 3,
+      "fecha" : "21-1-2019",
+      "pago" : 123,
+      "precio" : 41,
+      "variedad" : "Zapallito (Kg)"
+    }, {
+      "cantidad" : 1,
+      "fecha" : "21-1-2019",
+      "pago" : 41,
+      "precio" : 41,
+      "variedad" : "Zuchinni (Kg)"
+    }, {
+      "cantidad" : 1,
+      "fecha" : "21-1-2019",
+      "pago" : 41,
+      "precio" : 41,
+      "variedad" : "Pack Choi (PAQ)"
+    }, {
+      "cantidad" : 1,
+      "fecha" : "21-1-2019",
+      "pago" : 41,
+      "precio" : 41,
+      "variedad" : "Pepino (Kg)"
+    }, {
+      "cantidad" : 1.5,
+      "fecha" : "21-1-2019",
+      "pago" : 61.5,
+      "precio" : 41,
+      "variedad" : "Verdeo (PAQ)"
+    }, {
+      "cantidad" : 2.5,
+      "fecha" : "21-1-2019",
+      "pago" : 102.5,
+      "precio" : 41,
+      "variedad" : "Puerro (PAQ)"
+    }, {
+      "cantidad" : 3.3,
+      "fecha" : "21-1-2019",
+      "pago" : 135.29999999999998,
+      "precio" : 41,
+      "variedad" : "Anco (Unidad)"
+    }, {
+      "cantidad" : 3.1,
+      "fecha" : "21-1-2019",
+      "pago" : 127.10000000000001,
+      "precio" : 41,
+      "variedad" : "Kale (PAQ)"
+    }, {
+      "cantidad" : 9,
+      "fecha" : "21-1-2019",
+      "pago" : 369,
+      "precio" : 41,
+      "variedad" : "Lima (1/2 Kg)"
+    }, {
+      "cantidad" : 1,
+      "fecha" : "21-1-2019",
+      "pago" : 41,
+      "precio" : 41,
+      "variedad" : "Rabanito (PAQ)"
+    }, {
+      "cantidad" : 1,
+      "fecha" : "21-1-2019",
+      "pago" : 41,
+      "precio" : 41,
+      "variedad" : "Brocoli (Unidad)"
+    }, {
+      "cantidad" : 1,
+      "fecha" : "21-1-2019",
+      "pago" : 41,
+      "precio" : 41,
+      "variedad" : "Lechuga (1/2kg)"
+    }, {
+      "cantidad" : 1,
+      "fecha" : "21-1-2019",
+      "pago" : 41,
+      "precio" : 41,
+      "variedad" : "Hinojo (Kg)"
+    }, {
+      "cantidad" : 0.1,
+      "fecha" : "21-1-2019",
+      "pago" : 7,
+      "precio" : 70,
+      "variedad" : "Banana (Kg)"
+    }, {
+      "cantidad" : 0.2,
+      "fecha" : "21-1-2019",
+      "pago" : 14,
+      "precio" : 70,
+      "variedad" : "Ciruela (Kg)"
+    }, {
+      "cantidad" : 0.3,
+      "fecha" : "21-1-2019",
+      "pago" : 34.5,
+      "precio" : 115,
+      "variedad" : "Uva (Kg)"
+    }, {
+      "cantidad" : 0.4,
+      "fecha" : "21-1-2019",
+      "pago" : 28,
+      "precio" : 70,
+      "variedad" : "Melon (Kg)"
+    }, {
+      "cantidad" : 0.5,
+      "fecha" : "21-1-2019",
+      "pago" : 35,
+      "precio" : 70,
+      "variedad" : "Durazno (Kg)"
+    } ]
+  }
+}

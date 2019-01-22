@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main" id="app">
+
+
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBglbKOL_Ntls_USfZ8gRFT2yt2mKbmshE",
+            authDomain: "mundoverde-836c0.firebaseapp.com",
+            databaseURL: "https://mundoverde-836c0.firebaseio.com",
+            projectId: "mundoverde-836c0",
+            storageBucket: "bucket.appspot.com",
+            messagingSenderId: "472369472507"
+        };
+
+        firebase.initializeApp(config);
+
+        // Get a reference to the database service
+        var database = firebase.database();
+
+        console.log(database)
+
+    </script>
+</body>
+</html>

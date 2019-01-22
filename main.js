@@ -1,3 +1,4 @@
+
 let discounts = [
     { amount: "1", price: 55 },
     { amount: "2", price: 52.50 },
@@ -10,36 +11,36 @@ let discounts = [
 ]
 
 let products = [
-    {name: 'Tomate (Kg)',         amount: 0,url: 'images/tomate.jpg',    type: 'veggie'},
-    {name: 'Acelga (PAQ)',        amount: 0,url: 'images/acelga.jpg',    type: 'veggie'},
-    {name: 'Zanahoria (PAQ)',     amount: 0,url: 'images/zanahoria.jpg', type: 'veggie'},
-    {name: 'Remolacha (PAQ)',     amount: 0,url: 'images/remolacha.jpg', type: 'veggie'},
-    {name: 'Rucula (PAQ)',        amount: 0,url: 'images/rucula.jpg',    type: 'veggie'},
-    {name: 'Papa (Kg)',           amount: 0,url: 'images/papa.jpg',      type: 'veggie'},
-    {name: 'Choclo x 3',          amount: 0,url: 'images/choclo.jpg',    type: 'veggie'},
-    {name: 'Morron (Kg)',         amount: 0,url: 'images/morron.jpg',    type: 'veggie'},
-    {name: 'Perejil (Kg)',        amount: 0,url: 'images/perejil.jpg',   type: 'veggie'},
-    {name: 'Aji Vinagre (1/2 Kg)',amount: 0,url: 'images/ajivinagre.jpg',type: 'veggie'},
-    {name: 'Nabo (Kg)',           amount: 0,url: 'images/nabo.jpg',      type: 'veggie'},
-    {name: 'Repollo (Unidad)',    amount: 0,url: 'images/repollo.jpg',   type: 'veggie'},
-    {name: 'Zapallito (Kg)',      amount: 0,url: 'images/zapallito.jpg', type: 'veggie'},
-    {name: 'Zuchinni (Kg)',       amount: 0,url: 'images/zuchinni.jpg',  type: 'veggie'},
-    {name: 'Pack Choi (PAQ)',     amount: 0,url: 'images/packchoi.jpg',  type: 'veggie'},
-    {name: 'Pepino (Kg)',         amount: 0,url: 'images/pepino.jpg',    type: 'veggie'},
-    {name: 'Verdeo (PAQ)',        amount: 0,url: 'images/verdeo.jpg',    type: 'veggie'},
-    {name: 'Puerro (PAQ)',        amount: 0,url: 'images/puerro.jpg',    type: 'veggie'},
-    {name: 'Anco (Unidad)',       amount: 0,url: 'images/anco.jpg',      type: 'veggie'},
-    {name: 'Kale (PAQ)',          amount: 0,url: 'images/kale.jpg',      type: 'veggie'},
-    {name: 'Lima (1/2 Kg)',       amount: 0,url: 'images/lima.jpg',      type: 'veggie'},
-    {name: 'Rabanito (PAQ)',      amount: 0,url: 'images/rabanito.jpg',  type: 'veggie'},
-    {name: 'Brocoli (Unidad)',    amount: 0,url: 'images/brocoli.jpg',   type: 'veggie'},
-    {name: 'Lechuga (1/2kg)',     amount: 0,url: 'images/lechuga.jpg',   type: 'veggie'},
-    {name: 'Hinojo (Kg)',         amount: 0,url: 'images/hinojo.jpg',    type: 'veggie'},
-    {name: 'Banana (Kg)',     amount: 0,url: 'images/banana.jpg',        type: 'fruit',  price: 70 },
-    {name: 'Ciruela (Kg)',    amount: 0,url: 'images/ciruela.jpg',       type: 'fruit',  price: 70 },
-    {name: 'Uva (Kg)',        amount: 0,url: 'images/uva.jpg',           type: 'fruit',  price: 115 },
-    {name: 'Melon (Kg)',      amount: 0,url: 'images/melon.jpg',         type: 'fruit',  price: 70 },
-    {name: 'Durazno (Kg)',    amount: 0,url: 'images/durazno.jpg',       type: 'fruit',  price: 70 }
+    { name: 'Tomate (Kg)', amount: 0, url: 'images/tomate.jpg', type: 'veggie' },
+    { name: 'Acelga (PAQ)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
+    { name: 'Zanahoria (PAQ)', amount: 0, url: 'images/zanahoria.jpg', type: 'veggie' },
+    { name: 'Remolacha (PAQ)', amount: 0, url: 'images/remolacha.jpg', type: 'veggie' },
+    { name: 'Rucula (PAQ)', amount: 0, url: 'images/rucula.jpg', type: 'veggie' },
+    { name: 'Papa (Kg)', amount: 0, url: 'images/papa.jpg', type: 'veggie' },
+    { name: 'Choclo x 3', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
+    { name: 'Morron (Kg)', amount: 0, url: 'images/morron.jpg', type: 'veggie' },
+    { name: 'Perejil (Kg)', amount: 0, url: 'images/perejil.jpg', type: 'veggie' },
+    { name: 'Aji Vinagre (1/2 Kg)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
+    { name: 'Nabo (Kg)', amount: 0, url: 'images/nabo.jpg', type: 'veggie' },
+    { name: 'Repollo (Unidad)', amount: 0, url: 'images/repollo.jpg', type: 'veggie' },
+    { name: 'Zapallito (Kg)', amount: 0, url: 'images/zapallito.jpg', type: 'veggie' },
+    { name: 'Zuchinni (Kg)', amount: 0, url: 'images/zuchinni.jpg', type: 'veggie' },
+    { name: 'Pack Choi (PAQ)', amount: 0, url: 'images/packchoi.jpg', type: 'veggie' },
+    { name: 'Pepino (Kg)', amount: 0, url: 'images/pepino.jpg', type: 'veggie' },
+    { name: 'Verdeo (PAQ)', amount: 0, url: 'images/verdeo.jpg', type: 'veggie' },
+    { name: 'Puerro (PAQ)', amount: 0, url: 'images/puerro.jpg', type: 'veggie' },
+    { name: 'Anco (Unidad)', amount: 0, url: 'images/anco.jpg', type: 'veggie' },
+    { name: 'Kale (PAQ)', amount: 0, url: 'images/kale.jpg', type: 'veggie' },
+    { name: 'Lima (1/2 Kg)', amount: 0, url: 'images/lima.jpg', type: 'veggie' },
+    { name: 'Rabanito (PAQ)', amount: 0, url: 'images/rabanito.jpg', type: 'veggie' },
+    { name: 'Brocoli (Unidad)', amount: 0, url: 'images/brocoli.jpg', type: 'veggie' },
+    { name: 'Lechuga (1/2kg)', amount: 0, url: 'images/lechuga.jpg', type: 'veggie' },
+    { name: 'Hinojo (Kg)', amount: 0, url: 'images/hinojo.jpg', type: 'veggie' },
+    { name: 'Banana (Kg)', amount: 0, url: 'images/banana.jpg', type: 'fruit', price: 70 },
+    { name: 'Ciruela (Kg)', amount: 0, url: 'images/ciruela.jpg', type: 'fruit', price: 70 },
+    { name: 'Uva (Kg)', amount: 0, url: 'images/uva.jpg', type: 'fruit', price: 115 },
+    { name: 'Melon (Kg)', amount: 0, url: 'images/melon.jpg', type: 'fruit', price: 70 },
+    { name: 'Durazno (Kg)', amount: 0, url: 'images/durazno.jpg', type: 'fruit', price: 70 }
 ]
 
 var app = new Vue({
@@ -55,6 +56,9 @@ var app = new Vue({
         cartItems: 0
     },
     methods: {
+        submit: function () {
+            this.$refs.form.submit()
+        },
         getTotal: function () {
             var self = this;
             this.cartTotal = 0;
@@ -129,15 +133,18 @@ var app = new Vue({
                 year: 'numeric'
             }).split('/').join('-');
 
-            var sale = []
+            var sale = [];
 
             for (var item in cart) {
                 sale.push({
-                    variedad: cart[item].name,
-                    cantidad: cart[item].amount,
-                    precio: cart[item].price || this.price,
-                    pago: cart[item].total
-                })
+                    Fecha: today
+                },
+                    {
+                        variedad: cart[item].name,
+                        cantidad: cart[item].amount,
+                        precio: cart[item].price || this.price,
+                        pago: cart[item].total
+                    })
             }
 
             console.log(sale)

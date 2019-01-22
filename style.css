@@ -54,7 +54,7 @@ input[type=number]::-webkit-outer-spin-button {
 .main .header .contain{display: flex;justify-content: flex-start;flex-direction: column;align-items: flex-start;margin-left: 20px;}
 
 
-.main .header .discounts {
+.discounts {
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -62,7 +62,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 250px;
     flex-wrap: wrap;
     position: relative;
-    left: 79px;
+    margin-top:20px;
 }
 
 .discountTitle{
@@ -72,10 +72,13 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 20px;
     color: #00cc65;
 }
+.fruitCart{
+    margin-top :20px;
+}
 .equals{
     margin: 0px 10px;
 }
-.main .header .discounts .amount{
+.discounts .amount{
     display: flex;
    font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
@@ -196,10 +199,12 @@ input[type=number]::-webkit-outer-spin-button {
    font-family: 'Ubuntu', sans-serif;
 }
 .main .cart .item .name{
-    width: 150px;
+    margin-right:50px;
+    width: 140px;
 }
 .main .cart .item .amount{
-    width: 60px;
+    margin-right:5px;
+    width: 100px;
 }
 .main .cart .cartTotal{
     font-size: 20px;
