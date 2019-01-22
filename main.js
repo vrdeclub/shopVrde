@@ -53,12 +53,15 @@ var app = new Vue({
         productList: products,
         cartTotal: 0,
         cart: [],
-        cartItems: 0
+        cartItems: 0,
+        userData: {
+            name: "",
+            address:"",
+            phone:"",
+            email:""
+        }
     },
     methods: {
-        submit: function () {
-            this.$refs.form.submit()
-        },
         getTotal: function () {
             var self = this;
             this.cartTotal = 0;
@@ -126,20 +129,22 @@ var app = new Vue({
             this.getTotal();
         },
         saveSale: function (cart) {
-            console.log(cart)
             var today = new Date().toLocaleDateString('es-GB', {
                 day: 'numeric',
                 month: 'numeric',
                 year: 'numeric'
             }).split('/').join('-');
 
-            var sale = [];
+            var sale = [{
+                date:today,
+                name:this.userData.name,
+                address:this.userData.address,
+                phone:this.userData.phone,
+                email:this.userData.email
+            }];
 
             for (var item in cart) {
                 sale.push({
-                    Fecha: today
-                },
-                    {
                         variedad: cart[item].name,
                         cantidad: cart[item].amount,
                         precio: cart[item].price || this.price,
@@ -147,13 +152,9 @@ var app = new Vue({
                     })
             }
 
-            console.log(sale)
-
             database.ref('/' + today).push(sale, function (error) {
                 if (error) {
-                    console.log("error")
                 } else {
-                    console.log("saved")
                     window.location.reload();
                 }
             });

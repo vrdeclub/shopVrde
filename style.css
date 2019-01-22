@@ -1,3 +1,7 @@
+input:required {
+    border: 1px dashed red;
+  }
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
@@ -44,8 +48,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .main .header {
-    height: 155px;
+    /* height: 155px; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-end;
     align-content: center;
@@ -53,23 +58,44 @@ input[type=number]::-webkit-outer-spin-button {
 
 .main .header .contain{display: flex;justify-content: flex-start;flex-direction: column;align-items: flex-start;margin-left: 20px;}
 
-
+.userForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 281px;
+    /* margin-left: 20px; */
+    position: relative;
+    top: 2px;
+    margin-bottom: 20px;
+}
+.userForm .title{
+    flex: 1 100%;
+    margin-bottom: 13px;
+}
+.userForm input {
+    border-width: 0px;
+    padding: 4px;
+    font-size: 11px;
+    margin: 2px;
+    min-width: 210px;
+}
 .discounts {
     margin: 0px;
     display: flex;
     flex-direction: column;
     height: 114px;
-    width: 250px;
+    max-width: 370px;
     flex-wrap: wrap;
     position: relative;
     margin-top:20px;
+    justify-content: flex-start;
 }
 
 .discountTitle{
     position: absolute;
     top: -27px;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     color: #00cc65;
 }
 .fruitCart{
@@ -77,12 +103,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .equals{
     margin: 0px 10px;
+    max-width: 10px;
 }
 .discounts .amount{
     display: flex;
-   font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
     padding: 4px;
+    justify-content: flex-start;
+}
+.discounts .amount * {
+    width: 60px;
+    text-align: center;
 }
 
 .main .header .title {
@@ -95,6 +127,7 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 23px;
     color: #17ba7bfc;
     width: 290px;
+    margin-bottom: 10px;
 }
 
 
@@ -191,6 +224,11 @@ input[type=number]::-webkit-outer-spin-button {
     font-family: 'Ubuntu', sans-serif;
     /* align-items: center; */
 }
+.main .cart .price {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+}
 .main .cart .item{
     display: flex;
     padding: 5px;
@@ -199,16 +237,21 @@ input[type=number]::-webkit-outer-spin-button {
    font-family: 'Ubuntu', sans-serif;
 }
 .main .cart .item .name{
-    margin-right:50px;
+    margin-right: -10px;
     width: 140px;
 }
 .main .cart .item .amount{
     margin-right:5px;
     width: 100px;
 }
+
+.main .cart .item .total{
+ color:#00cc70;
+}
 .main .cart .cartTotal{
     font-size: 20px;
     margin: 20px;
+    color: #00cc65;
 }
 
 .main .cart .confirm{

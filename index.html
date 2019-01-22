@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Mundo Verde</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
 
@@ -14,7 +15,7 @@
         <div class="header">
             <img src="./images/logoMain.jpg" alt="" class="logo">
             <div class="contain">
-                <div class="title" v-bind='this.title'>
+                <div class="title" >
                     {{this.title}}
                 </div>
                 <div class="search">
@@ -42,17 +43,19 @@
                 <div class="discounts">
                     <div class="discountTitle">Precios por Cantidad</div>
                     <div class="amount" v-for="item in discounts">
-
+                        
                         <div>{{item.amount}}</div>
                         <div class="equals"> = </div>
                         <div>${{item.price}}</div>
                     </div>
                 </div>
-                <div class="price">Precio por unidad de verdura = ${{this.price}}</div>
-                <div class="price">Cantidad de unidades = {{this.cartItems}}</div>
+                <div class="veggies">Verduras</div>
+                <div class="price">Precio por unidad = ${{this.price}}</div>
+                <div class="price">Unidades = {{this.cartItems}}</div>
                 <div class="item" v-for="item in cart" v-if="item.type == 'veggie'">
                     <div class="name">{{item.name}}</div>
-                    <div class="amount">{{item.amount}} =</div>
+                    <div class="amount">{{item.amount}}</div>
+                    <div class="equals">=</div>
                     <div class="total"> ${{item.total}}</div>
                 </div>
             </div>
@@ -60,11 +63,19 @@
                 <div class="fruits">Frutas</div>
                 <div class="item" v-for="item in cart" v-if="item.type == 'fruit'">
                     <div class="name">{{item.name}}</div>
-                    <div class="amount">${{ item.price }} * {{item.amount}} =</div>
+                    <div class="amount">${{ item.price }} * {{item.amount}}</div>
+                    <div class="equals">=</div>
                     <div class="total"> ${{item.total}}</div>
                 </div>
             </div>
             <div class="cartTotal">Total = ${{cartTotal}}</div>
+            <form action="#" class="userForm">
+                    <div class="title">Datos de Usuario</div>
+                    <input type="text" placeholder="Nombre" v-model="userData.name" required>
+                    <input type="text" placeholder="Direccion" v-model="userData.address" required>
+                    <input type="tel" placeholder="Telefono" v-model="userData.phone" required>
+                    <input type="email" placeholder="Correo" v-model="userData.email" required>
+                </form>
             <div class="confirm" v-on:click="saveSale(cart)">Confirm</div>
         </div>
         <form method="post" action="hatechamp@gmail.com" style="display:none;">
