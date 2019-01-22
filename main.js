@@ -152,10 +152,11 @@ var app = new Vue({
                     })
             }
 
-            database.ref('/' + today).push(sale, function (error) {
+            database.ref('/sales/' + today).push(sale, function (error) {
                 if (error) {
+                    console.log(error)
                 } else {
-                    window.location.reload();
+                    //window.location.reload();
                 }
             });
         }
