@@ -156,7 +156,7 @@ var app = new Vue({
                 if (error) {
                     console.log(error)
                 } else {
-                    //window.location.reload();
+                    window.location.reload();
                 }
             });
         }
