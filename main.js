@@ -1,177 +1,55 @@
+let discounts = [
+    { amount: "1", price: 55 },
+    { amount: "2", price: 52.50 },
+    { amount: "3", price: 50 },
+    { amount: "4", price: 47.50 },
+    { amount: "5-59", price: 45 },
+    { amount: "60-199", price: 41 },
+    { amount: "200-249", price: 36 },
+    { amount: "250+", price: 32 }
+]
+
+let products = [
+    {name: 'Tomate (Kg)',         amount: 0,url: 'images/tomate.jpg',    type: 'veggie'},
+    {name: 'Acelga (PAQ)',        amount: 0,url: 'images/acelga.jpg',    type: 'veggie'},
+    {name: 'Zanahoria (PAQ)',     amount: 0,url: 'images/zanahoria.jpg', type: 'veggie'},
+    {name: 'Remolacha (PAQ)',     amount: 0,url: 'images/remolacha.jpg', type: 'veggie'},
+    {name: 'Rucula (PAQ)',        amount: 0,url: 'images/rucula.jpg',    type: 'veggie'},
+    {name: 'Papa (Kg)',           amount: 0,url: 'images/papa.jpg',      type: 'veggie'},
+    {name: 'Choclo x 3',          amount: 0,url: 'images/choclo.jpg',    type: 'veggie'},
+    {name: 'Morron (Kg)',         amount: 0,url: 'images/morron.jpg',    type: 'veggie'},
+    {name: 'Perejil (Kg)',        amount: 0,url: 'images/perejil.jpg',   type: 'veggie'},
+    {name: 'Aji Vinagre (1/2 Kg)',amount: 0,url: 'images/ajivinagre.jpg',type: 'veggie'},
+    {name: 'Nabo (Kg)',           amount: 0,url: 'images/nabo.jpg',      type: 'veggie'},
+    {name: 'Repollo (Unidad)',    amount: 0,url: 'images/repollo.jpg',   type: 'veggie'},
+    {name: 'Zapallito (Kg)',      amount: 0,url: 'images/zapallito.jpg', type: 'veggie'},
+    {name: 'Zuchinni (Kg)',       amount: 0,url: 'images/zuchinni.jpg',  type: 'veggie'},
+    {name: 'Pack Choi (PAQ)',     amount: 0,url: 'images/packchoi.jpg',  type: 'veggie'},
+    {name: 'Pepino (Kg)',         amount: 0,url: 'images/pepino.jpg',    type: 'veggie'},
+    {name: 'Verdeo (PAQ)',        amount: 0,url: 'images/verdeo.jpg',    type: 'veggie'},
+    {name: 'Puerro (PAQ)',        amount: 0,url: 'images/puerro.jpg',    type: 'veggie'},
+    {name: 'Anco (Unidad)',       amount: 0,url: 'images/anco.jpg',      type: 'veggie'},
+    {name: 'Kale (PAQ)',          amount: 0,url: 'images/kale.jpg',      type: 'veggie'},
+    {name: 'Lima (1/2 Kg)',       amount: 0,url: 'images/lima.jpg',      type: 'veggie'},
+    {name: 'Rabanito (PAQ)',      amount: 0,url: 'images/rabanito.jpg',  type: 'veggie'},
+    {name: 'Brocoli (Unidad)',    amount: 0,url: 'images/brocoli.jpg',   type: 'veggie'},
+    {name: 'Lechuga (1/2kg)',     amount: 0,url: 'images/lechuga.jpg',   type: 'veggie'},
+    {name: 'Hinojo (Kg)',         amount: 0,url: 'images/hinojo.jpg',    type: 'veggie'},
+    {name: 'Banana (Kg)',     amount: 0,url: 'images/banana.jpg',        type: 'fruit',  price: 70 },
+    {name: 'Ciruela (Kg)',    amount: 0,url: 'images/ciruela.jpg',       type: 'fruit',  price: 70 },
+    {name: 'Uva (Kg)',        amount: 0,url: 'images/uva.jpg',           type: 'fruit',  price: 115 },
+    {name: 'Melon (Kg)',      amount: 0,url: 'images/melon.jpg',         type: 'fruit',  price: 70 },
+    {name: 'Durazno (Kg)',    amount: 0,url: 'images/durazno.jpg',       type: 'fruit',  price: 70 }
+]
+
 var app = new Vue({
     el: '#app',
     data: {
-        title: 'VERDURA "ORGANICA" DE PROCEDENCIA DUDOSA...',
+        title: 'VERDURA Y FRUTA ORGANICA',
         search: "",
         price: 55,
-        discounts: [
-            {
-                amount: "1",
-                price: 55
-            },
-            {
-                amount: "2",
-                price: 52.50
-            },
-            {
-                amount: "3",
-                price: 50
-            },
-            {
-                amount: "4",
-                price: 47.50
-            },
-            {
-                amount: "5-59",
-                price: 45
-            },
-            {
-                amount: "60-199",
-                price: 41
-            },
-            {
-                amount: "200-249",
-                price: 36
-            },
-            {
-                amount: "250+",
-                price: 32
-            },
-        ],
-        productList: [
-            {
-                name: 'Tomate (Kg)',
-                amount: 0,
-                url: 'images/tomate.jpg'
-            },
-            {
-                name: 'Acelga (PAQ)',
-                amount: 0,
-                url: 'images/acelga.jpg'
-            },
-            {
-                name: 'Zanahoria (PAQ)',
-                amount: 0,
-                url: 'images/zanahoria.jpg'
-            }, {
-                name: 'Remolacha (PAQ)',
-                amount: 0,
-                url: 'images/remolacha.jpg'
-            },
-            {
-                name: 'Rucula (PAQ)',
-                amount: 0,
-                url: 'images/rucula.jpg'
-            },
-            {
-                name: 'Papa (Kg)',
-                amount: 0,
-                url: 'images/papa.jpg'
-            },
-            {
-                name: 'Choclo x 3',
-                amount: 0,
-                url: 'images/choclo.jpg'
-            },
-            {
-                name: 'Morron (Kg)',
-                amount: 0,
-                url: 'images/morron.jpg'
-            },
-            {
-                name: 'Perejil (Kg)',
-                amount: 0,
-                url: 'images/perejil.jpg'
-            },
-            {
-                name: 'Aji Vinagre (1/2 Kg)',
-                amount: 0,
-                url: 'images/ajivinagre.jpg'
-            },
-            {
-                name: 'Nabo (Kg)',
-                amount: 0,
-                url: 'images/nabo.jpg'
-            },
-            {
-                name: 'Repollo (Unidad)',
-                amount: 0,
-                url: 'images/repollo.jpg'
-            },
-            {
-                name: 'Zapallito (Kg)',
-                amount: 0,
-                url: 'images/zapallito.jpg'
-            },
-            {
-                name: 'Zuchinni (Kg)',
-                amount: 0,
-                url: 'images/zuchinni.jpg'
-            },
-            {
-                name: 'Pack Choi (PAQ)',
-                amount: 0,
-                url: 'images/packchoi.jpg'
-            },
-            {
-                name: 'Pepino (Kg)',
-                amount: 0,
-                url: 'images/pepino.jpg'
-            },
-            {
-                name: 'Verdeo (PAQ)',
-                amount: 0,
-                url: 'images/verdeo.jpg'
-            },
-            {
-                name: 'Puerro (PAQ)',
-                amount: 0,
-                url: 'images/puerro.jpg'
-            },
-            {
-                name: 'Anco (Unidad)',
-                amount: 0,
-                url: 'images/anco.jpg'
-            },
-            {
-                name: 'Kale (PAQ)',
-                amount: 0,
-                url: 'images/kale.jpg'
-            },
-            {
-                name: 'Lima (1/2 Kg)',
-                amount: 0,
-                url: 'images/lima.jpg'
-            },
-            {
-                name: 'Rabanito (PAQ)',
-                amount: 0,
-                url: 'images/rabanito.jpg'
-            },
-            {
-                name: 'Brocoli (Unidad)',
-                amount: 0,
-                url: 'images/brocoli.jpg'
-            },
-            {
-                name: 'Lechuga (1/2kg)',
-                amount: 0,
-                url: 'images/lechuga.jpg'
-            },
-            {
-                name: 'Hinojo (Kg)',
-                amount: 0,
-                url: 'images/hinojo.jpg'
-            },
-            {
-                name: 'Pera (Unidad)',
-                amount: 0,
-                url: 'images/.jpg',
-                price: 12,
-                type:'fruit'
-            }
-        ],
-
+        discounts: discounts,
+        productList: products,
         cartTotal: 0,
         cart: [],
         cartItems: 0
@@ -187,8 +65,8 @@ var app = new Vue({
             });
 
             for (var item in this.cart) {
-                if (!this.cart[item].type)
-                this.cartItems += this.cart[item].amount;
+                if (this.cart[item].type == 'veggie')
+                    this.cartItems += this.cart[item].amount;
             }
 
             if (this.cartItems <= 1) { this.price = 55 }
@@ -201,7 +79,7 @@ var app = new Vue({
             else { this.price = 32 }
 
             for (var item in this.cart) {
-                if (this.cart[item].type == 'fruit'){
+                if (this.cart[item].type == 'fruit') {
                     this.cart[item].total = this.cart[item].amount * this.cart[item].price;
                     this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                 } else {
@@ -215,7 +93,7 @@ var app = new Vue({
         },
         addItem: function (item) {
             item.amount++;
-            if (item.price){
+            if (item.price) {
                 item.total = item.amount * item.price;
             } else {
                 item.total = item.amount * this.price;
@@ -226,7 +104,7 @@ var app = new Vue({
             if (item.amount > 0) {
                 item.amount--;
             }
-            if (item.price){
+            if (item.price) {
                 item.total = item.amount * item.price;
             } else {
                 item.total = item.amount * this.price;
@@ -236,7 +114,7 @@ var app = new Vue({
         updateValue: function (item) {
             if (item.amount == "" || parseFloat(item.amount) == NaN) { item.amount = 0 }
             else (item.amount = parseFloat(item.amount))
-            if (item.price){
+            if (item.price) {
                 item.total = item.amount * item.price;
             } else {
                 item.total = item.amount * this.price;

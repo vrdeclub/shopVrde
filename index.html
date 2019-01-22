@@ -26,15 +26,6 @@
                     <input type="text" v-model="search">
                 </div>
             </div>
-            <div class="discounts">
-                <div class="discountTitle">Precios por Cantidad</div>
-                <div class="amount" v-for="item in discounts">
-
-                    <div>{{item.amount}}</div>
-                    <div class="equals"> = </div>
-                    <div>${{item.price}}</div>
-                </div>
-            </div>
         </div>
         <div class="products">
             <div class="item" v-for="item in filteredItems">
@@ -50,9 +41,26 @@
         </div>
         <div class="cart">
             <div class="veggieCart">
+                <div class="discounts">
+                    <div class="discountTitle">Precios por Cantidad</div>
+                    <div class="amount" v-for="item in discounts">
+
+                        <div>{{item.amount}}</div>
+                        <div class="equals"> = </div>
+                        <div>${{item.price}}</div>
+                    </div>
+                </div>
                 <div class="price">Precio por unidad de verdura = ${{this.price}}</div>
                 <div class="price">Cantidad de unidades = {{this.cartItems}}</div>
-                <div class="item" v-for="item in cart">
+                <div class="item" v-for="item in cart" v-if="item.type == 'veggie'">
+                    <div class="name">{{item.name}}</div>
+                    <div class="amount">X {{item.amount}}</div>
+                    <div class="total">$ {{item.total}}</div>
+                </div>
+            </div>
+            <div class="fruitCart">
+                <div class="fruits">Frutas</div>
+                <div class="item" v-for="item in cart" v-if="item.type == 'fruit'">
                     <div class="name">{{item.name}}</div>
                     <div class="amount">X {{item.amount}}</div>
                     <div class="total">$ {{item.total}}</div>
