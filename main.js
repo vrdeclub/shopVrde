@@ -40,8 +40,20 @@ let products = [
     { name: 'Ciruela (Kg)', amount: 0, url: 'images/ciruela.jpg', type: 'fruit', price: 70 },
     { name: 'Uva (Kg)', amount: 0, url: 'images/uva.jpg', type: 'fruit', price: 115 },
     { name: 'Melon (Kg)', amount: 0, url: 'images/melon.jpg', type: 'fruit', price: 70 },
-    { name: 'Durazno (Kg)', amount: 0, url: 'images/durazno.jpg', type: 'fruit', price: 70 }
+    { name: 'Durazno (Kg)', amount: 0, url: 'images/durazno.jpg', type: 'fruit', price: 70 },
+    { name: 'Tarta Kale y Champi', amount: 0, url: 'images/tartakalechampi.jpg', type: 'meal', price: 90 },
+    { name: 'Budin Banana y Pera', amount: 0, url: 'images/budinbananapera.jpg', type: 'meal', price: 80 },
+    { name: 'Tortilla Vegana', amount: 0, url: 'images/tortillavegana.jpg', type: 'meal', price: 80 }
+
 ]
+
+products.sort(function(a, b) {
+    var textA = a.name.toUpperCase();
+    var textB = b.name.toUpperCase();
+    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+});
+
+console.log(products)
 
 var app = new Vue({
     el: '#app',
@@ -171,7 +183,7 @@ var app = new Vue({
             this.active[type].status = !this.active[type].status; 
         },
         toggleActive: function (e) {
-            console.log(e);
+            console.log(e)
             e.target.classList.toggle('active');
         }
 

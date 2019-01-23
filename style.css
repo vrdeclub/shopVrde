@@ -161,13 +161,14 @@ input[type=number]::-webkit-outer-spin-button {
     background: #333;
     margin: 5px;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .main .products .item .productImage {
     width: 150px;
     height: 100px;
     background: #e6e6e6;
+    object-fit: cover;
 }
 .main .products .item .title {
     color: white;

@@ -33,8 +33,7 @@
         <div class="products">
             <div class="item" v-for="item in filteredItems">
                 <img :src="`${item.url}`" class="productImage">
-                <div class="title">{{item.name}}</div>
-                <div class="price">{{item.price}}</div>
+                <div class="title">{{item.name}} = ${{item.price || price}}</div>
                 <div class="setAmount">
                     <div class="remove" v-on:click="removeItem(item)">-</div>
                     <input type="number" step="any" class="amount" v-on:input="updateValue(item)" v-model="item.amount" />
