@@ -14,7 +14,6 @@ let products = [
     { name: 'Tomate (Kg)', amount: 0, url: 'images/tomate.jpg', type: 'veggie' },
     { name: 'Tomate Cherry (500g)', amount: 0, url: 'images/tomatecherry.jpg', type: 'veggie' },
     { name: 'Acelga (Kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
-    { name: 'Acelga color (800g)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
     { name: 'Zanahoria (Kg)', amount: 0, url: 'images/zanahoria.jpg', type: 'veggie' },
     { name: 'Remolacha (Kg)', amount: 0, url: 'images/remolacha.jpg', type: 'veggie' },
     { name: 'Rucula (500g)', amount: 0, url: 'images/rucula.jpg', type: 'veggie' },
