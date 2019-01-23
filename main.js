@@ -129,7 +129,8 @@ var app = new Vue({
                     this.cart[item].total = this.cart[item].amount * this.cart[item].price;
                     this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                     this.cartHas.meal = true;
-                } else {
+                } 
+                if(this.cart[item].type == 'veggie'){
                     this.cart[item].price = this.price;
                     this.cart[item].total = this.cart[item].amount * this.price;
                     this.cartHas.veggie = true;
