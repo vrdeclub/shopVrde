@@ -18,7 +18,7 @@ let products = [
     { name: 'Remolacha (Kg)', amount: 0, url: 'images/remolacha.jpg', type: 'veggie' },
     { name: 'Rucula (500g)', amount: 0, url: 'images/rucula.jpg', type: 'veggie' },
     { name: 'Papa (Kg)', amount: 0, url: 'images/papa.jpg', type: 'veggie' },
-    { name: 'Choclo x 2', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
+    { name: 'Choclo x 3', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
     { name: 'Morron (Kg)', amount: 0, url: 'images/morron.jpg', type: 'veggie' },
     { name: 'Perejil (400g)', amount: 0, url: 'images/perejil.jpg', type: 'veggie' },
     { name: 'Aji Vinagre (1/2 Kg)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
