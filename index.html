@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mundo Verde</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
 
 </head>
+
 <body>
     <div class="main" id="app">
         <div class="header">
-            <img src="./images/logoMain.jpg" alt="" class="logo">
+            <img src="./images/logoMainIcon.jpg" alt="" class="logo">
             <div class="contain">
-                <div class="title" >
-                    {{this.title}}
+                <div class="filter">
+                    <a class="button active" @click="setVisibility('veggie'); toggleActive($event);"  >Verdura</a>
+                    <a class="button active" @click="setVisibility('fruit'); toggleActive($event)" >Fruta</a>
+                    <a class="button active" @click="setVisibility('meal'); toggleActive($event)" >Comidas</a>
                 </div>
                 <div class="search">
                     <div class="searchLabel">
@@ -43,7 +47,7 @@
                 <div class="discounts">
                     <div class="discountTitle">Precios por Cantidad</div>
                     <div class="amount" v-for="item in discounts">
-                        
+
                         <div>{{item.amount}}</div>
                         <div class="equals"> = </div>
                         <div>${{item.price}}</div>
@@ -70,22 +74,22 @@
             </div>
             <div class="cartTotal">Total = ${{cartTotal}}</div>
             <form action="#" class="userForm">
-                    <div class="title">Datos de Usuario</div>
-                    <input type="text" placeholder="Nombre" v-model="userData.name" required>
-                    <input type="text" placeholder="Direccion" v-model="userData.address" required>
-                    <input type="tel" placeholder="Telefono" v-model="userData.phone" required>
-                    <input type="email" placeholder="Correo" v-model="userData.email" required>
-                </form>
+                <div class="title">Datos de Usuario</div>
+                <input type="text" placeholder="Nombre" v-model="userData.name" required>
+                <input type="text" placeholder="Direccion" v-model="userData.address" required>
+                <input type="tel" placeholder="Telefono" v-model="userData.phone" required>
+                <input type="email" placeholder="Correo" v-model="userData.email" required>
+            </form>
             <div class="confirm" v-on:click="saveSale(cart)">Confirm</div>
         </div>
         <form method="post" action="hatechamp@gmail.com" style="display:none;">
-                <div class="item" v-for="item in cart">
-                    <input name="name" v-model="item.name" value="item.name">
-                    <input name="amount" v-model="item.amount" value="item.amount">
-                    <input name="price" v-model="item.price" value="item.price">
-                    <input name="total" v-model="item.total" value="item.total">
-                </div>
-                <input type="submit" value="Mandar Pedido"/>
+            <div class="item" v-for="item in cart">
+                <input name="name" v-model="item.name" value="item.name">
+                <input name="amount" v-model="item.amount" value="item.amount">
+                <input name="price" v-model="item.price" value="item.price">
+                <input name="total" v-model="item.total" value="item.total">
+            </div>
+            <input type="submit" value="Mandar Pedido" />
         </form>
     </div>
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
@@ -110,4 +114,5 @@
 
     </script>
 </body>
+
 </html>

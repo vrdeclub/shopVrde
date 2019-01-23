@@ -12,17 +12,19 @@ input[type=number]::-webkit-outer-spin-button {
 .main {
     align-content: center;
     justify-content: center;
-    max-width: 910px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .main .search {
     background-color: #333;
     height: 20px;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    flex: 1;
+    margin-bottom: 10px;
 }
 
 .main .search .searchLabel {
@@ -45,13 +47,29 @@ input[type=number]::-webkit-outer-spin-button {
 .main .header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
     align-content: center;
+    max-width: 620px;
+    margin-bottom: 20px;
 }
 
-.main .header .contain{display: flex;justify-content: center;flex-direction: column;align-items: center;/* margin-left: 20px; */}
+.main .header .contain{display: flex;justify-content: center;flex-direction: row;align-items: center;/* align-items: flex-start; *//* margin-left: 20px; */position: relative;top: 10px;flex-wrap: wrap;/* height: 40px; */}
 
+.filter {
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Ubuntu', sans-serif;
+    height: 40px;
+    flex: 1;
+    margin-bottom: 10px;
+}
+.filter .button {padding: 10px;background-color: #00cc65;color: white;display: flex;justify-content: center;text-align: center;/* margin: 5px; */cursor: pointer;min-width: 76px;max-width: 80px;margin-right: 10px;flex: 1;}
+
+.filter .button .active {
+
+    
+}
 .userForm {
     display: flex;
     flex-wrap: wrap;
@@ -122,11 +140,10 @@ input[type=number]::-webkit-outer-spin-button {
     color: #17ba7bfc;
     width: 290px;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 
-.main .header .logo {height: 154px;}
+.main .header .logo {height: 154px;position: relative;/* top: 9px; */margin: 10px;}
 
 .main .products {
     display: flex;
@@ -134,7 +151,7 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: row;
     align-items: flex-start;
     align-content: flex-start;
-    margin-top: 20px;
+    margin-top: 10px;
     flex-wrap: wrap;
 }
 

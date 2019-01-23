@@ -59,7 +59,13 @@ var app = new Vue({
             address:"",
             phone:"",
             email:""
+        },
+        active: {
+            'veggie': {status: true},
+            'fruit': {status: true},
+            'meal': {status: true}
         }
+            
     },
     methods: {
         getTotal: function () {
@@ -159,6 +165,14 @@ var app = new Vue({
                     window.location.reload();
                 }
             });
+        },
+        setVisibility: function (type) {
+            console.log(type, this.active[type])
+            this.active[type].status = !this.active[type].status; 
+        },
+        toggleActive: function (e) {
+            console.log(e);
+            e.target.classList.toggle('active');
         }
 
     },
@@ -166,7 +180,8 @@ var app = new Vue({
         filteredItems: function () {
             var self = this;
             return this.productList.filter(function (item) {
-                return item.name.toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
+                return item.name.toLowerCase().indexOf(self.search.toLowerCase()) >= 0 
+                && self.active[item.type].status == true;
             });
         }
 
