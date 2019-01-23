@@ -12,8 +12,6 @@ input[type=number]::-webkit-outer-spin-button {
 .main {
     align-content: center;
     justify-content: center;
-    /* background-color: #f2f2f2; */
-    /* padding: 20px; */
     max-width: 910px;
     margin: 0 auto;
 }
@@ -35,8 +33,6 @@ input[type=number]::-webkit-outer-spin-button {
     height: 20px;
     font-family: 'Ubuntu', sans-serif;
     width: 50px;
-    /* position: relative; */
-    /* right: 12px; */
     padding-right: 10px;
 }
 
@@ -47,7 +43,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .main .header {
-    /* height: 155px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -62,7 +57,6 @@ input[type=number]::-webkit-outer-spin-button {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 281px;
-    /* margin-left: 20px; */
     position: relative;
     top: 2px;
     margin-bottom: 20px;
@@ -140,10 +134,8 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: row;
     align-items: flex-start;
     align-content: flex-start;
-    /* background-color: #404040; */
     margin-top: 20px;
     flex-wrap: wrap;
-    /* padding: 10px; */
 }
 
 .main .products .item {
@@ -223,7 +215,6 @@ input[type=number]::-webkit-outer-spin-button {
     flex-wrap: wrap;
     padding: 10px;
     font-family: 'Ubuntu', sans-serif;
-    /* align-items: center; */
 }
 .main .cart .price {
     margin-bottom: 5px;
