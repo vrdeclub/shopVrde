@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="cart">
-            <div class="veggieCart">
+            <div class="veggieCart" v-if="cartHas.veggie = true">
                 <div class="discounts">
                     <div class="discountTitle">Precios por Cantidad</div>
                     <div class="amount" v-for="item in discounts">
@@ -62,9 +62,18 @@
                     <div class="total"> ${{item.total}}</div>
                 </div>
             </div>
-            <div class="fruitCart">
+            <div class="fruitCart"  v-if="cartHas.fruit == true">
                 <div class="fruits">Frutas</div>
                 <div class="item" v-for="item in cart" v-if="item.type == 'fruit'">
+                    <div class="name">{{item.name}}</div>
+                    <div class="amount">${{ item.price }} * {{item.amount}}</div>
+                    <div class="equals">=</div>
+                    <div class="total"> ${{item.total}}</div>
+                </div>
+            </div>
+            <div class="mealCart" v-if="cartHas.meal == true">
+                <div class="fruits">Comidas</div>
+                <div class="item" v-for="item in cart" v-if="item.type == 'meal'">
                     <div class="name">{{item.name}}</div>
                     <div class="amount">${{ item.price }} * {{item.amount}}</div>
                     <div class="equals">=</div>

@@ -66,7 +66,6 @@ console.log(products)
 var app = new Vue({
     el: '#app',
     data: {
-        title: 'VERDURA Y FRUTA ORGANICA',
         search: "",
         price: 55,
         discounts: discounts,
@@ -84,6 +83,11 @@ var app = new Vue({
             'veggie': {status: true},
             'fruit': {status: true},
             'meal': {status: true}
+        },
+        cartHas: {
+            veggie:false,
+            fruit:false,
+            meal:false
         }
             
     },
@@ -115,9 +119,17 @@ var app = new Vue({
                 if (this.cart[item].type == 'fruit') {
                     this.cart[item].total = this.cart[item].amount * this.cart[item].price;
                     this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
+                    this.cartHas.fruit = true;
+                    console.log(this.cartHas)
+                } 
+                if (this.cart[item].type == 'meal') {
+                    this.cart[item].total = this.cart[item].amount * this.cart[item].price;
+                    this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
+                    this.cartHas.meal = true;
                 } else {
                     this.cart[item].price = this.price;
                     this.cart[item].total = this.cart[item].amount * this.price;
+                    this.cartHas.veggie = true;
                 }
                 this.cartTotal += this.cart[item].total;
                 this.cartTotal = parseFloat(this.cartTotal.toFixed(2))
