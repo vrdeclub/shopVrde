@@ -48,7 +48,12 @@ let products = [
     { name: 'Ciruela (Kg)', amount: 0, url: 'images/ciruela.jpg', type: 'fruit', price: 70 },
     { name: 'Uva (Kg)', amount: 0, url: 'images/uva.jpg', type: 'fruit', price: 115 },
     { name: 'Melon (Kg)', amount: 0, url: 'images/melon.jpg', type: 'fruit', price: 70 },
+    { name: 'Pera (Kg)', amount: 0, url: 'images/pera.jpg', type: 'fruit', price: 70 },
     { name: 'Durazno (Kg)', amount: 0, url: 'images/durazno.jpg', type: 'fruit', price: 70 },
+    { name: 'Pelon (Kg)', amount: 0, url: 'images/pelon.jpg', type: 'fruit', price: 70 },
+    { name: 'Mango (Kg)', amount: 0, url: 'images/mango.jpg', type: 'fruit', price: 70 },
+    { name: 'Maracuya (Kg)', amount: 0, url: 'images/maracuya.jpg', type: 'fruit', price: 70 },
+    { name: 'Limon (Kg)', amount: 0, url: 'images/limon.jpg', type: 'fruit', price: 70 },
     { name: 'Tarta Kale y Champi', amount: 0, url: 'images/tartakalechampi.jpg', type: 'meal', price: 90 },
     { name: 'Budin Banana y Pera', amount: 0, url: 'images/budinbananapera.jpg', type: 'meal', price: 80 },
     { name: 'Tortilla Vegana', amount: 0, url: 'images/tortillavegana.jpg', type: 'meal', price: 80 }
@@ -61,7 +66,6 @@ products.sort(function(a, b) {
     return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
 });
 
-console.log(products)
 
 var app = new Vue({
     el: '#app',
@@ -120,7 +124,6 @@ var app = new Vue({
                     this.cart[item].total = this.cart[item].amount * this.cart[item].price;
                     this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                     this.cartHas.fruit = true;
-                    console.log(this.cartHas)
                 } 
                 if (this.cart[item].type == 'meal') {
                     this.cart[item].total = this.cart[item].amount * this.cart[item].price;
