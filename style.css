@@ -1,52 +1,48 @@
 /* CSS reset with box-sizing fix */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
- margin: 0;
- padding: 0;
- border: 0;
- font-size: 100%;
- font: inherit;
- vertical-align: baseline;
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
- display: block;
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
+
 html {
- box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 *, *:before, *:after {
- box-sizing: inherit;
+    box-sizing: inherit;
 }
+
 body {
- line-height: 1;
+    line-height: 1;
 }
+
 ol, ul {
- list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
- quotes: none;
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
- content: '';
- content: none;
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
 }
+
 table {
- border-collapse: collapse;
- border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 input:required {
     border: 1px dashed red;
 }
@@ -58,10 +54,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin: 0;
 }
 
-
 body {
-    margin:0px;
+    margin: 0px;
 }
+
 .main {
     align-content: center;
     justify-content: center;
@@ -94,7 +90,7 @@ body {
     height: 50px;
 }
 
-.search input  {
+.search input {
     flex: 1;
     max-width: 150px;
 }
@@ -214,7 +210,7 @@ body {
     font-size: 16px;
 }
 
-.delivery label .small{
+.delivery label .small {
     position: relative;
     top: 5px;
     font-size: 10px;
@@ -224,6 +220,7 @@ body {
     position: relative;
     top: 2px;
 }
+
 .delivery input {
     width: 10px;
     min-width: 20px;
@@ -261,12 +258,10 @@ body {
 }
 
 .fruitCart .fruits, .mealCart .fruits {
-
     padding: 10px;
     background: #333;
     color: #00cc65;
     font-size: 25px;
-
 }
 
 .equals {
@@ -428,7 +423,7 @@ body {
     margin-bottom: 10px;
 }
 
-.main .cart .head .schedule{
+.main .cart .head .schedule {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -438,7 +433,7 @@ body {
     min-width: 240px;
 }
 
-.main .cart .head .schedule .title{
+.main .cart .head .schedule .title {
     display: flex;
     /* flex: 1; */
     font-family: 'Ubuntu', sans-serif;
@@ -449,7 +444,16 @@ body {
     margin-bottom: 10px;
 }
 
-.main .cart .head .schedule .day{display: flex;font-family: 'Ubuntu', sans-serif;font-size: 14px;padding: 2px;justify-content: flex-start;color: #333333;margin-bottom: 4px;line-height: 20px;}
+.main .cart .head .schedule .day {
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    padding: 2px;
+    justify-content: flex-start;
+    color: #333333;
+    margin-bottom: 4px;
+    line-height: 20px;
+}
 
 .main .cart .veggieCart {
     padding: 10px;
@@ -554,7 +558,7 @@ body {
     margin-right: 20px;
 }
 
-.footer .social{
+.footer .social {
     display: flex;
     flex-direction: column;
     /* position: relative; */
@@ -563,18 +567,21 @@ body {
     position: relative;
     top: 3px;
 }
-.footer .social .footerLogo{
+
+.footer .social .footerLogo {
     width: 160px;
     position: absolute;
     left: 0px;
 }
-.footer .social .insta{
+
+.footer .social .insta {
     height: 20px;
     position: relative;
     top: 4px;
     margin-right: 8px;
 }
-.footer .social .fb{
+
+.footer .social .fb {
     height: 18px;
     position: relative;
     top: 3px;
@@ -582,36 +589,45 @@ body {
     left: 2px;
 }
 
-.footer .social .link{
+.footer .social .link {
     margin-bottom: 5px;
     position: relative;
 }
-.footer .social .web{height: 19px;margin-right: 6px;top: 3px;left: 1px;position: relative;}
 
-.footer .social .weblink{
+.footer .social .web {
+    height: 19px;
+    margin-right: 6px;
+    top: 3px;
+    left: 1px;
+    position: relative;
+}
+
+.footer .social .weblink {
     text-decoration: none;
     margin-bottom: 2px;
     position: relative;
 }
 
-.footer .contact{
+.footer .contact {
     position: relative;
     margin-top: 3px;
     line-height: 26px;
 }
-.footer .contact .phone{
+
+.footer .contact .phone {
     position: relative;
     height: 20px;
     top: 4px;
     margin-right: 5px;
 }
 
-.footer .zones{
+.footer .zones {
     margin-top: 2px;
     position: relative;
     line-height: 26px;
 }
-.footer .zones .zone{
+
+.footer .zones .zone {
     position: relative;
     height: 20px;
     top: 5px;
