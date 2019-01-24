@@ -15,7 +15,7 @@
 <body>
     <div class="main" id="app">
         <div class="header">
-            <img src="./images/logoMainIcon.jpg" alt="" class="logo">
+            <img src="./images/header.jpg" alt="" class="logo">
             <div class="contain">
                 <div class="filter">
                     <a class="button active" @click="setVisibility('veggie'); toggleActive($event);"  >Verdura</a>
@@ -44,12 +44,12 @@
         <div class="cart">
             <div class="veggieCart" v-if="cartHas.veggie == true">
                 <div class="discounts">
-                    <div class="discountTitle">Precios por Cantidad</div>
+                    <div class="discountTitle">Precios por Unidad</div>
                     <div class="amount" v-for="item in discounts">
 
-                        <div>{{item.amount}}</div>
+                        <div class="amount">{{item.amount}}</div>
                         <div class="equals"> = </div>
-                        <div>${{item.price}}</div>
+                        <div class="price">${{item.price}}</div>
                     </div>
                 </div>
                 <div class="veggies">Verduras</div>
@@ -58,7 +58,7 @@
                 <div class="item" v-for="item in cart" v-if="item.type == 'veggie'">
                     <div class="name">{{item.name}}</div>
                     <div class="amount">${{item.price}} * {{item.amount}}</div>
-                    <div class="equals">=</div>
+                    <div class="equals"> = </div>
                     <div class="total"> ${{item.total}}</div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                     <input id="delivery" type="checkbox" v-model="userData.delivery">
                 </div>
             </form>
-            <div class="confirm" v-on:click="saveSale(cart)">Confirm</div>
+            <div class="confirm" v-on:click="saveSale(cart)">Realizar Pedido</div>
         </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
