@@ -141,6 +141,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin: 2px;
     min-width: 210px;
     background-color: #f0f0f0;
+    flex: 1;
 }
 
 .delivery {
@@ -163,28 +164,22 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin: 0px;
     display: flex;
     flex-direction: column;
-    height: 184px;
-    /* max-width: 370px; */
-    ap;
-    */ position: relative;
-    /* margin-top:20px; */
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    position: relative;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* flex: 1; */
+    padding: 10px;
+    min-width: 240px;
+    width: 320px;
 }
 
 .discountTitle {
-    position: absolute;
     font-family: 'Ubuntu', sans-serif;
     font-size: 22px;
     color: #00cc65;
     width: 100%;
-    top: 17px;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 10px;
+    width: 200px;
 }
 
 .fruitCart, .mealCart {
@@ -327,6 +322,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .main .cart {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     margin-top: 0px;
     flex-wrap: wrap;
@@ -339,6 +335,37 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin-bottom: 40px;
 }
 
+.main .cart .head {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* max-width: 500px; */
+    flex-wrap: wrap;
+}
+
+.main .cart .head .schedule{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* flex: 1; */
+    padding: 10px;
+    min-width: 240px;
+    width: 320px;
+}
+
+.main .cart .head .schedule .title{
+    display: flex;
+    /* flex: 1; */
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    color: #00cc65;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.main .cart .head .schedule .day{display: flex;font-family: 'Ubuntu', sans-serif;font-size: 15px;padding: 3px;justify-content: flex-start;color: #333333;}
 .main .cart .price {
     margin-bottom: 5px;
     margin-top: 5px;

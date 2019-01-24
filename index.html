@@ -45,16 +45,22 @@
             </div>
         </div>
         <div class="cart">
-            <div class="veggieCart" v-if="cartHas.veggie == true">
+            <div class="head">
                 <div class="discounts">
                     <div class="discountTitle">Precios por Unidad</div>
                     <div class="amount" v-for="item in discounts">
-
                         <div class="amount">{{item.amount}}</div>
                         <div class="equals"> = </div>
                         <div class="price">${{item.price}}</div>
                     </div>
                 </div>
+                <div class="schedule">
+                    <div class="title">Horarios</div>
+                    <div class="day">Viernes pickup de 15 a 20. Envios de 17 a 22</div>
+                    <div class="day">Sabado pickup de 12 a 18</div>
+                </div>
+            </div>
+            <div class="veggieCart" v-if="cartHas.veggie == true">
                 <div class="veggies">Verduras</div>
                 <div class="price">Precio por unidad = ${{this.price}}</div>
                 <div class="price">Unidades = {{this.cartItems}}</div>
