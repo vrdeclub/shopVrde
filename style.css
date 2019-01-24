@@ -19,13 +19,21 @@ input[type=number]::-webkit-outer-spin-button {
 .main .search {
     background-color: #333;
     height: 20px;
-    padding: 10px 20px;
+    padding: 16px 20px;
     display: flex;
     flex-direction: row;
     /* margin-top: 10px; */
     flex: 1;
     margin-bottom: 10px;
+    justify-content: center;
     max-width: 285px;
+}
+
+.filterProducts {
+    max-width: 320px;
+    font-family: Ubuntu;
+    font-size: 12px;
+    padding-bottom: 7px;
 }
 
 .main .search .searchLabel {

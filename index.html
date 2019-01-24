@@ -17,16 +17,19 @@
         <div class="header">
             <img src="./images/logoMainIcon.png" alt="" class="logo">
             <div class="contain">
-                <div class="filter">
-                    <a class="button active" @click="setVisibility('veggie'); toggleActive($event);"  >Verdura</a>
-                    <a class="button active" @click="setVisibility('fruit'); toggleActive($event)" >Fruta</a>
-                    <a class="button active" @click="setVisibility('meal'); toggleActive($event)" >Comidas</a>
-                </div>
                 <div class="search">
                     <div class="searchLabel">
                         Buscar
                     </div>
                     <input type="text" v-model="search">
+                </div>
+                <div class="filterProducts">Seleccione las categorias que quieras ver haciendo click.
+                    Los productos se ordenan en orden alfabetico.
+                </div>
+                <div class="filter">
+                    <a class="button active" @click="setVisibility('veggie'); toggleActive($event);"  >Verdura</a>
+                    <a class="button active" @click="setVisibility('fruit'); toggleActive($event)" >Fruta</a>
+                    <a class="button active" @click="setVisibility('meal'); toggleActive($event)" >Comidas</a>
                 </div>
             </div>
         </div>
