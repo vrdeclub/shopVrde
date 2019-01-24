@@ -39,7 +39,7 @@
                 <div class="title">{{item.name}} = ${{item.price || price}}</div>
                 <div class="setAmount">
                     <div class="remove" v-on:click="removeItem(item)">-</div>
-                    <input type="number" step="any" class="amount" v-on:input="updateValue(item)" v-model="item.amount" />
+                    <input type="tel" step="any" class="amount" v-on:input="updateValue(item)" v-model="item.amount" />
                     <div class="add" v-on:click="addItem(item)">+</div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                 </div>
             </form>
             <div class="confirm" v-on:click="saveSale(cart)">Realizar Pedido</div>
-            <div class="confirmSale" v-show="saleComplete == true" >
+            <div class="confirmSale" v-show="saleComplete == true">
                 Su pedido se ha realizado con exito!
                 Recargue la pagina para hacer otro pedido.
             </div>
@@ -122,6 +122,24 @@
 
         // Get a reference to the database service
         var database = firebase.database();
+
+        window.addEventListener('scroll', function (evt) {
+
+            // This value is your scroll distance from the top
+            var distance_from_top = document.documentElement.scrollTop
+
+            // The user has scrolled to the tippy top of the page. Set appropriate style.
+            if (distance_from_top === 0) {
+                document.getElementsByClassName("search")[0].classList.remove("fixed");
+            }
+
+            if (distance_from_top > 0) {
+                document.getElementsByClassName("search")[0].classList.add("fixed");
+            }
+
+            console.log(distance_from_top)
+
+        });
 
     </script>
 </body>

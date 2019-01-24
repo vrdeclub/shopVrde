@@ -4,10 +4,10 @@ let discounts = [
     { amount: "2", price: 52.50 },
     { amount: "3", price: 50 },
     { amount: "4", price: 47.50 },
-    { amount: "5 > 59", price: 45 },
-    { amount: "60 > 200", price: 41 },
-    { amount: "200 > 250", price: 36 },
-    { amount: "250 >", price: 32 }
+    { amount: "> 5", price: 45 },
+    //{ amount: "60 > 200", price: 41 },
+    //{ amount: "200 > 250", price: 36 },
+    //{ amount: "250 >", price: 32 }
 ]
 
 let products = [
@@ -42,7 +42,8 @@ let products = [
     { name: 'Lechuga (1kg)', amount: 0, url: 'images/lechuga.jpg', type: 'veggie' },
     { name: 'Hinojo (Kg)', amount: 0, url: 'images/hinojo.jpg', type: 'veggie' },
     { name: 'Cilantro (Kg)', amount: 0, url: 'images/cilantro.jpg', type: 'veggie' },
-    { name: 'Calabaza (Kg)', amount: 0, url: 'images/calabaza.jpg', type: 'veggie' },
+    { name: 'Zapallito (Kg)', amount: 0, url: 'images/zapallito.jpg', type: 'veggie' },
+    { name: 'Albahaca (x2)', amount: 0, url: 'images/albahaca.jpg', type: 'veggie' },
     { name: 'Banana (Kg)', amount: 0, url: 'images/banana.jpg', type: 'fruit', price: 55 },
     { name: 'Uva (Kg)', amount: 0, url: 'images/uva.jpg', type: 'fruit', price: 100 },
     { name: 'Melon (Kg)', amount: 0, url: 'images/melon.jpg', type: 'fruit', price: 80 },
@@ -114,10 +115,10 @@ var app = new Vue({
             else if (this.cartItems == 2) { this.price = 52.50 }
             else if (this.cartItems == 3) { this.price = 50 }
             else if (this.cartItems == 4) { this.price = 47.50 }
-            else if (this.cartItems >= 5 && this.cartItems <= 59) { this.price = 45 }
-            else if (this.cartItems >= 60 && this.cartItems <= 199) { this.price = 41 }
-            else if (this.cartItems >= 200 && this.cartItems <= 249) { this.price = 36 }
-            else { this.price = 32 }
+            else if (this.cartItems >= 5 && this.cartItems) { this.price = 45 }
+            //else if (this.cartItems >= 60 && this.cartItems <= 199) { this.price = 41 }
+            //else if (this.cartItems >= 200 && this.cartItems <= 249) { this.price = 36 }
+            //else { this.price = 32 }
 
             for (var item in this.cart) {
                 if (this.cart[item].type == 'fruit') {
