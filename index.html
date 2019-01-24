@@ -120,15 +120,12 @@
 
         firebase.initializeApp(config);
 
-        // Get a reference to the database service
         var database = firebase.database();
 
         window.addEventListener('scroll', function (evt) {
 
-            // This value is your scroll distance from the top
             var distance_from_top = document.documentElement.scrollTop
 
-            // The user has scrolled to the tippy top of the page. Set appropriate style.
             if (distance_from_top === 0) {
                 document.getElementsByClassName("search")[0].classList.remove("fixed");
             }
@@ -136,8 +133,6 @@
             if (distance_from_top > 0) {
                 document.getElementsByClassName("search")[0].classList.add("fixed");
             }
-
-            console.log(distance_from_top)
 
         });
 
