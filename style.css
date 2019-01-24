@@ -1,14 +1,14 @@
 input:required {
     border: 1px dashed red;
-  }
+}
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 0; 
+    margin: 0;
 }
+
 .main {
     align-content: center;
     justify-content: center;
@@ -28,7 +28,15 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: center;
     max-width: 285px;
 }
-.main .search.fixed {position: fixed;top: 0px;left: 0px;width: 100%;max-width: 100%;z-index: 1000;}
+
+.main .search.fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1000;
+}
 
 .filterProducts {
     max-width: 320px;
@@ -65,7 +73,20 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 20px;
 }
 
-.main .header .contain{display: flex;justify-content: center;flex-direction: row;align-items: flex-end;/* align-items: flex-start; *//* margin-left: 20px; */position: relative;top: 10px;flex-wrap: wrap;/* height: 40px; */max-width: 438px;}
+.main .header .contain {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
+    /* align-items: flex-start; */
+    /* margin-left: 20px; */
+    position: relative;
+    top: 10px;
+    flex-wrap: wrap;
+    /* height: 40px; */
+    max-width: 438px;
+    min-height: 150px;
+}
 
 .filter {
     display: flex;
@@ -75,9 +96,29 @@ input[type=number]::-webkit-outer-spin-button {
     flex: 1;
     /* margin-bottom: 10px; */
 }
-.filter .button {padding: 10px;background-color: #333333;color: #999999;display: flex;justify-content: center;text-align: center;/* margin: 5px; */cursor: pointer;min-width: 76px;max-width: 80px;margin: 5px;margin-bottom: 0px;margin-top: 5px;flex: 1;}
 
-.filter .button.active {color: white;background-color: #00cc65;}
+.filter .button {
+    padding: 10px;
+    background-color: #333333;
+    color: #999999;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* margin: 5px; */
+    cursor: pointer;
+    min-width: 76px;
+    max-width: 80px;
+    margin: 5px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    flex: 1;
+}
+
+.filter .button.active {
+    color: white;
+    background-color: #00cc65;
+}
+
 .userForm {
     display: flex;
     flex-wrap: wrap;
@@ -87,10 +128,12 @@ input[type=number]::-webkit-outer-spin-button {
     top: 2px;
     margin-bottom: 20px;
 }
-.userForm .title{
+
+.userForm .title {
     flex: 1 100%;
     margin-bottom: 13px;
 }
+
 .userForm input {
     border-width: 0px;
     padding: 9px;
@@ -99,27 +142,31 @@ input[type=number]::-webkit-outer-spin-button {
     min-width: 210px;
     background-color: #f0f0f0;
 }
+
 .delivery {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 10px;
     font-size: 16px;
 }
-.delivery label{}
-.delivery input{
+
+.delivery label {}
+
+.delivery input {
     width: 10px;
     min-width: 20px;
     position: relative;
     top: 1.5px;
 }
+
 .discounts {
     margin: 0px;
     display: flex;
     flex-direction: column;
     height: 184px;
     /* max-width: 370px; */
-    ap; */
-    position: relative;
+    ap;
+    */ position: relative;
     /* margin-top:20px; */
     justify-content: center;
     align-content: center;
@@ -130,7 +177,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 20px;
 }
 
-.discountTitle{
+.discountTitle {
     position: absolute;
     font-family: 'Ubuntu', sans-serif;
     font-size: 22px;
@@ -139,15 +186,18 @@ input[type=number]::-webkit-outer-spin-button {
     top: 17px;
     text-align: center;
 }
-.fruitCart, .mealCart{
-    margin-top :20px;
+
+.fruitCart, .mealCart {
+    margin-top: 20px;
 }
-.equals{
+
+.equals {
     margin: 0px 10px;
     max-width: 10px;
     padding-top: 4px;
 }
-.discounts .amount{
+
+.discounts .amount {
     display: flex;
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
@@ -157,6 +207,7 @@ input[type=number]::-webkit-outer-spin-button {
     color: #333333;
     width: 110px;
 }
+
 .discounts .amount {
     /* width: 110px; */
     /* text-align: center; */
@@ -172,7 +223,7 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    font-family:sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     font-size: 23px;
     color: #17ba7bfc;
@@ -180,8 +231,12 @@ input[type=number]::-webkit-outer-spin-button {
     margin-bottom: 10px;
 }
 
-
-.main .header .logo {height: 154px;position: relative;/* top: 9px; */margin: 10px;}
+.main .header .logo {
+    height: 154px;
+    position: relative;
+    /* top: 9px; */
+    margin: 10px;
+}
 
 .main .products {
     display: flex;
@@ -211,10 +266,12 @@ input[type=number]::-webkit-outer-spin-button {
     background: #e6e6e6;
     object-fit: cover;
 }
+
 .main .products .item .title {
     color: white;
     padding: 10px;
 }
+
 .main .products .item .price {
     margin-bottom: 10px;
     color: white;
@@ -281,39 +338,44 @@ input[type=number]::-webkit-outer-spin-button {
     position: relative;
     margin-bottom: 40px;
 }
+
 .main .cart .price {
     margin-bottom: 5px;
     margin-top: 5px;
     /* font-size: 12px; */
 }
-.main .cart .item{
+
+.main .cart .item {
     display: flex;
     padding: 5px;
     margin: 5px;
     border-bottom: 0.2px solid #b4b4b4;
-   font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
-.main .cart .item .name{
+
+.main .cart .item .name {
     margin-right: -10px;
     width: 160px;
     font-size: 13px;
 }
-.main .cart .item .amount{
-    margin-right:5px;
+
+.main .cart .item .amount {
+    margin-right: 5px;
     width: 70px;
     font-size: 16px;
 }
 
-.main .cart .item .total{
- color:#00cc70;
+.main .cart .item .total {
+    color: #00cc70;
 }
-.main .cart .cartTotal{
+
+.main .cart .cartTotal {
     font-size: 20px;
     margin: 20px;
     color: #00cc65;
 }
 
-.main .cart .confirm{
+.main .cart .confirm {
     width: 200px;
     display: flex;
     text-align: center;
@@ -324,7 +386,7 @@ input[type=number]::-webkit-outer-spin-button {
     color: white;
 }
 
-.main .cart .confirmSale{
+.main .cart .confirmSale {
     background: white;
     max-width: 100%;
     padding: 30px;
@@ -343,7 +405,6 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: center;
 }
 
-.main .cart .confirmSale .reload{
+.main .cart .confirmSale .reload {
     margin-top: 10px;
-    }
-
+}
