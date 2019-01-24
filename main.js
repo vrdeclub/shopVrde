@@ -182,7 +182,8 @@ var app = new Vue({
                 address:this.userData.address,
                 phone:this.userData.phone,
                 email:this.userData.email,
-                delivery: this.userData.delivery
+                delivery: this.userData.delivery,
+                total: this.cartTotal
             }];
 
             for (var item in cart) {
