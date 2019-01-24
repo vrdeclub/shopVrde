@@ -84,8 +84,8 @@ var app = new Vue({
         },
         active: {
             'veggie': {status: true},
-            'fruit': {status: true},
-            'meal': {status: true}
+            'fruit': {status: false},
+            'meal': {status: false}
         },
         cartHas: {
             veggie:false,
