@@ -81,7 +81,8 @@ var app = new Vue({
             name: "",
             address:"",
             phone:"",
-            email:""
+            email:"",
+            delivery:false
         },
         active: {
             'veggie': {status: true},
@@ -182,7 +183,8 @@ var app = new Vue({
                 name:this.userData.name,
                 address:this.userData.address,
                 phone:this.userData.phone,
-                email:this.userData.email
+                email:this.userData.email,
+                delivery: this.userData.delivery
             }];
 
             for (var item in cart) {
