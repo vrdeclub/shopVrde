@@ -183,12 +183,24 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 .fruitCart, .mealCart {
     margin-top: 20px;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+.fruitCart .fruits, .mealCart .fruits {
+
+    padding: 10px;
+    background: #333;
+    color: #00cc65;
+    font-size: 25px;
+
 }
 
 .equals {
     margin: 0px 10px;
     max-width: 10px;
-    padding-top: 4px;
+    padding-top: 0px;
 }
 
 .discounts .amount {
@@ -336,10 +348,11 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 .main .cart .head {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
-    /* max-width: 500px; */
+    max-width: 310px;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 .main .cart .head .schedule{
@@ -363,11 +376,28 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin-bottom: 10px;
 }
 
-.main .cart .head .schedule .day{display: flex;font-family: 'Ubuntu', sans-serif;font-size: 15px;padding: 3px;justify-content: flex-start;color: #333333;}
+.main .cart .head .schedule .day{display: flex;font-family: 'Ubuntu', sans-serif;font-size: 14px;padding: 2px;justify-content: flex-start;color: #333333;}
+
+.main .cart .veggieCart {
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+.main .cart .veggieCart .veggies {
+    padding: 10px;
+    background: #333;
+    color: #00cc65;
+    font-size: 25px;
+}
+
 .main .cart .price {
     margin-bottom: 5px;
     margin-top: 5px;
-    /* font-size: 12px; */
+    font-size: 12px;
+    position: relative;
+    left: 10px;
+    bottom: 6px;
 }
 
 .main .cart .item {
