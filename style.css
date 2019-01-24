@@ -449,7 +449,7 @@ body {
     margin-bottom: 10px;
 }
 
-.main .cart .head .schedule .day{display: flex;font-family: 'Ubuntu', sans-serif;font-size: 14px;padding: 2px;justify-content: flex-start;color: #333333;}
+.main .cart .head .schedule .day{display: flex;font-family: 'Ubuntu', sans-serif;font-size: 14px;padding: 2px;justify-content: flex-start;color: #333333;margin-bottom: 4px;line-height: 20px;}
 
 .main .cart .veggieCart {
     padding: 10px;
