@@ -169,7 +169,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     /* flex: 1; */
     padding: 10px;
     min-width: 240px;
-    width: 320px;
 }
 
 .discountTitle {
@@ -351,7 +350,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     /* flex: 1; */
     padding: 10px;
     min-width: 240px;
-    width: 320px;
 }
 
 .main .cart .head .schedule .title{
