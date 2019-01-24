@@ -178,6 +178,15 @@ var app = new Vue({
                 year: 'numeric'
             }).split('/').join('-');
 
+            var sale = [{
+                date:today,
+                name:this.userData.name,
+                address:this.userData.address,
+                phone:this.userData.phone,
+                email:this.userData.email,
+                delivery: this.userData.delivery,
+                total: this.cartTotal
+            }];
             
             for (var item in cart) {
                 sale.push({
@@ -188,15 +197,6 @@ var app = new Vue({
                 })
             }
             
-            var sale = [{
-                date:today,
-                name:this.userData.name,
-                address:this.userData.address,
-                phone:this.userData.phone,
-                email:this.userData.email,
-                delivery: this.userData.delivery,
-                total: this.cartTotal
-            }];
 
             console.log(sale)
 
