@@ -178,6 +178,16 @@ var app = new Vue({
                 year: 'numeric'
             }).split('/').join('-');
 
+            
+            for (var item in cart) {
+                sale.push({
+                    variedad: cart[item].name,
+                    cantidad: cart[item].amount,
+                    precio: cart[item].price || this.price,
+                    pago: cart[item].total
+                })
+            }
+            
             var sale = [{
                 date:today,
                 name:this.userData.name,
@@ -188,14 +198,7 @@ var app = new Vue({
                 total: this.cartTotal
             }];
 
-            for (var item in cart) {
-                sale.push({
-                        variedad: cart[item].name,
-                        cantidad: cart[item].amount,
-                        precio: cart[item].price || this.price,
-                        pago: cart[item].total
-                    })
-            }
+            console.log(sale)
 
             var self = this;
 

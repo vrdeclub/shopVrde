@@ -1,3 +1,52 @@
+/* CSS reset with box-sizing fix */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+html {
+ box-sizing: border-box;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+body {
+ line-height: 1;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
 input:required {
     border: 1px dashed red;
 }
@@ -9,6 +58,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin: 0;
 }
 
+
+body {
+    margin:0px;
+}
 .main {
     align-content: center;
     justify-content: center;
@@ -26,7 +79,8 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     flex: 1;
     /* margin-bottom: 10px; */
     justify-content: center;
-    max-width: 285px;
+    max-width: 320px;
+    height: 50px;
 }
 
 .main .search.fixed {
@@ -36,6 +90,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     width: 100%;
     max-width: 100%;
     z-index: 1000;
+    height: 50px;
 }
 
 .filterProducts {
@@ -52,9 +107,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     text-align: left;
     display: flex;
     align-items: center;
-    height: 20px;
+    height: 18px;
     font-family: 'Ubuntu', sans-serif;
-    width: 100px;
+    width: 110px;
     padding-right: 10px;
 }
 
@@ -98,7 +153,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .filter .button {
-    padding: 10px;
+    padding: 13px;
     background-color: #333333;
     color: #999999;
     display: flex;
@@ -106,7 +161,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     text-align: center;
     /* margin: 5px; */
     cursor: pointer;
-    min-width: 76px;
+    min-width: 100px;
     max-width: 80px;
     margin: 5px;
     margin-bottom: 0px;
@@ -126,7 +181,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     max-width: 281px;
     position: relative;
     top: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .userForm .title {
@@ -151,8 +206,16 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     font-size: 16px;
 }
 
-.delivery label {}
+.delivery label .small{
+    position: relative;
+    top: 5px;
+    font-size: 10px;
+}
 
+.delivery label {
+    position: relative;
+    top: 2px;
+}
 .delivery input {
     width: 10px;
     min-width: 20px;
@@ -186,6 +249,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     padding: 10px;
     background: #333;
     color: white;
+    padding-bottom: 20px;
 }
 
 .fruitCart .fruits, .mealCart .fruits {
@@ -210,6 +274,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     padding: 3px;
     /* padding-right: 10px; */
     justify-content: flex-start;
+    align-items: center;
     color: #333333;
     width: 110px;
 }
@@ -299,7 +364,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     align-items: center;
     flex-grow: 1;
     background-color: #fe5047;
-    height: 42px;
+    height: 40px;
     color: white;
     font-size: 35px;
     cursor: pointer;
@@ -312,7 +377,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     align-items: center;
     flex-grow: 1;
     background-color: #00cc65;
-    height: 42px;
+    height: 40px;
     color: white;
     font-size: 35px;
     cursor: pointer;
@@ -343,7 +408,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     /* background-color: #333; */
     color: #555555;
     position: relative;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 
 .main .cart .head {
@@ -382,6 +447,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     padding: 10px;
     background: #333;
     color: white;
+    padding-bottom: 20px;
 }
 
 .main .cart .veggieCart .veggies {
@@ -394,10 +460,11 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .main .cart .price {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-size: 12px;
+    font-size: 16px;
     position: relative;
     left: 10px;
-    bottom: 6px;
+    /* bottom: 6px; */
+    top: 1px;
 }
 
 .main .cart .item {
@@ -462,4 +529,85 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 .main .cart .confirmSale .reload {
     margin-top: 10px;
+}
+
+.footer {
+    width: 100%;
+    padding: 20px;
+    color: #333333;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 1x black;
+    -moz-box-shadow: 0 0 10px #00000061;
+    -webkit-box-shadow: 0 0 10px #00000061;
+    box-shadow: 0 0 10px #00000061;
+}
+
+.footer .footerLogo {
+    height: 150px;
+    position: relative;
+    /* top: 27px; */
+}
+
+.footer .social{
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    /* max-width: 240px; */
+    padding: 10px;
+}
+.footer .social .footerLogo{
+    width: 160px;
+    position: absolute;
+    left: 0px;
+}
+.footer .social .insta{
+    height: 20px;
+    position: relative;
+    top: 4px;
+    margin-right: 8px;
+}
+.footer .social .fb{
+    height: 18px;
+    position: relative;
+    top: 3px;
+    margin-right: 7px;
+}
+
+.footer .social .link{
+    margin-bottom: 13px;
+    position: relative;
+}
+.footer .social .web{height: 19px;margin-right: 5px;top: 3px;position: relative;}
+
+.footer .social .weblink{
+    text-decoration: none;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.footer .contact{
+    position: relative;
+    margin-top: 3px;
+    line-height: 26px;
+}
+.footer .contact .phone{
+    position: relative;
+    height: 20px;
+    top: 4px;
+    margin-right: 7px;
+}
+
+.footer .zones{
+    margin-top: 12px;
+    position: relative;
+    line-height: 26px;
+}
+.footer .zones .zone{
+    position: relative;
+    height: 20px;
+    top: 5px;
 }
