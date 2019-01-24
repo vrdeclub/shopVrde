@@ -39,7 +39,7 @@
                 <div class="title">{{item.name}} = ${{item.price || price}}</div>
                 <div class="setAmount">
                     <div class="remove" v-on:click="removeItem(item)">-</div>
-                    <input type="tel" step="any" class="amount" v-on:input="updateValue(item)" v-model="item.amount" />
+                    <input type="number" step="any" class="amount" v-on:input="updateValue(item)" v-model="item.amount" />
                     <div class="add" v-on:click="addItem(item)">+</div>
                 </div>
             </div>
