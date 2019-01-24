@@ -274,6 +274,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 20px;
     /* background-color: #333; */
     color: #555555;
+    position: relative;
 }
 .main .cart .price {
     margin-bottom: 5px;
@@ -316,6 +317,21 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 10px;
     cursor: pointer;
     color: white;
+}
+
+.main .cart .confirmSale{
+    background: white;
+    max-width: 320px;
+    padding: 30px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: 0 auto;
+    -moz-box-shadow: 0px 1px 24px 4px #00000026;
+    -webkit-box-shadow: 0px 1px 24px 4px #00000026;
+    box-shadow: 0px 1px 24px 4px #00000026;
 }
 
 

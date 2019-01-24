@@ -23,7 +23,7 @@
                     <a class="button" @click="setVisibility('meal'); toggleActive($event)">Comidas</a>
                 </div>
                 <div class="filterProducts">Seleccione las categorias que quieras ver haciendo click.
-                    Los productos se ordenan en orden alfabetico.
+                    Los productos se ordenan alfabeticamente.
                 </div>
                 <div class="search">
                     <div class="searchLabel">
@@ -97,6 +97,10 @@
                 </div>
             </form>
             <div class="confirm" v-on:click="saveSale(cart)">Realizar Pedido</div>
+            <div class="confirmSale" v-show="saleComplete == true" >
+                Su pedido se ha realizado con exito!
+                Recargue la pagina para hacer otro pedido.
+            </div>
         </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>

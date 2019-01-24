@@ -75,6 +75,7 @@ var app = new Vue({
         cartTotal: 0,
         cart: [],
         cartItems: 0,
+        saleComplete:false,
         userData: {
             name: "",
             address:"",
@@ -195,11 +196,15 @@ var app = new Vue({
                     })
             }
 
+            var self = this;
+
             database.ref('/sales/' + today).push(sale, function (error) {
                 if (error) {
                     console.log(error)
                 } else {
-                    window.location.reload();
+                    self.saleComplete = true;
+                    console.log(this.saleComplete)
+                    //window.location.reload();
                 }
             });
         },
