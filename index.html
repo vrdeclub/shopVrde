@@ -17,19 +17,19 @@
         <div class="header">
             <img src="./images/logoMainIcon.png" alt="" class="logo">
             <div class="contain">
-                <div class="filter">
-                    <a class="button active" @click="setVisibility('veggie'); toggleActive($event);">Verdura</a>
-                    <a class="button" @click="setVisibility('fruit'); toggleActive($event)">Fruta</a>
-                    <a class="button" @click="setVisibility('meal'); toggleActive($event)">Comidas</a>
-                </div>
-                <div class="filterProducts">Seleccione las categorias que quieras ver haciendo click.
-                    Los productos se ordenan alfabeticamente.
-                </div>
                 <div class="search">
                     <div class="searchLabel">
                         Buscar
                     </div>
                     <input type="text" v-model="search">
+                </div>
+                <div class="filter">
+                    <a class="button active" @click="setVisibility('veggie'); toggleActive($event);">Verdura</a>
+                    <a class="button" @click="setVisibility('fruit'); toggleActive($event)">Fruta</a>
+                    <a class="button" @click="setVisibility('meal'); toggleActive($event)">Comidas</a>
+                </div>
+                <div class="filterProducts">
+                    'Click' para activar y desactivar categorias.
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
             <div class="confirm" v-on:click="saveSale(cart)">Realizar Pedido</div>
             <div class="confirmSale" v-show="saleComplete == true">
                 Su pedido se ha realizado con exito!
-                Recargue la pagina para hacer otro pedido.
+                <a class="reload" href="vrde.club">Realizar otro pedido</a>
             </div>
         </div>
     </div>
