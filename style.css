@@ -540,10 +540,10 @@ body {
 }
 
 .footer .footerLogo {
-    height: 94px;
+    height: 64px;
     position: relative;
     /* top: 27px; */
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .footer .social{
@@ -552,6 +552,8 @@ body {
     /* position: relative; */
     /* max-width: 240px; */
     /* padding: 10px; */
+    position: relative;
+    top: 3px;
 }
 .footer .social .footerLogo{
     width: 160px;
