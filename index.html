@@ -17,19 +17,19 @@
         <div class="header">
             <img src="./images/logoMainIcon.png" alt="" class="logo">
             <div class="contain">
+                <div class="filter">
+                    <a class="button active" @click="setVisibility('veggie'); toggleActive($event);">Verdura</a>
+                    <a class="button" @click="setVisibility('fruit'); toggleActive($event)">Fruta</a>
+                    <a class="button" @click="setVisibility('meal'); toggleActive($event)">Comidas</a>
+                </div>
+                <div class="filterProducts">Seleccione las categorias que quieras ver haciendo click.
+                    Los productos se ordenan en orden alfabetico.
+                </div>
                 <div class="search">
                     <div class="searchLabel">
                         Buscar
                     </div>
                     <input type="text" v-model="search">
-                </div>
-                <div class="filterProducts">Seleccione las categorias que quieras ver haciendo click.
-                    Los productos se ordenan en orden alfabetico.
-                </div>
-                <div class="filter">
-                    <a class="button active" @click="setVisibility('veggie'); toggleActive($event);"  >Verdura</a>
-                    <a class="button" @click="setVisibility('fruit'); toggleActive($event)" >Fruta</a>
-                    <a class="button" @click="setVisibility('meal'); toggleActive($event)" >Comidas</a>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
                     <div class="total"> ${{item.total}}</div>
                 </div>
             </div>
-            <div class="fruitCart"  v-if="cartHas.fruit == true">
+            <div class="fruitCart" v-if="cartHas.fruit == true">
                 <div class="fruits">Frutas</div>
                 <div class="item" v-for="item in cart" v-if="item.type == 'fruit'">
                     <div class="name">{{item.name}}</div>
@@ -87,7 +87,8 @@
             <form action="#" class="userForm">
                 <div class="title">Datos de Usuario</div>
                 <input type="text" placeholder="Nombre" v-model="userData.name" required>
-                <input type="text" placeholder="Direccion" v-model="userData.address" v-if="userData.delivery == true" required>
+                <input type="text" placeholder="Direccion" v-model="userData.address" v-if="userData.delivery == true"
+                    required>
                 <input type="tel" placeholder="Telefono" v-model="userData.phone" required>
                 <input type="email" placeholder="Correo" v-model="userData.email" required>
                 <div class="delivery">
