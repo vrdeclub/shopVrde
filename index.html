@@ -93,12 +93,12 @@
             <form action="#" class="userForm">
                 <div class="title">Datos de Usuario</div>
                 <input type="text" placeholder="Nombre" v-model="userData.name" required>
-                <input type="text" placeholder="Direccion" v-model="userData.address" v-if="userData.delivery == true"
-                    required>
+                <input type="text" placeholder="Direccion" v-model="userData.address" required>
                 <input type="tel" placeholder="Telefono" v-model="userData.phone" required>
                 <input type="email" placeholder="Correo" v-model="userData.email" required>
                 <div class="delivery">
-                    <label for="delivery" value="Retiro en local" class="label">Entrega a tu casa <br>
+                    <label for="delivery" value="Retiro en local" class="label" @click="disabled = !disabled">Entrega a
+                        tu casa <br>
                         <div class="small">* Consulte costo de envio</div>
                     </label>
                     <input id="delivery" type="checkbox" v-model="userData.delivery">
