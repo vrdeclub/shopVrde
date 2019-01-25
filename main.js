@@ -197,9 +197,6 @@ var app = new Vue({
                 })
             }
 
-
-            console.log(sale)
-
             var self = this;
 
             database.ref('/sales/' + today).push(sale, function (error) {
