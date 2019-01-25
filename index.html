@@ -104,7 +104,7 @@
                     <input id="delivery" type="checkbox" v-model="userData.delivery">
                 </div>
             </form>
-            <div class="confirm" v-on:click="saveSale(cart)">Realizar Pedido</div>
+            <div class="confirm" v-on:click="saveSale(cart)" v-show="saleComplete == false">Realizar Pedido</div>
             <div class="confirmSale" v-show="saleComplete == true">
                 Su pedido se ha realizado con exito!
                 <a class="reload" href="/">Realizar otro pedido</a>
