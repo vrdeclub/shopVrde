@@ -4,7 +4,7 @@ let discounts = [
     { amount: "2", price: 52.50 },
     { amount: "3", price: 50 },
     { amount: "4", price: 47.50 },
-    { amount: "> 5", price: 45 },
+    { amount: "5+", price: 45 },
     //{ amount: "60 > 200", price: 41 },
     //{ amount: "200 > 250", price: 36 },
     //{ amount: "250 >", price: 32 }
@@ -59,7 +59,7 @@ let products = [
 
 ]
 
-products.sort(function(a, b) {
+products.sort(function (a, b) {
     var textA = a.name.toUpperCase();
     var textB = b.name.toUpperCase();
     return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
@@ -76,25 +76,25 @@ var app = new Vue({
         cartTotal: 0,
         cart: [],
         cartItems: 0,
-        saleComplete:false,
+        saleComplete: false,
         userData: {
             name: "",
-            address:"",
-            phone:"",
-            email:"",
-            delivery:false
+            address: "",
+            phone: "",
+            email: "",
+            delivery: false
         },
         active: {
-            'veggie': {status: true},
-            'fruit': {status: false},
-            'meal': {status: false}
+            'veggie': { status: true },
+            'fruit': { status: false },
+            'meal': { status: false }
         },
         cartHas: {
-            veggie:false,
-            fruit:false,
-            meal:false
+            veggie: false,
+            fruit: false,
+            meal: false
         }
-            
+
     },
     methods: {
         getTotal: function () {
@@ -125,13 +125,13 @@ var app = new Vue({
                     this.cart[item].total = this.cart[item].amount * this.cart[item].price;
                     this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                     this.cartHas.fruit = true;
-                } 
+                }
                 if (this.cart[item].type == 'meal') {
                     this.cart[item].total = this.cart[item].amount * this.cart[item].price;
                     this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                     this.cartHas.meal = true;
-                } 
-                if(this.cart[item].type == 'veggie'){
+                }
+                if (this.cart[item].type == 'veggie') {
                     this.cart[item].price = this.price;
                     this.cart[item].total = this.cart[item].amount * this.price;
                     this.cartHas.veggie = true;
@@ -179,15 +179,15 @@ var app = new Vue({
             }).split('/').join('-');
 
             var sale = [{
-                date:today,
-                name:this.userData.name,
-                address:this.userData.address,
-                phone:this.userData.phone,
-                email:this.userData.email,
+                date: today,
+                name: this.userData.name,
+                address: this.userData.address,
+                phone: this.userData.phone,
+                email: this.userData.email,
                 delivery: this.userData.delivery,
                 total: this.cartTotal
             }];
-            
+
             for (var item in cart) {
                 sale.push({
                     variedad: cart[item].name,
@@ -196,7 +196,7 @@ var app = new Vue({
                     pago: cart[item].total
                 })
             }
-            
+
 
             console.log(sale)
 
@@ -212,12 +212,13 @@ var app = new Vue({
             });
         },
         setVisibility: function (type) {
-            console.log(type, this.active[type])
-            this.active[type].status = !this.active[type].status; 
+            for (var t in this.active) {
+                this.active[t].status = false;
+            }
+            this.active[type].status = true;
         },
         toggleActive: function (e) {
-            console.log(e)
-            e.target.classList.toggle('active');
+            e.target.classList.add('active');
         }
 
     },
@@ -225,8 +226,8 @@ var app = new Vue({
         filteredItems: function () {
             var self = this;
             return this.productList.filter(function (item) {
-                return item.name.toLowerCase().indexOf(self.search.toLowerCase()) >= 0 
-                && self.active[item.type].status == true;
+                return item.name.toLowerCase().indexOf(self.search.toLowerCase()) >= 0
+                    && self.active[item.type].status == true;
             });
         }
 

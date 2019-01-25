@@ -24,9 +24,9 @@
                     <input type="text" v-model="search">
                 </div>
                 <div class="filter">
-                    <a class="button active" @click="setVisibility('veggie'); toggleActive($event);">Verdura</a>
-                    <a class="button" @click="setVisibility('fruit'); toggleActive($event)">Fruta</a>
-                    <a class="button" @click="setVisibility('meal'); toggleActive($event)">Comidas</a>
+                    <a class="button" v-bind:class="{active : active['veggie'].status}" @click="setVisibility('veggie');">Verdura</a>
+                    <a class="button" v-bind:class="{active : active['fruit'].status}" @click="setVisibility('fruit');">Fruta</a>
+                    <a class="button" v-bind:class="{active : active['meal'].status}" @click="setVisibility('meal');">Comidas</a>
                 </div>
                 <div class="filterProducts">
                     'Click' para activar y desactivar categorias.
@@ -47,7 +47,9 @@
         <div class="cart">
             <div class="head">
                 <div class="discounts">
-                    <div class="discountTitle">Precios por Unidad</div>
+                    <div class="discountTitle">Precios por Unidad
+                    <div class="subtitle">Estos descuentos se aplican solamente a las verduras.</div>   
+                    </div>
                     <div class="amount" v-for="item in discounts">
                         <div class="amount">{{item.amount}}</div>
                         <div class="equals"> = </div>
@@ -93,7 +95,7 @@
             <form action="#" class="userForm">
                 <div class="title">Datos de Usuario</div>
                 <input type="text" placeholder="Nombre" v-model="userData.name" required>
-                <input type="text" placeholder="Direccion" v-model="userData.address" required>
+                <input type="text" placeholder="Direccion" v-model="userData.address" :disabled="userData.delivery == false" v-bind:class="{disabled:userData.delivery == false}">
                 <input type="tel" placeholder="Telefono" v-model="userData.phone" required>
                 <input type="email" placeholder="Correo" v-model="userData.email" required>
                 <div class="delivery">
