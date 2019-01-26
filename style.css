@@ -130,6 +130,7 @@ body {
     justify-content: center;
     align-content: center;
     /* max-width: 620px; */
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -146,6 +147,7 @@ body {
     /* height: 40px; */
     max-width: 438px;
     /* min-height: 120px; */
+    max-height: 100px;
 }
 
 .filter {
