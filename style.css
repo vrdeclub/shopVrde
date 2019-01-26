@@ -78,6 +78,7 @@ body {
     align-items: center;
     max-width: 320px;
     height: 50px;
+    margin-bottom: 10px;
 }
 
 .main .search.fixed {
@@ -144,7 +145,7 @@ body {
     flex-wrap: wrap;
     /* height: 40px; */
     max-width: 438px;
-    min-height: 150px;
+    /* min-height: 120px; */
 }
 
 .filter {
