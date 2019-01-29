@@ -13,6 +13,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+
+.aviso {
+    max-width: 320px;
+    padding: 14px 24px;
+    background: #fe5046;
+    color: white;
+    font-size: 14px;
+    font-family: Ubuntu;
+    line-height: 18px;
+    margin-bottom: 10px;
+    border: 1px solid red;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -147,7 +160,7 @@ body {
     /* height: 40px; */
     max-width: 438px;
     /* min-height: 120px; */
-    max-height: 100px;
+    /* max-height: 100px; */
 }
 
 .filter {

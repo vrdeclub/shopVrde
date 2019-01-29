@@ -55,6 +55,8 @@ let products = [
     { name: 'Limon (Kg)', amount: 0, url: 'images/limon.jpg', type: 'fruit', price: 70 },
     { name: 'Tarta Kale y Champi', amount: 0, url: 'images/tartakalechampi.jpg', type: 'meal', price: 90 },
     { name: 'Budin Banana y Pera', amount: 0, url: 'images/budinbananapera.jpg', type: 'meal', price: 80 },
+    { name: 'Hamburguesa Vegana de lenteja, remolacha agro y mijo (x3 $100)', amount: 0, url: 'images/hamburguesavegana.jpg', type: 'meal', price: 100 },
+    { name: 'Milanesa de Berenjena (x6 $150)', amount: 0, url: 'images/milanesaberenjena.jpg', type: 'meal', price: 80 },
     { name: 'Tortilla Vegana', amount: 0, url: 'images/tortillavegana.jpg', type: 'meal', price: 80 }
 
 ]
