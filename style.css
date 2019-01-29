@@ -528,11 +528,13 @@ body {
     margin-right: -10px;
     width: 160px;
     font-size: 13px;
+    padding-right: 20px;
 }
 
 .main .cart .item .amount {
     margin-right: 5px;
-    width: 70px;
+    /* width: 70px; */
+    /* min-width: 70px; */
     font-size: 16px;
 }
 

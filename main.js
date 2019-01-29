@@ -61,11 +61,7 @@ let products = [
 
 ]
 
-products.sort(function (a, b) {
-    var textA = a.name.toUpperCase();
-    var textB = b.name.toUpperCase();
-    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-});
+
 
 
 var app = new Vue({
@@ -211,6 +207,7 @@ var app = new Vue({
             });
         },
         setVisibility: function (type) {
+            this.search = "";
             for (var t in this.active) {
                 this.active[t].status = false;
             }
@@ -224,11 +221,22 @@ var app = new Vue({
     computed: {
         filteredItems: function () {
             var self = this;
-            return this.productList.filter(function (item) {
-                return item.name.toLowerCase().indexOf(self.search.toLowerCase()) >= 0
-                    && self.active[item.type].status == true;
+            var newList = this.productList.filter(function (item) {
+                if (self.search != "") {
+                    for (var t in self.active) {
+                        self.active[t].status = false;
+                    }
+                }
+                return item.name.toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
+            });
+            if (self.search != "") {
+                for (var i in newList) {
+                    self.active[newList[i].type].status = true;
+                }
+            }
+            return newList.filter(function (item) {
+                return self.active[item.type].status == true;
             });
         }
-
     }
 })
