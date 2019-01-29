@@ -222,16 +222,22 @@ var app = new Vue({
         filteredItems: function () {
             var self = this;
             var newList = this.productList.filter(function (item) {
-                if (self.search != "") {
-                    for (var t in self.active) {
-                        self.active[t].status = false;
-                    }
-                }
                 return item.name.toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
             });
             if (self.search != "") {
+                for (var t in this.active) {
+                    this.active[t].status = false;
+                }
                 for (var i in newList) {
                     self.active[newList[i].type].status = true;
+                }
+            }
+            if (self.search == "") {
+                for (var t in this.active) {
+                    if(this.active[t].status == true) {}
+                    else {
+                        this.active[t].status = false;
+                    }
                 }
             }
             return newList.filter(function (item) {
