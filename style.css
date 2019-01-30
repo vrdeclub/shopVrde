@@ -79,9 +79,9 @@ body {
 }
 
 .main .search {
-    background-color: #333;
+    background-color: #6b6b6b;
     height: 20px;
-    padding: 16px 20px;
+    padding: 15px;
     display: flex;
     flex-direction: row;
     /* margin-top: 10px; */
@@ -89,7 +89,7 @@ body {
     /* margin-bottom: 10px; */
     justify-content: center;
     align-items: center;
-    max-width: 320px;
+    /* max-width: 320px; */
     height: 50px;
     margin-bottom: 10px;
 }
@@ -106,7 +106,10 @@ body {
 
 .search input {
     flex: 1;
-    max-width: 150px;
+    /* max-width: 150px; */
+    padding: 5px;
+    padding-left: 9px;
+    color: #f4f4f4;
 }
 
 .filterProducts {
@@ -129,6 +132,7 @@ body {
     padding-right: 10px;
     flex: 1;
     max-width: 110px;
+    min-width: 110px;
 }
 
 .main .search img.searchLabel {
@@ -144,7 +148,7 @@ body {
     align-content: center;
     /* max-width: 620px; */
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .main .header .contain {
@@ -161,6 +165,27 @@ body {
     max-width: 438px;
     /* min-height: 120px; */
     /* max-height: 100px; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.headerDisplay {
+    /* height: 90px; */
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.headerDisplay:after {
+    background-image:url("images/download.jpg")
+}
+.veggieDisplay {
+    /* position: absolute; */
+    ima: 0;
+    /* max-width: 530px; */
 }
 
 .filter {
@@ -171,22 +196,23 @@ body {
     height: 45px;
     flex: 1;
     /* margin-bottom: 10px; */
-    max-width: 320px;
+    /* max-width: 320px; */
 }
 
 .filter .button {
     padding: 13px;
-    background-color: #333333;
-    color: #999999;
+    background-color: #f3f3f3;
+    color: #bebebe;
     display: flex;
     justify-content: center;
     text-align: center;
     /* margin: 5px; */
     cursor: pointer;
-    max-width: 100px;
+    max-width: 146px;
     margin-bottom: 0px;
     flex: 1;
     padding-top: 15px;
+    font-weight: 100;
 }
 
 .filter .button.active {
@@ -346,6 +372,7 @@ body {
     position: relative;
     /* top: 9px; */
     margin: 10px;
+    margin-top: 30px;
 }
 
 .main .products {
@@ -354,7 +381,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     align-content: flex-start;
-    margin-top: 10px;
+    margin-top: 0px;
     flex-wrap: wrap;
 }
 
@@ -368,6 +395,7 @@ body {
     margin: 5px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 10px;
+    margin-top: 0px;
 }
 
 .main .products .item .productImage {
@@ -402,7 +430,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    background-color: #fe5047;
+    background-color: #00cc65;
     height: 40px;
     color: white;
     font-size: 35px;
@@ -415,7 +443,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    background-color: #00cc65;
+    background-color: #fe5046;
     height: 40px;
     color: white;
     font-size: 35px;
