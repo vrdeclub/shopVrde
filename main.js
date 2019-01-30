@@ -11,58 +11,57 @@ let discounts = [
 ]
 
 let products = [
-    { name: 'Tomate (Kg)', amount: 0, url: 'images/tomate.jpg', type: 'veggie' },
-    { name: 'Tomate Cherry (500g)', amount: 0, url: 'images/tomatecherry.jpg', type: 'veggie' },
     { name: 'Acelga (Kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
-    { name: 'Zanahoria (Kg)', amount: 0, url: 'images/zanahoria.jpg', type: 'veggie' },
-    { name: 'Remolacha (Kg)', amount: 0, url: 'images/remolacha.jpg', type: 'veggie' },
-    { name: 'Rucula (500g)', amount: 0, url: 'images/rucula.jpg', type: 'veggie' },
-    { name: 'Papa (Kg)', amount: 0, url: 'images/papa.jpg', type: 'veggie' },
-    { name: 'Choclo x 3', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
-    { name: 'Morron (Kg)', amount: 0, url: 'images/morron.jpg', type: 'veggie' },
-    { name: 'Perejil (400g)', amount: 0, url: 'images/perejil.jpg', type: 'veggie' },
-    { name: 'Aji Vinagre (1/2 Kg)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
-    { name: 'Nabo (Kg)', amount: 0, url: 'images/nabo.jpg', type: 'veggie' },
-    { name: 'Repollo (Kg)', amount: 0, url: 'images/repollo.jpg', type: 'veggie' },
-    { name: 'Apio (Kg)', amount: 0, url: 'images/apio.jpg', type: 'veggie' },
-    { name: 'Zuchinni (Kg)', amount: 0, url: 'images/zuchinni.jpg', type: 'veggie' },
-    { name: 'Pack Choi (Kg)', amount: 0, url: 'images/packchoi.jpg', type: 'veggie' },
-    { name: 'Pepino (Kg)', amount: 0, url: 'images/pepino.jpg', type: 'veggie' },
-    { name: 'Verdeo (500g)', amount: 0, url: 'images/verdeo.jpg', type: 'veggie' },
-    { name: 'Puerro (PAQ)', amount: 0, url: 'images/puerro.jpg', type: 'veggie' },
-    { name: 'Anco (Kg)', amount: 0, url: 'images/anco.jpg', type: 'veggie' },
-    { name: 'Kale Verde (500g)', amount: 0, url: 'images/kale.jpg', type: 'veggie' },
-    { name: 'Kale Morado (500g)', amount: 0, url: 'images/kalemorado.jpg', type: 'veggie' },
-    { name: 'Lima (1/2 Kg)', amount: 0, url: 'images/lima.jpg', type: 'veggie' },
-    { name: 'Rabanito (500g)', amount: 0, url: 'images/rabanito.jpg', type: 'veggie' },
-    { name: 'Radicheta (500g)', amount: 0, url: 'images/radicheta.jpg', type: 'veggie' },
-    { name: 'Brocoli (Kg)', amount: 0, url: 'images/brocoli.jpg', type: 'veggie' },
-    { name: 'Espinaca (500g)', amount: 0, url: 'images/espinaca.jpg', type: 'veggie' },
     { name: 'Achicoria (500g)', amount: 0, url: 'images/achicoria.jpg', type: 'veggie' },
-    { name: 'Lechuga (1kg)', amount: 0, url: 'images/lechuga.jpg', type: 'veggie' },
-    { name: 'Hinojo (Kg)', amount: 0, url: 'images/hinojo.jpg', type: 'veggie' },
-    { name: 'Cilantro (Kg)', amount: 0, url: 'images/cilantro.jpg', type: 'veggie' },
-    { name: 'Zapallito (Kg)', amount: 0, url: 'images/zapallito.jpg', type: 'veggie' },
+    { name: 'Aji Vinagre (1/2 Kg)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
     { name: 'Albahaca (x2)', amount: 0, url: 'images/albahaca.jpg', type: 'veggie' },
+    { name: 'Anco (Kg)', amount: 0, url: 'images/anco.jpg', type: 'veggie' },
+    { name: 'Apio (Kg)', amount: 0, url: 'images/apio.jpg', type: 'veggie' },
     { name: 'Banana (Kg)', amount: 0, url: 'images/banana.jpg', type: 'fruit', price: 55 },
-    { name: 'Uva (Kg)', amount: 0, url: 'images/uva.jpg', type: 'fruit', price: 100 },
-    { name: 'Melon (Kg)', amount: 0, url: 'images/melon.jpg', type: 'fruit', price: 80 },
-    { name: 'Pera (Kg)', amount: 0, url: 'images/pera.jpg', type: 'fruit', price: 60 },
+    { name: 'Brocoli (Kg)', amount: 0, url: 'images/brocoli.jpg', type: 'veggie' },
+    { name: 'Choclo x 3', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
+    { name: 'Cilantro (Kg)', amount: 0, url: 'images/cilantro.jpg', type: 'veggie' },
     { name: 'Durazno (Kg)', amount: 0, url: 'images/durazno.jpg', type: 'fruit', price: 70 },
-    { name: 'Pelon (Kg)', amount: 0, url: 'images/pelon.jpg', type: 'fruit', price: 70 },
+    { name: 'Espinaca (500g)', amount: 0, url: 'images/espinaca.jpg', type: 'veggie' },
+    { name: 'Hinojo (Kg)', amount: 0, url: 'images/hinojo.jpg', type: 'veggie' },
+    { name: 'Kale Morado (500g)', amount: 0, url: 'images/kalemorado.jpg', type: 'veggie' },
+    { name: 'Kale Verde (500g)', amount: 0, url: 'images/kale.jpg', type: 'veggie' },
+    { name: 'Lechuga (1kg)', amount: 0, url: 'images/lechuga.jpg', type: 'veggie' },
+    { name: 'Lima (1/2 Kg)', amount: 0, url: 'images/lima.jpg', type: 'veggie' },
+    { name: 'Limon (Kg)', amount: 0, url: 'images/limon.jpg', type: 'fruit', price: 70 },
+    { name: 'Melon (Kg)', amount: 0, url: 'images/melon.jpg', type: 'fruit', price: 80 },
     { name: 'Mango (Kg)', amount: 0, url: 'images/mango.jpg', type: 'fruit', price: 80 },
     { name: 'Maracuya (Kg)', amount: 0, url: 'images/maracuya.jpg', type: 'fruit', price: 100 },
-    { name: 'Limon (Kg)', amount: 0, url: 'images/limon.jpg', type: 'fruit', price: 70 },
-    { name: 'Tarta Kale y Champi', amount: 0, url: 'images/tartakalechampi.jpg', type: 'meal', price: 90 },
+    { name: 'Morron (Kg)', amount: 0, url: 'images/morron.jpg', type: 'veggie' },
+    { name: 'Nabo (Kg)', amount: 0, url: 'images/nabo.jpg', type: 'veggie' },
+    { name: 'Pack Choi (Kg)', amount: 0, url: 'images/packchoi.jpg', type: 'veggie' },
+    { name: 'Papa (Kg)', amount: 0, url: 'images/papa.jpg', type: 'veggie' },
+    { name: 'Pelon (Kg)', amount: 0, url: 'images/pelon.jpg', type: 'fruit', price: 70 },
+    { name: 'Pepino (Kg)', amount: 0, url: 'images/pepino.jpg', type: 'veggie' },
+    { name: 'Pera (Kg)', amount: 0, url: 'images/pera.jpg', type: 'fruit', price: 60 },
+    { name: 'Perejil (400g)', amount: 0, url: 'images/perejil.jpg', type: 'veggie' },
+    { name: 'Puerro (PAQ)', amount: 0, url: 'images/puerro.jpg', type: 'veggie' },
+    { name: 'Rabanito (500g)', amount: 0, url: 'images/rabanito.jpg', type: 'veggie' },
+    { name: 'Radicheta (500g)', amount: 0, url: 'images/radicheta.jpg', type: 'veggie' },
+    { name: 'Repollo (Kg)', amount: 0, url: 'images/repollo.jpg', type: 'veggie' },
+    { name: 'Remolacha (Kg)', amount: 0, url: 'images/remolacha.jpg', type: 'veggie' },
+    { name: 'Rucula (500g)', amount: 0, url: 'images/rucula.jpg', type: 'veggie' },
+    { name: 'Tomate (Kg)', amount: 0, url: 'images/tomate.jpg', type: 'veggie' },
+    { name: 'Tomate Cherry (500g)', amount: 0, url: 'images/tomatecherry.jpg', type: 'veggie' },
+    { name: 'Uva (Kg)', amount: 0, url: 'images/uva.jpg', type: 'fruit', price: 100 },
+    { name: 'Verdeo (500g)', amount: 0, url: 'images/verdeo.jpg', type: 'veggie' },
+    { name: 'Zanahoria (Kg)', amount: 0, url: 'images/zanahoria.jpg', type: 'veggie' },
+    { name: 'Zapallito (Kg)', amount: 0, url: 'images/zapallito.jpg', type: 'veggie' },
+    { name: 'Zuchinni (Kg)', amount: 0, url: 'images/zuchinni.jpg', type: 'veggie' },
     { name: 'Budin Banana y Pera', amount: 0, url: 'images/budinbananapera.jpg', type: 'meal', price: 80 },
     { name: 'Hamburguesa Vegana de lenteja, remolacha agro y mijo (x3)', amount: 0, url: 'images/hamburguesavegana.jpg', type: 'meal', price: 100 },
     { name: 'Milanesa de Berenjena (x6)', amount: 0, url: 'images/milanesaberenjena.jpg', type: 'meal', price: 150 },
+    { name: 'Tarta Kale y Champi', amount: 0, url: 'images/tartakalechampi.jpg', type: 'meal', price: 90 },
     { name: 'Tortilla Vegana', amount: 0, url: 'images/tortillavegana.jpg', type: 'meal', price: 80 }
 
 ]
 
-
-
+products = products.sort()
 
 var app = new Vue({
     el: '#app',
@@ -221,7 +220,7 @@ var app = new Vue({
     computed: {
         filteredItems: function () {
             var self = this;
-            var newList = this.productList.filter(function (item) {
+            var newList = this.productList.sort().filter(function (item) {
                 return item.name.toLowerCase().indexOf(self.search.toLowerCase()) >= 0;
             });
             if (self.search != "") {
@@ -242,7 +241,7 @@ var app = new Vue({
             }
             return newList.filter(function (item) {
                 return self.active[item.type].status == true;
-            });
+            }).sort();
         }
     }
 })
