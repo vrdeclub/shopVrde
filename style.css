@@ -80,7 +80,7 @@ body {
 }
 
 .main .search {
-    background-color: #6b6b6b;
+    background-color: #333333;
     height: 20px;
     padding: 15px;
     display: flex;
@@ -276,12 +276,15 @@ body {
 .discounts {
     margin: 0px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     /* justify-content: flex-start; */
     /* align-items: flex-start; */
     /* flex: 1; */
-    padding: 10px;
+    padding: 20px 20px;
     min-width: 240px;
+    background: #ffffffd4;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .discountTitle {
@@ -317,7 +320,7 @@ body {
 }
 
 .equals {
-    margin: 0px 10px;
+    /* margin: 0px 10px; */
     max-width: 10px;
     padding-top: 0px;
 }
@@ -331,7 +334,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     color: #333333;
-    width: 110px;
+    width: 81px;
+    /* margin-right: 10px; */
 }
 
 .discounts .amount {
@@ -401,6 +405,7 @@ body {
 .main .products .item .title {
     color: white;
     padding: 10px;
+    font-size: 12px;
 }
 
 .main .products .item .price {
@@ -424,7 +429,7 @@ body {
     align-items: center;
     flex-grow: 1;
     background-color: #00cc65;
-    height: 40px;
+    height: 35px;
     color: white;
     font-size: 35px;
     cursor: pointer;
@@ -437,7 +442,7 @@ body {
     align-items: center;
     flex-grow: 1;
     background-color: #fe5046;
-    height: 40px;
+    height: 35px;
     color: white;
     font-size: 35px;
     cursor: pointer;
@@ -446,7 +451,7 @@ body {
 
 .main .products .item .amount {
     width: 50px;
-    height: 40px;
+    height: 35px;
     display: flex;
     align-items: center;
     align-content: center;
@@ -476,8 +481,12 @@ body {
     justify-content: flex-start;
     align-content: center;
     /* max-width: 310px; */
+    padding: 4%;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    background: linear-gradient( to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.45) ),url(../images/download.jpg);
+    background-position: 0px;
+    background-size: cover;
 }
 
 .main .cart .head .schedule {
@@ -486,9 +495,11 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     /* flex: 1; */
-    padding: 10px;
+    padding: 20px;
     min-width: 240px;
-    max-width: 300px;
+    /* max-width: 300px; */
+    background: #ffffffd4;
+    width: 100%;
 }
 
 .main .cart .head .schedule .title {
@@ -509,7 +520,7 @@ body {
     padding: 2px;
     justify-content: flex-start;
     color: #333333;
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
     line-height: 20px;
 }
 
@@ -532,9 +543,10 @@ body {
     margin-top: 5px;
     font-size: 16px;
     position: relative;
-    left: 10px;
+    left: 3px;
     /* bottom: 6px; */
     top: 1px;
+    margin-right: 20px;
 }
 
 .main .cart .item {
