@@ -378,7 +378,7 @@ body {
 
 .main .products {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row;
     align-items: flex-start;
     align-content: flex-start;
