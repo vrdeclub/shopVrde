@@ -285,6 +285,7 @@ body {
     background: #ffffffd4;
     width: 100%;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .discountTitle {
@@ -474,6 +475,7 @@ body {
     color: #555555;
     position: relative;
     /* margin-bottom: 40px; */
+    overflow: hidden;
 }
 
 .main .cart .head {
@@ -484,9 +486,12 @@ body {
     padding: 4%;
     flex-wrap: wrap;
     margin-bottom: 10px;
-    background: linear-gradient( to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.45) ),url(../images/download.jpg);
+    background: linear-gradient( to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.47) ),url(../images/download.jpg);
     background-position: 0px;
     background-size: cover;
+    margin-top: 0px;
+    position: relative;
+    bottom: 4px;
 }
 
 .main .cart .head .schedule {
