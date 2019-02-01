@@ -81,6 +81,7 @@ body {
 
 .main .search {
     background-color: #333333;
+    opacity: 0.9;
     height: 20px;
     padding: 15px;
     display: flex;
@@ -594,12 +595,12 @@ body {
 }
 
 .main .cart .confirm {
-    width: 200px;
+    width: 280px;
     display: flex;
     text-align: center;
     background-color: #00cc65;
     justify-content: center;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     color: white;
 }
