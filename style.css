@@ -151,7 +151,7 @@ body {
     /* max-width: 620px; */
     align-items: center;
     margin-bottom: 0px;
-    background: linear-gradient(      to bottom,      rgba(255, 255, 255, 0),      rgb(255, 255, 255)    ),url(../images/download.jpg);
+    /* background: linear-gradient(      to bottom,      rgba(255, 255, 255, 0.78),      rgb(255, 255, 255)    ),url(../images/download.jpg); */
     /* margin-left: 5px; */
     /* margin-right: 5px; */
     margin-bottom: 30px;
@@ -189,7 +189,7 @@ body {
 
 .filter .button {
     padding: 13px;
-    background-color: #ffffffdb;
+    background-color: #9e9e9e33;
     color: #6b6b6b;
     display: flex;
     justify-content: center;
