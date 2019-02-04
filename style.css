@@ -81,7 +81,7 @@ body {
 
 .main .search {
     background-color: #333333;
-    opacity: 0.9;
+    /* opacity: 0.9; */
     height: 20px;
     padding: 15px;
     display: flex;
@@ -154,7 +154,8 @@ body {
     /* background: linear-gradient(      to bottom,      rgba(255, 255, 255, 0.78),      rgb(255, 255, 255)    ),url(../images/download.jpg); */
     /* margin-left: 5px; */
     /* margin-right: 5px; */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .main .header .contain {
@@ -165,7 +166,7 @@ body {
     /* align-items: flex-start; */
     /* margin-left: 20px; */
     position: relative;
-    top: 10px;
+    /* top: 28px; */
     flex-wrap: wrap;
     /* height: 40px; */
     max-width: 438px;
@@ -374,7 +375,7 @@ body {
     margin: 10px;
     margin-top: 30px;
     margin: 0px 20px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .main .products {
@@ -493,7 +494,7 @@ body {
     padding: 4%;
     flex-wrap: wrap;
     margin-bottom: 10px;
-    background: linear-gradient( to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0) ),url(../images/download.jpg);
+    /* background: linear-gradient( to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0) ),url(../images/download.jpg); */
     background-position: 0px;
     background-size: cover;
     margin-top: 0px;
