@@ -123,9 +123,6 @@ var app = new Vue({
             else if (this.cartItems == 3) { this.price = 50 }
             else if (this.cartItems == 4) { this.price = 47.50 }
             else if (this.cartItems >= 5 && this.cartItems) { this.price = 45 }
-            //else if (this.cartItems >= 60 && this.cartItems <= 199) { this.price = 41 }
-            //else if (this.cartItems >= 200 && this.cartItems <= 249) { this.price = 36 }
-            //else { this.price = 32 }
 
             for (var item in this.cart) {
                 if (this.cart[item].type == 'fruit') {
@@ -225,6 +222,9 @@ var app = new Vue({
         },
         toggleActive: function (e) {
             e.target.classList.add('active');
+        },
+        scrollTop: function () {
+            window.scrollTo(0, 0);
         }
 
     },
