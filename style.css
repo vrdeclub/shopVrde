@@ -324,7 +324,17 @@ body {
     color: #00cc65;
     font-size: 25px;
 }
-.fruitCart .fruits, .mealCart .subtitle {
+.mealCart .subtitle {
+    /* padding: 10px; */
+    background: #333;
+    color: #00cc65;
+    font-size: 14px;
+    padding-top: 10px;
+    color: #ffffff99;
+    margin-left:5px
+}
+
+.fruitCart .fruitCart .subtitle {
     /* padding: 10px; */
     background: #333;
     color: #00cc65;
@@ -332,6 +342,7 @@ body {
     padding-top: 10px;
     color: #ffffff99;
 }
+
 
 .equals {
     /* margin: 0px 10px; */
