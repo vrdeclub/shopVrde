@@ -301,7 +301,6 @@ body {
     width: 100%;
     text-align: left;
     margin-bottom: 10px;
-    width: 200px;
 }
 
 .discountTitle .subtitle {
@@ -325,11 +324,20 @@ body {
     color: #00cc65;
     font-size: 25px;
 }
+.fruitCart .fruits, .mealCart .subtitle {
+    /* padding: 10px; */
+    background: #333;
+    color: #00cc65;
+    font-size: 14px;
+    padding-top: 10px;
+    color: #ffffff99;
+}
 
 .equals {
     /* margin: 0px 10px; */
     max-width: 10px;
     padding-top: 0px;
+    padding: 0px 20px;
 }
 
 .discounts .amount {
@@ -625,12 +633,13 @@ body {
 .footer {
     width: 100%;
     padding: 20px;
-    color: #333333;
+    color: white;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     margin-top: 30px;
+    background-color: #333;
 }
 
 .footer .footerLogo {
@@ -648,6 +657,7 @@ body {
     /* padding: 10px; */
     position: relative;
     top: 3px;
+    color: #ffffffbf;
 }
 
 .footer .social .footerLogo {
@@ -661,6 +671,8 @@ body {
     position: relative;
     top: 4px;
     margin-right: 8px;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
 }
 
 .footer .social .fb {
@@ -669,6 +681,8 @@ body {
     top: 3px;
     margin-right: 7px;
     left: 2px;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
 }
 
 .footer .social .link {
@@ -701,6 +715,8 @@ body {
     height: 20px;
     top: 4px;
     margin-right: 5px;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
 }
 
 .footer .zones {

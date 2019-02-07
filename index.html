@@ -46,13 +46,19 @@
         <div class="cart">
             <div class="head">
                 <div class="discounts">
-                    <div class="discountTitle">Precios por Unidad
-                        <div class="subtitle">Estos descuentos se aplican solamente a las verduras.</div>
-                    </div>
-                    <div class="amount" v-for="item in discounts">
-                        <div class="amount">{{item.amount}}</div>
-                        <div class="equals"> = </div>
-                        <div class="price">${{item.price}}</div>
+                    <div class="discountTitle">Precios de las verduras.
+                        <div class="subtitle">
+                            TODAS TIENEN EL MISMO PRECIO.
+                            <br />
+                            Cuantos más kgs o paquetes lleves, menos pagas!.
+                            <br />
+                            <br />
+                            Llevando 1kg o paq. $55 <br />
+                            Llevando 2kg o 2paqs. $52,50 cu. <br />
+                            Llevando 3kg o 3 paqs. $50 cu. <br />
+                            Llevando 4kg o 4 paqs. $47,50 cu. <br />
+                            Llevando 5kg o 5paqs. $45 cu.!! <br />
+                        </div>
                     </div>
                 </div>
                 <div class="schedule">
@@ -82,7 +88,9 @@
                 </div>
             </div>
             <div class="mealCart" v-if="cartHas.meal == true">
-                <div class="fruits">Comidas</div>
+                <div class="fruits">Comidas
+                    <div class="subtitle">Realizadas con todas verduras y frutas agroecologicas</div>
+                </div>
                 <div class="item" v-for="item in cart" v-if="item.type == 'meal'">
                     <div class="name">{{item.name}}</div>
                     <div class="amount">${{ item.price }} * {{item.amount}}</div>
@@ -112,7 +120,7 @@
                 <a class="reload" href="/">Realizar otro pedido</a>
             </div>
             <div class="footer">
-                <img src="images/logoMainIcon.jpg" alt="" class="footerLogo">
+                <img src="images/logoMainIconOnly.png" alt="" class="footerLogo">
                 <div class="social">
                     <div class="link">
                         <img src="images/fb.png" alt="" class="fb">
