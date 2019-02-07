@@ -209,7 +209,6 @@ var app = new Vue({
                     console.log(error)
                 } else {
                     self.saleComplete = true;
-                    //window.location.reload();
                 }
             });
         },
