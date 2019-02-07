@@ -561,11 +561,11 @@ body {
 }
 
 .main .cart .price {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 6px;
+    font-size: 14px;
     position: relative;
-    left: 3px;
+    left: 17px;
     /* bottom: 6px; */
     top: 1px;
     margin-right: 20px;
