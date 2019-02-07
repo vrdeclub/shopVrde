@@ -22,9 +22,6 @@
                         Que buscas?
                     </div>
                     <input v-on:input="scrollTop()" type="text" v-model="search" placeholder="Variedad">
-                    <div class="searchButton">
-                        <img src="./images/search.png" alt="">
-                    </div>
                 </div>
                 <div class="filter">
                     <a class="button" v-bind:class="{active : active['veggie'].status}" @click="setVisibility('veggie');">Verdura</a>
