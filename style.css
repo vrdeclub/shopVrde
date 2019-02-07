@@ -1,5 +1,3 @@
-/* CSS reset with box-sizing fix */
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -13,9 +11,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
-
 .aviso {
-    /* max-width: 320px; */
     padding: 14px 24px;
     background: #fe5046;
     color: white;
@@ -24,7 +20,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     line-height: 18px;
     margin-bottom: 10px;
     border: 1px solid red;
-    /* text-align: center; */
 }
 
 html {
@@ -81,17 +76,13 @@ body {
 
 .main .search {
     background-color: #333333;
-    /* opacity: 0.9; */
     height: 20px;
     padding: 15px;
     display: flex;
     flex-direction: row;
-    /* margin-top: 10px; */
     flex: 1;
-    /* margin-bottom: 10px; */
     justify-content: center;
     align-items: center;
-    /* max-width: 320px; */
     height: 50px;
     margin-bottom: 10px;
 }
@@ -130,7 +121,6 @@ body {
     align-items: center;
     height: 18px;
     font-family: 'Ubuntu', sans-serif;
-    /* width: 118px; */
     padding-right: 10px;
     flex: 1;
     max-width: 110px;
@@ -148,12 +138,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    /* max-width: 620px; */
     align-items: center;
     margin-bottom: 0px;
-    /* background: linear-gradient(      to bottom,      rgba(255, 255, 255, 0.78),      rgb(255, 255, 255)    ),url(../images/download.jpg); */
-    /* margin-left: 5px; */
-    /* margin-right: 5px; */
     margin-bottom: 20px;
     margin-top: 10px;
 }
@@ -163,15 +149,9 @@ body {
     justify-content: center;
     flex-direction: row;
     align-items: flex-end;
-    /* align-items: flex-start; */
-    /* margin-left: 20px; */
     position: relative;
-    /* top: 28px; */
     flex-wrap: wrap;
-    /* height: 40px; */
     max-width: 438px;
-    /* min-height: 120px; */
-    /* max-height: 100px; */
     margin-top: 10px;
     margin-bottom: 20px;
     margin: 10px;
@@ -184,8 +164,6 @@ body {
     font-family: 'Ubuntu', sans-serif;
     height: 45px;
     flex: 1;
-    /* margin-bottom: 10px; */
-    /* max-width: 320px; */
 }
 
 .filter .button {
@@ -195,7 +173,6 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    /* margin: 5px; */
     cursor: pointer;
     max-width: 146px;
     margin-bottom: 0px;
@@ -203,6 +180,7 @@ body {
     padding-top: 15px;
     font-weight: 100;
 }
+
 .filter .button:nth-child(2) {
     margin: 0px 10px;
 }
@@ -210,7 +188,6 @@ body {
 .filter .button.active {
     color: white;
     background-color: #00cc65;
-    /* box-shadow: 0px 2px 10px #33333345; */
 }
 
 .userForm {
@@ -241,14 +218,13 @@ body {
 .userForm input.disabled {
     border-width: 0px;
     padding: 5px;
-    /* margin-top :4px; */
     font-size: 14px;
     margin: 6px;
     min-width: 210px;
     background-color: #f0f0f0;
     flex: 1;
-    opacity:0.3;
-    position:relative;
+    opacity: 0.3;
+    position: relative;
 }
 
 .delivery {
@@ -279,14 +255,9 @@ body {
 .discounts {
     margin: 0px;
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: flex-start; */
-    /* align-items: flex-start; */
-    /* flex: 1; */
     padding: 20px 20px;
     padding-top: 20px;
     padding-bottom: 10px;
-    /* padding-top: 0px; */
     min-width: 240px;
     background: #ffffffd4;
     width: 100%;
@@ -317,6 +288,7 @@ body {
     color: white;
     padding-bottom: 20px;
     min-width: 90%;
+    max-width: 90%;
 }
 
 .fruitCart .fruits, .mealCart .fruits {
@@ -325,18 +297,17 @@ body {
     color: #00cc65;
     font-size: 25px;
 }
+
 .mealCart .subtitle {
-    /* padding: 10px; */
     background: #333;
     color: #00cc65;
     font-size: 14px;
     padding-top: 10px;
     color: #ffffff99;
-    margin-left:5px
+    margin-left: 5px
 }
 
 .fruitCart .fruitCart .subtitle {
-    /* padding: 10px; */
     background: #333;
     color: #00cc65;
     font-size: 14px;
@@ -344,12 +315,12 @@ body {
     color: #ffffff99;
 }
 
-
 .equals {
-    /* margin: 0px 10px; */
     max-width: 10px;
     padding-top: 0px;
     padding: 0px 20px;
+    flex: 2;
+    text-align: center;
 }
 
 .discounts .amount {
@@ -357,22 +328,16 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
     padding: 3px;
-    /* padding-right: 10px; */
     justify-content: flex-start;
     align-items: center;
     color: #333333;
     width: 81px;
-    /* margin-right: 10px; */
 }
 
-.discounts .amount {
-    /* width: 110px; */
-    /* text-align: center; */
-}
+.discounts .amount {}
 
 .discounts .price {
     width: 240px;
-    /* text-align: center; */
 }
 
 .main .header .title {
@@ -391,11 +356,9 @@ body {
 .main .header .logo {
     height: 134px;
     position: relative;
-    /* top: 9px; */
     margin: 10px;
     margin-top: 30px;
     margin: 0px 20px;
-    /* margin-top: 20px; */
 }
 
 .main .products {
@@ -434,7 +397,6 @@ body {
     color: white;
     padding: 10px;
     font-size: 11px;
-    /* height: 50px; */
     width: 100%;
     line-height: 15px;
 }
@@ -498,24 +460,19 @@ body {
     flex-direction: column;
     margin-top: 0px;
     flex-wrap: wrap;
-    /* padding: 10px; */
     font-family: 'Ubuntu', sans-serif;
     margin-top: 20px;
-    /* background-color: #333; */
     color: #555555;
     position: relative;
-    /* margin-bottom: 40px; */
     overflow: hidden;
 }
 
 .main .cart .head {
     display: flex;
     justify-content: flex-start;
-    /* max-width: 310px; */
     padding: 4%;
     flex-wrap: wrap;
     margin-bottom: 10px;
-    /* background: linear-gradient( to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0) ),url(../images/download.jpg); */
     background-position: 0px;
     background-size: cover;
     margin-top: 0px;
@@ -525,21 +482,11 @@ body {
 }
 
 .main .cart .head .schedule {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: flex-start; */
-    /* align-items: flex-start; */
-    /* flex: 1; */
     padding: 20px;
-    /* min-width: 240px; */
-    /* max-width: 300px; */
-    /* background: #ffffffd4; */
-    /* width: 100%; */
 }
 
 .main .cart .head .schedule .title {
     display: flex;
-    /* flex: 1; */
     font-family: 'Ubuntu', sans-serif;
     font-size: 25px;
     color: #00cc65;
@@ -555,7 +502,6 @@ body {
     padding: 2px;
     justify-content: flex-start;
     color: #333333;
-    /* margin-bottom: 4px; */
     line-height: 20px;
 }
 
@@ -565,6 +511,7 @@ body {
     color: white;
     padding-bottom: 20px;
     min-width: 90%;
+    max-width: 90%;
 }
 
 .main .cart .veggieCart .veggies {
@@ -580,7 +527,6 @@ body {
     font-size: 14px;
     position: relative;
     left: 15px;
-    /* bottom: 6px; */
     top: 1px;
     margin-right: 20px;
     color: #ffffff99;
@@ -601,21 +547,19 @@ body {
     width: 160px;
     font-size: 13px;
     padding-right: 20px;
+    flex: 1;
 }
 
 .main .cart .item .amount {
     margin-right: 5px;
-    /* width: 70px; */
-    /* min-width: 70px; */
     font-size: 16px;
-    /* align-items: center; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-content: center; */
+    text-align: center;
 }
 
 .main .cart .item .total {
     color: #00cc70;
+    flex: 2;
+    /* text-align: center; */
 }
 
 .main .cart .cartTotal {
@@ -640,7 +584,6 @@ body {
     max-width: 100%;
     padding: 30px;
     width: 100%;
-    /* position: fixed; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -666,16 +609,12 @@ body {
 .footer .footerLogo {
     height: 64px;
     position: relative;
-    /* top: 27px; */
     margin-right: 20px;
 }
 
 .footer .social {
     display: flex;
     flex-direction: column;
-    /* position: relative; */
-    /* max-width: 240px; */
-    /* padding: 10px; */
     position: relative;
     top: 3px;
     color: #ffffffbf;
@@ -753,4 +692,6 @@ body {
     margin-right: 5px;
 }
 
-[v-cloak] { display: none; }
+[v-cloak] {
+    display: none;
+}
