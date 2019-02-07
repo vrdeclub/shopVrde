@@ -21,6 +21,7 @@ let products = [
     { name: 'Banana (Kg)', amount: 0, url: 'images/banana.jpg', type: 'fruit', price: 55 },
     // { name: 'Brocoli (Kg)', amount: 0, url: 'images/brocoli.jpg', type: 'veggie' },
     { name: 'Cebolla (Kg)', amount: 0, url: 'images/cebolla.jpg', type: 'veggie' },
+    { name: 'Chucrut (200 cm2)', amount: 0, url: 'images/chucrut.jpg', type: 'veggie' },
     // { name: 'Cilantro (Kg)', amount: 0, url: 'images/cilantro.jpg', type: 'veggie' },
     { name: 'Ciruela (Kg)', amount: 0, url: 'images/ciruela.jpg', type: 'fruit', price: 70 },
     // { name: 'Choclo x 3', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
