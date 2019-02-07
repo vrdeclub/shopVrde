@@ -22,7 +22,7 @@ let products = [
     // { name: 'Brocoli (Kg)', amount: 0, url: 'images/brocoli.jpg', type: 'veggie' },
     { name: 'Cebolla (Kg)', amount: 0, url: 'images/cebolla.jpg', type: 'veggie' },
     // { name: 'Cilantro (Kg)', amount: 0, url: 'images/cilantro.jpg', type: 'veggie' },
-    { name: 'Ciruela (Kg)', amount: 0, url: 'images/ciruela.jpg', type: 'fruit' },
+    { name: 'Ciruela (Kg)', amount: 0, url: 'images/ciruela.jpg', type: 'fruit', price: 70 },
     // { name: 'Choclo x 3', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
     { name: 'Durazno (Kg)', amount: 0, url: 'images/durazno.jpg', type: 'fruit', price: 70 },
     // { name: 'Espinaca (500g)', amount: 0, url: 'images/espinaca.jpg', type: 'veggie' },
@@ -136,6 +136,12 @@ var app = new Vue({
                     this.cart[item].price = this.price;
                     this.cart[item].total = this.cart[item].amount * this.price;
                     this.cartHas.veggie = true;
+                }
+                if (this.cart[item].type == "meal") {
+                    this.cart[item].price = this.price;
+                    this.cart[item].total = this.cart[item].amount * this.price;
+                    this.cartHas.meal = true;
+
                 }
                 this.cartTotal += this.cart[item].total;
                 this.cartTotal = parseFloat(this.cartTotal.toFixed(2))
