@@ -14,7 +14,7 @@ let products = [
     { name: 'Acelga (Kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
     // { name: 'Achicoria (500g)', amount: 0, url: 'images/achicoria.jpg', type: 'veggie' },
     // { name: 'Aji Vinagre (1/2 Kg)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
-    { name: 'Ajo (Cabeza)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie', price: 30 },
+    { name: 'Ajo (Cabeza)', amount: 0, url: 'images/ajo.jpg', type: 'veggie', price: 30 },
     // { name: 'Albahaca (x2)', amount: 0, url: 'images/albahaca.jpg', type: 'veggie' },
     { name: 'Anco (Kg)', amount: 0, url: 'images/anco.jpg', type: 'veggie' },
     // { name: 'Apio (Kg)', amount: 0, url: 'images/apio.jpg', type: 'veggie' },

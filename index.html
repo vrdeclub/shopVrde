@@ -33,9 +33,9 @@
             </div>
         </div>
         <div class="products">
-            <div class="item" v-for="item in filteredItems">
+            <div v-cloak class="item" v-for="item in filteredItems">
                 <img :src="`${item.url}`" class="productImage">
-                <div class="title">{{item.name}} = ${{item.price || price}}</div>
+                <div class="title" v-cloak >{{item.name}} = ${{item.price || price}}</div>
                 <div class="setAmount">
                     <div class="remove" v-on:click="removeItem(item)">-</div>
                     <input type="number" step="any" class="amount" v-on:input="updateValue(item)" v-model="item.amount" />
@@ -67,7 +67,7 @@
                     <div class="day">Sabado pickup de 12 a 18</div>
                 </div>
             </div>
-            <div class="veggieCart" v-if="cartHas.veggie == true">
+            <div class="veggieCart" v-if="cartHas.veggie == true" v-cloak>
                 <div class="veggies">Verduras</div>
                 <div class="price">Precio por unidad = ${{this.price}}</div>
                 <div class="price">Unidades = {{this.cartItems}}</div>
