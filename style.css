@@ -316,6 +316,7 @@ body {
     background: #333;
     color: white;
     padding-bottom: 20px;
+    min-width: 90%;
 }
 
 .fruitCart .fruits, .mealCart .fruits {
@@ -435,6 +436,7 @@ body {
     font-size: 11px;
     /* height: 50px; */
     width: 100%;
+    line-height: 15px;
 }
 
 .main .products .item .price {
@@ -523,23 +525,23 @@ body {
 }
 
 .main .cart .head .schedule {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
     /* flex: 1; */
     padding: 20px;
-    min-width: 240px;
+    /* min-width: 240px; */
     /* max-width: 300px; */
-    background: #ffffffd4;
-    width: 100%;
+    /* background: #ffffffd4; */
+    /* width: 100%; */
 }
 
 .main .cart .head .schedule .title {
     display: flex;
     /* flex: 1; */
     font-family: 'Ubuntu', sans-serif;
-    font-size: 22px;
+    font-size: 25px;
     color: #00cc65;
     width: 100%;
     text-align: left;
@@ -562,6 +564,7 @@ body {
     background: #333;
     color: white;
     padding-bottom: 20px;
+    min-width: 90%;
 }
 
 .main .cart .veggieCart .veggies {
@@ -572,11 +575,11 @@ body {
 }
 
 .main .cart .price {
-    margin-bottom: 15px;
-    margin-top: 6px;
+    margin-bottom: 10px;
+    margin-top: 0px;
     font-size: 14px;
     position: relative;
-    left: 17px;
+    left: 15px;
     /* bottom: 6px; */
     top: 1px;
     margin-right: 20px;
@@ -589,6 +592,8 @@ body {
     margin: 5px;
     border-bottom: 0.2px solid #b4b4b4;
     font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 .main .cart .item .name {
@@ -603,6 +608,10 @@ body {
     /* width: 70px; */
     /* min-width: 70px; */
     font-size: 16px;
+    /* align-items: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-content: center; */
 }
 
 .main .cart .item .total {
