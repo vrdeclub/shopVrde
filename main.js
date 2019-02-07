@@ -14,7 +14,7 @@ let products = [
     { name: 'Acelga (Kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
     // { name: 'Achicoria (500g)', amount: 0, url: 'images/achicoria.jpg', type: 'veggie' },
     // { name: 'Aji Vinagre (1/2 Kg)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
-    { name: 'Ajo (Cabeza)', amount: 0, url: 'images/ajo.jpg', type: 'veggie', price: 30 },
+    { name: 'Ajo (x2)', amount: 0, url: 'images/ajo.jpg', type: 'veggie'},
     // { name: 'Albahaca (x2)', amount: 0, url: 'images/albahaca.jpg', type: 'veggie' },
     { name: 'Anco (Kg)', amount: 0, url: 'images/anco.jpg', type: 'veggie' },
     // { name: 'Apio (Kg)', amount: 0, url: 'images/apio.jpg', type: 'veggie' },
@@ -40,7 +40,7 @@ let products = [
     // { name: 'Nabo (Kg)', amount: 0, url: 'images/nabo.jpg', type: 'veggie' },
     // { name: 'Pack Choi (Kg)', amount: 0, url: 'images/packchoi.jpg', type: 'veggie' },
     { name: 'Papa (Kg)', amount: 0, url: 'images/papa.jpg', type: 'veggie' },
-    { name: 'Pelon (Kg)', amount: 0, url: 'images/pelon.jpg', type: 'fruit', price: 70 },
+    { name: 'Pelon (Kg)', amount: 0, url: 'images/pelon.jpg', type: 'fruit', price: 75 },
     // { name: 'Pepino (Kg)', amount: 0, url: 'images/pepino.jpg', type: 'veggie' },
     { name: 'Pera (Kg)', amount: 0, url: 'images/pera.jpg', type: 'fruit', price: 60 },
     // { name: 'Perejil (400g)', amount: 0, url: 'images/perejil.jpg', type: 'veggie' },
@@ -50,7 +50,7 @@ let products = [
     { name: 'Repollo (Kg)', amount: 0, url: 'images/repollo.jpg', type: 'veggie' },
     // { name: 'Remolacha (Kg)', amount: 0, url: 'images/remolacha.jpg', type: 'veggie' },
     { name: 'Rucula (500g)', amount: 0, url: 'images/rucula.jpg', type: 'veggie' },
-    { name: 'Sandia (Kg)', amount: 0, url: 'images/watermelon.jpg', type: 'fruit', price: 100 },
+    { name: 'Sandia (Kg)', amount: 0, url: 'images/watermelon.jpg', type: 'fruit', price: 60 },
     { name: 'Tomate (Kg)', amount: 0, url: 'images/tomato.jpg', type: 'veggie' },
     { name: 'Tomate Cherry (500g)', amount: 0, url: 'images/tomatecherry.jpg', type: 'veggie' },
     // { name: 'Uva (Kg)', amount: 0, url: 'images/uva.jpg', type: 'fruit', price: 100 },
@@ -131,11 +131,6 @@ var app = new Vue({
                     this.cart[item].total = this.cart[item].amount * this.cart[item].price;
                     this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                     this.cartHas.fruit = true;
-                }
-                if (this.cart[item].type == 'meal') {
-                    this.cart[item].total = this.cart[item].amount * this.cart[item].price;
-                    this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
-                    this.cartHas.meal = true;
                 }
                 if (this.cart[item].type == 'veggie') {
                     this.cart[item].price = this.price;
