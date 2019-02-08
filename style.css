@@ -474,7 +474,7 @@ body {
     align-items: center;
     flex-direction: column;
     margin-top: 0px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     font-family: 'Ubuntu', sans-serif;
     margin-top: 20px;
     color: #555555;
