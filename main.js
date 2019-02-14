@@ -61,7 +61,7 @@ let products = [
      { name: 'Budin banana y frutos rojos', amount: 0, url: 'images/budinbananafrutosrojos.jpg', type: 'meal', price: 90 },
      { name: 'Budin banana y pera', amount: 0, url: 'images/budinbananapera.jpg', type: 'meal', price: 90 },
      { name: 'Budin cacao amargo y frutos secos', amount: 0, url: 'images/cacaoamargo.jpg', type: 'meal', price: 90 },
-     { name: 'Chucrut (200 cm2)', amount: 0, url: 'images/chucrut.jpg', type: 'meal', price: 60 },
+     { name: 'Chucrut (200 cm2)', amount: 0, url: 'images/chucrut.jpg', type: 'meal', price: 50 },
      { name: 'Hamburguesa vegana de lenteja, remolacha y mijo (x3)', amount: 0, url: 'images/hamburguesavegana.jpg', type: 'meal', price: 100 },
     { name: 'Milanesa de berenjena (x6)', amount: 0, url: 'images/milanesaberenjena.jpg', type: 'meal', price: 150 },
     { name: 'Tarta de berenjena', amount: 0, url: 'images/tartavariedad.jpg', type: 'meal', price: 110 },
