@@ -53,7 +53,7 @@ let products = [
     // { name: 'Repollo (Kg)', amount: 0, url: 'images/repollo.jpg', type: 'veggie' },
     // { name: 'Remolacha (Kg)', amount: 0, url: 'images/remolacha.jpg', type: 'veggie' },
     { name: 'Rucula (500g)', amount: 0, url: 'images/rucula.jpg', type: 'veggie' },
-    { name: 'Sandia (Kg)', amount: 0, url: 'images/watermelon.jpg', type: 'fruit', price: 60 },
+    { name: 'Sandia (Kg)', amount: 0, url: 'images/watermelon.jpg', type: 'fruit', price: 70 },
     // { name: 'Tomate (Kg)', amount: 0, url: 'images/tomato.jpg', type: 'veggie' },
     // { name: 'Tomate Cherry (500g)', amount: 0, url: 'images/tomatecherry.jpg', type: 'veggie' },
     { name: 'Uva (Kg)', amount: 0, url: 'images/uva.jpg', type: 'fruit', price: 100 },
