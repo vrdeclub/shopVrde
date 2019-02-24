@@ -20,7 +20,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     border: 0.1px solid #ff00006b;
     max-width: 710px;
     margin: 10px;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 0px;
 }
 
@@ -294,8 +294,8 @@ body {
     background: #333;
     color: white;
     padding-bottom: 20px;
-    min-width: 90%;
-    max-width: 90%;
+    /* max-width: 90%; */
+    /* max-width: 500px; */
 }
 
 .fruitCart .fruits, .mealCart .fruits {
@@ -549,11 +549,15 @@ body {
     padding-bottom: 10px;
     padding-left: 10px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
 }
 
 .main .cart .item .itemName {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
+    flex-wrap: wrap;
 }
 
 .main .cart .item .itemTotal {
@@ -565,21 +569,22 @@ body {
 }
 
 .main .cart .item .img {
-    max-height: 40px;
-    max-width: 40px;
+    height: 60px;
+    width: 60px;
     margin-right: 10px;
     object-fit: cover;
 }
 
 .main .cart .item .name {
     margin-right: -10px;
-    width: 160px;
+    /* width: 160px; */
     font-size: 14px;
     padding-right: 20px;
     flex: 1;
     display: flex;
     align-items: center;
     line-height: 18px;
+    flex: 1 100%;
 }
 
 .main .cart .item .amount {
