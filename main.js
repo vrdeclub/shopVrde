@@ -13,7 +13,7 @@ let discounts = [
 
 
 let products = [
-    // { name: 'Acelga (kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
+    { name: 'Acelga (kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
     // { name: 'Achicoria (500g)', amount: 0, url: 'images/achicoria.jpg', type: 'veggie' },
     // { name: 'Aji Vinagre (1/2 kg)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
     { name: 'Ajo (x2)', amount: 0, url: 'images/ajo.jpg', type: 'veggie' },
