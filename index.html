@@ -21,7 +21,7 @@
                     <div class="searchLabel">
                         Que buscas?
                     </div>
-                    <input v-on:input="scrollTop()" type="text" v-model="search" placeholder="Variedad">
+                    <input id="searchInput" v-on:input="scrollTop()" type="text" v-model="search" placeholder="Variedad">
                 </div>
                 <div class="filter">
                     <a class="button" v-bind:class="{active : active['veggie'].status}"

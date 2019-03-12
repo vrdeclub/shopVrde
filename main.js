@@ -46,7 +46,7 @@ let products = [
     // { name: 'Morron Rojo(kg)', amount: 0, url: 'images/morronrojo.jpg', type: 'veggie' },
     // { name: 'Nabo (kg)', amount: 0, url: 'images/nabo.jpg', type: 'veggie' },
     // { name: 'Pack Choi (kg)', amount: 0, url: 'images/packchoi.jpg', type: 'veggie' },
-    { name: 'Palta (x2)', amount: 0, url: 'images/palta.jpg', type: 'fruit', price:50 },
+    { name: 'Palta (x2)', amount: 0, url: 'images/palta.jpg', type: 'fruit', price: 50 },
     { name: 'Papa (kg)', amount: 0, url: 'images/papa.jpg', type: 'veggie' },
     { name: 'Poroto Adzuki (1/2kg)', amount: 0, url: 'images/poroto.jpg', type: 'veggie' },
     // { name: 'Pelon (kg)', amount: 0, url: 'images/pelon.jpg', type: 'fruit', price: 75 },
@@ -258,14 +258,20 @@ var app = new Vue({
                     self.active[newList[i].type].status = true;
                 }
             }
-            if (self.search == "") {
-                for (var t in this.active) {
-                    if (this.active[t].status == true) { }
-                    else {
-                        this.active[t].status = false;
+            var input = document.getElementById('searchInput');
+
+            input.onkeyup = function () {
+                var key = event.keyCode || event.charCode;
+
+                if (key == 8 || key == 46 && self.search == "") {
+                    self.active = {
+                        'veggie': { status: true },
+                        'fruit': { status: false },
+                        'meal': { status: false }
                     }
                 }
-            }
+            };
+
             return newList.filter(function (item) {
                 return self.active[item.type].status == true;
             }).sort();
