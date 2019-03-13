@@ -228,6 +228,14 @@ var app = new Vue({
                     self.saleComplete = true;
                 }
             });
+
+            database.ref('/salesArchive/' + today).push(sale, function (error) {
+                if (error) {
+                    console.log(error)
+                } else {
+                    self.saleComplete = true;
+                }
+            });
         },
         setVisibility: function (type) {
             this.search = "";
