@@ -10,8 +10,6 @@ let discounts = [
     //{ amount: "250 >", price: 32 }
 ]
 
-
-
 let products = [
     { name: 'Acelga (kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
     // { name: 'Achicoria (500g)', amount: 0, url: 'images/achicoria.jpg', type: 'veggie' },
@@ -83,6 +81,7 @@ let products = [
     { name: 'Huevos (x12)', amount: 0, url: 'images/huevos.jpg', type: 'meal', price: 90 },
     { name: 'Huevos (x6)', amount: 0, url: 'images/huevos.jpg', type: 'meal', price: 50 },
     // { name: 'Mermelada ciruela (200cc)', amount: 0, url: 'images/mermelada.jpg', type: 'meal', price: 55 },
+    { name: 'Miel Pura (500g)', amount: 0, url: 'images/mielpura.jpg', type: 'meal', price: 170 },
     { name: 'Milanesa de berenjena (x6)', amount: 0, url: 'images/milanesaberenjena.jpg', type: 'meal', price: 150 },
     { name: 'Morrones verdes en almibar (440g)', amount: 0, url: 'images/morronverdealmibar.jpg', type: 'meal', price: 70 },
     // { name: 'Tarta de berenjena', amount: 0, url: 'images/tartavariedad.jpg', type: 'meal', price: 110 },
@@ -152,7 +151,9 @@ var app = new Vue({
                     this.cartHas.fruit = true;
                 }
                 if (this.cart[item].type == 'veggie') {
+                    console.log(this.cart[item].price, this.price)
                     this.cart[item].price = this.price;
+                    console.log(this.cart[item].price, this.price)
                     this.cart[item].total = this.cart[item].amount * this.price;
                     this.cartHas.veggie = true;
                 }
@@ -166,10 +167,12 @@ var app = new Vue({
                 this.cartTotal = parseFloat(this.cartTotal.toFixed(2))
             }
 
+            // console.log(this.cartTotal, this.cartItems)
+
         },
         addItem: function (item) {
             item.amount++;
-            if (item.price) {
+            if (item.price && item.type != "veggie") {
                 item.total = item.amount * item.price;
             } else {
                 item.total = item.amount * this.price;
@@ -177,12 +180,18 @@ var app = new Vue({
             this.getTotal();
         },
         removeItem: function (item) {
-            if (item.amount > 0) {
+            if (item.amount >= 0) {
                 item.amount--;
+                if(item.amount < 0) {
+                    item.amount = 0;
+                }
+                this.getTotal();
+                item.price = this.price;
             }
-            if (item.price) {
+            if (item.price && item.type != "veggie") {
                 item.total = item.amount * item.price;
             } else {
+                item.price = this.price;
                 item.total = item.amount * this.price;
             }
             this.getTotal();
