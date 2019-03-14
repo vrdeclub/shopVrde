@@ -13,15 +13,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .aviso {
     padding: 14px 24px;
-    color: #F44336;
-    font-size: 14px;
+    color: #636363;
+    font-size: 12px;
     font-family: Ubuntu;
-    line-height: 18px;
-    border: 0.1px solid #ff00006b;
+    line-height: 14px;
+    border: 1px solid #ececec;
     max-width: 450px;
     margin: 10px;
     margin-top: 10px;
     margin-bottom: 0px;
+    font-weight: lighter;
 }
 
 html {

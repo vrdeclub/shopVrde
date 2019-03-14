@@ -125,6 +125,8 @@ var app = new Vue({
     },
     methods: {
         getTotal: function () {
+
+            console.log("Get Total Price:", this.price)
             var self = this;
             this.cartTotal = 0;
             this.cartItems = 0;
@@ -151,9 +153,7 @@ var app = new Vue({
                     this.cartHas.fruit = true;
                 }
                 if (this.cart[item].type == 'veggie') {
-                    console.log(this.cart[item].price, this.price)
                     this.cart[item].price = this.price;
-                    console.log(this.cart[item].price, this.price)
                     this.cart[item].total = this.cart[item].amount * this.price;
                     this.cartHas.veggie = true;
                 }
@@ -167,8 +167,6 @@ var app = new Vue({
                 this.cartTotal = parseFloat(this.cartTotal.toFixed(2))
             }
 
-            // console.log(this.cartTotal, this.cartItems)
-
         },
         addItem: function (item) {
             item.amount++;
@@ -180,17 +178,14 @@ var app = new Vue({
             this.getTotal();
         },
         removeItem: function (item) {
-            if (item.amount >= 0) {
+            this.getTotal();
+            if (item.amount > 0) {
                 item.amount--;
-                if(item.amount < 0) {
-                    item.amount = 0;
-                }
-                this.getTotal();
-                item.price = this.price;
             }
             if (item.price && item.type != "veggie") {
                 item.total = item.amount * item.price;
             } else {
+                console.log("Remove Item", this.price, item.price)
                 item.price = this.price;
                 item.total = item.amount * this.price;
             }
