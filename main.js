@@ -125,8 +125,6 @@ var app = new Vue({
     },
     methods: {
         getTotal: function () {
-
-            console.log("Get Total Price:", this.price)
             var self = this;
             this.cartTotal = 0;
             this.cartItems = 0;
@@ -247,6 +245,8 @@ var app = new Vue({
         },
         setVisibility: function (type) {
             this.search = "";
+
+            console.log(type, this.active)
             for (var t in this.active) {
                 this.active[t].status = false;
             }
@@ -274,6 +274,7 @@ var app = new Vue({
                     self.active[newList[i].type].status = true;
                 }
             }
+
             var input = document.getElementById('searchInput');
 
             input.onkeyup = function () {

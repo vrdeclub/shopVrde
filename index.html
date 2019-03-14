@@ -42,10 +42,9 @@
             </div>
         </div>
         <div class="products">
-            <div v-cloak class="item" v-for="item in filteredItems">
+            <div class="item" v-for="item in filteredItems">
                 <img :src="`${item.url}`" class="productImage">
-                <div class="title" v-if="item.type = 'veggie'">{{item.name}} = ${{ price }}</div>
-                <div class="title" v-if="item.type != 'veggie'">${{ item.price }}</div>
+                <div class="title" >{{item.name}} = ${{ item.price || price }}</div>
                 <div class="setAmount">
                     <div class="remove" v-on:click="removeItem(item)">-</div>
                     <input type="number" step="any" class="amount" v-on:input="updateValue(item)"
