@@ -12,15 +12,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .aviso {
-    padding: 14px 24px;
+    padding: 10px 10px;
     color: #636363;
     font-size: 12px;
     font-family: Ubuntu;
     line-height: 14px;
     border: 1px solid #ececec;
-    max-width: 450px;
+    max-width: 650px;
     margin: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 0px;
     font-weight: lighter;
 }
@@ -361,7 +361,7 @@ body {
 }
 
 .main .header .logo {
-    height: 134px;
+    height: 110px;
     position: relative;
     margin: 10px;
     margin-top: 30px;
