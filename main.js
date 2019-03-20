@@ -40,7 +40,7 @@ let products = [
     { name: 'Limon (kg)', amount: 0, url: 'images/limon.jpg', type: 'fruit', price: 70 },
     { name: 'Melon (kg)', amount: 0, url: 'images/melon.jpg', type: 'fruit', price: 80 },
     // { name: 'Mango (kg)', amount: 0, url: 'images/mango.jpg', type: 'fruit', price: 80 },
-    // { name: 'Manzana (kg)', amount: 0, url: 'images/manzana.jpg', type: 'fruit', price: 55 },
+    { name: 'Manzana (kg)', amount: 0, url: 'images/manzana.jpg', type: 'fruit', price: 55 },
     // { name: 'Maracuya (kg)', amount: 0, url: 'images/maracuya.jpg', type: 'fruit', price: 100 },
     { name: 'Morron (kg)', amount: 0, url: 'images/morron.jpg', type: 'veggie' },
     // { name: 'Morron Rojo(kg)', amount: 0, url: 'images/morronrojo.jpg', type: 'veggie' },
