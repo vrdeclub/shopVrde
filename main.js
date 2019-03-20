@@ -129,7 +129,6 @@ var app = new Vue({
     methods: {
         getTotal: function () {
 
-            console.log("Get Total Price:", this.price)
             var self = this;
             this.cartTotal = 0;
             this.cartItems = 0;
