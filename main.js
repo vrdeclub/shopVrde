@@ -188,7 +188,6 @@ var app = new Vue({
             if (item.price && item.type != "veggie") {
                 item.total = item.amount * item.price;
             } else {
-                console.log("Remove Item", this.price, item.price)
                 item.price = this.price;
                 item.total = item.amount * this.price;
             }
