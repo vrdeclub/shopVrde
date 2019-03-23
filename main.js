@@ -85,7 +85,7 @@ let products = [
     { name: 'Maple Huevos (x30)', amount: 0, url: 'images/huevos.jpg', type: 'meal', price: 225 },
     { name: 'Huevos (x6)', amount: 0, url: 'images/huevos.jpg', type: 'meal', price: 50 },
     { name: 'Mermelada de ciruela (400cc)', amount: 0, url: 'images/mermelada.jpg', type: 'meal', price: 120 },
-    { name: 'Miel Pura (500g)', amount: 0, url: 'images/mielpura.jpg', type: 'meal', price: 170 },
+    { name: 'Miel Pura (500g)', amount: 0, url: 'images/mielpura.jpg', type: 'meal', price: 120 },
     { name: 'Milanesas de berenjenas (x6)', amount: 0, url: 'images/milanesaberenjena.jpg', type: 'meal', price: 150 },
     { name: 'Morrones verdes en almibar (830g)', amount: 0, url: 'images/morronverdealmibar.jpg', type: 'meal', price: 130 },
     // { name: 'Tarta de berenjena', amount: 0, url: 'images/tartavariedad.jpg', type: 'meal', price: 110 },
