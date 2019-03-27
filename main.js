@@ -53,7 +53,7 @@ let products = [
     // { name: 'Papa Colorada (kg)', amount: 0, url: 'images/papacolorada.jpg', type: 'veggie' },
     { name: 'Poroto Adzuki (1/2kg)', amount: 0, url: 'images/poroto.jpg', type: 'veggie' },
     // { name: 'Pelon (kg)', amount: 0, url: 'images/pelon.jpg', type: 'fruit', price: 75 },
-    { name: 'Pepino (kg)', amount: 0, url: 'images/pepino.jpg', type: 'veggie' },
+    // { name: 'Pepino (kg)', amount: 0, url: 'images/pepino.jpg', type: 'veggie' },
     // { name: 'Pera (kg)', amount: 0, url: 'images/pera.jpg', type: 'fruit', price: 70 },
     // { name: 'Perejil (400g)', amount: 0, url: 'images/perejil.jpg', type: 'veggie' },
     // { name: 'Puerro (PAQ)', amount: 0, url: 'images/puerro.jpg', type: 'veggie' },
