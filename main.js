@@ -57,7 +57,7 @@ let products = [
     // { name: 'Pera (kg)', amount: 0, url: 'images/pera.jpg', type: 'fruit', price: 70 },
     // { name: 'Perejil (400g)', amount: 0, url: 'images/perejil.jpg', type: 'veggie' },
     // { name: 'Puerro (PAQ)', amount: 0, url: 'images/puerro.jpg', type: 'veggie' },
-    { name: 'Rabanito (500g)', amount: 0, url: 'images/rabanito.jpg', type: 'veggie' },
+    // { name: 'Rabanito (500g)', amount: 0, url: 'images/rabanito.jpg', type: 'veggie' },
     // { name: 'Radicheta (500g)', amount: 0, url: 'images/radicheta.jpg', type: 'veggie' },
     // { name: 'Repollo (kg)', amount: 0, url: 'images/repollo.jpg', type: 'veggie' },
     { name: 'Remolacha (kg)', amount: 0, url: 'images/remolacha.jpg', type: 'veggie' },
