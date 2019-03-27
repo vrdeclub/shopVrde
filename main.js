@@ -42,7 +42,7 @@ let products = [
     { name: 'Limon (kg)', amount: 0, url: 'images/limon.jpg', type: 'fruit', price: 70 },
     { name: 'Melon (kg)', amount: 0, url: 'images/melon.jpg', type: 'fruit', price: 80 },
     // { name: 'Mango (kg)', amount: 0, url: 'images/mango.jpg', type: 'fruit', price: 80 },
-    { name: 'Manzana (kg)', amount: 0, url: 'images/manzana.jpg', type: 'fruit', price: 55 },
+    // { name: 'Manzana (kg)', amount: 0, url: 'images/manzana.jpg', type: 'fruit', price: 55 },
     // { name: 'Maracuya (kg)', amount: 0, url: 'images/maracuya.jpg', type: 'fruit', price: 100 },
     { name: 'Morron Verde(kg)', amount: 0, url: 'images/morron.jpg', type: 'veggie' },
     // { name: 'Morron Rojo(kg)', amount: 0, url: 'images/morronrojo.jpg', type: 'veggie' },
@@ -90,6 +90,10 @@ let products = [
     { name: 'Miel Pura (500g)', amount: 0, url: 'images/mielpura.jpg', type: 'meal', price: 150 },
     // { name: 'Milanesas de berenjenas (x6)', amount: 0, url: 'images/milanesaberenjena.jpg', type: 'meal', price: 150 },
     { name: 'Morrones verdes en almibar (830g)', amount: 0, url: 'images/morronverdealmibar.jpg', type: 'meal', price: 150 },
+    { name: 'Mermelada de ciruela (400cc)', amount: 0, url: 'images/mermelada.jpg', type: 'meal', price: 120 },
+    { name: 'Miel Pura (500g)', amount: 0, url: 'images/mielpura.jpg', type: 'meal', price: 120 },
+    { name: 'Milanesas de berenjenas (x6)', amount: 0, url: 'images/milanesaberenjena.jpg', type: 'meal', price: 150 },
+    { name: 'Morrones verdes en almibar (830g)', amount: 0, url: 'images/morronverdealmibar.jpg', type: 'meal', price: 130 },
     // { name: 'Tarta de berenjena', amount: 0, url: 'images/tartavariedad.jpg', type: 'meal', price: 110 },
     { name: 'Tarta de zapallito y puerro', amount: 0, url: 'images/tartavariedad.jpg', type: 'meal', price: 110 },
     { name: 'Tarta de Acelga', amount: 0, url: 'images/tartavariedad.jpg', type: 'meal', price: 110 }
@@ -131,6 +135,7 @@ var app = new Vue({
     methods: {
         getTotal: function () {
 
+            console.log("Get Total Price:", this.price)
             var self = this;
             this.cartTotal = 0;
             this.cartItems = 0;
@@ -189,6 +194,7 @@ var app = new Vue({
             if (item.price && item.type != "veggie") {
                 item.total = item.amount * item.price;
             } else {
+                console.log("Remove Item", this.price, item.price)
                 item.price = this.price;
                 item.total = item.amount * this.price;
             }
