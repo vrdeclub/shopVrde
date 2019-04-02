@@ -1,15 +1,3 @@
-
-let discounts = [
-    { amount: "1", price: 55 },
-    { amount: "2", price: 52.50 },
-    { amount: "3", price: 50 },
-    { amount: "4", price: 47.50 },
-    { amount: "5+", price: 45 },
-    //{ amount: "60 > 200", price: 41 },
-    //{ amount: "200 > 250", price: 36 },
-    //{ amount: "250 >", price: 32 }
-]
-
 let products = [
     { name: 'Acelga (kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
     // { name: 'Achicoria (500g)', amount: 0, url: 'images/achicoria.jpg', type: 'veggie' },
@@ -93,8 +81,19 @@ let products = [
     { name: 'Tarta de Acelga', amount: 0, url: 'images/tartakalechampi.jpg', type: 'meal', price: 110 }
     // { name: 'Tortilla vegana', amount: 0, url: 'images/tortillavegana.jpg', type: 'meal', price: 90 }
 ]
-
 products = products.sort()
+
+let discounts = [
+    { amount: "1", price: 55 },
+    { amount: "2", price: 52.50 },
+    { amount: "3", price: 50 },
+    { amount: "4", price: 47.50 },
+    { amount: "5+", price: 45 },
+    //{ amount: "60 > 200", price: 41 },
+    //{ amount: "200 > 250", price: 36 },
+    //{ amount: "250 >", price: 32 }
+]
+
 
 //Scroll top on pageload
 window.addEventListener('scroll', function (evt) {
