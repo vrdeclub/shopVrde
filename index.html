@@ -34,10 +34,9 @@
             </div>
             <div class="headerDisplay">
                 <div class="aviso">
-                    Las frutas y verduras llegan los viernes y sabados, podes pasarla a buscar o solicitar delivery // Los miercoles actualizamos la pagina con lo que va a llegar,
-                    si haces su pedido antes de la actualizacion, ciertos productos pueden no estar disponibles //  
-                    Las comidas, legumbres y huevos estan disponibles todos los dias en nuestro local !!  
-                    Ultima actualizacion: Miercoles 27 
+                    Las frutas y verduras llegan los viernes y sabados, podes pasarla a buscar o solicitar delivery - Los miercoles actualizamos la pagina con lo que va a llegar,
+                    si haces su pedido antes de la actualizacion, ciertos productos pueden no estar disponibles - 
+                    Las comidas, legumbres y huevos estan disponibles todos los dias en nuestro local! Ultima actualizacion: Miercoles 27 
 
                 </div>
             </div>
@@ -128,10 +127,11 @@
             <div class="cartTotal">Total = ${{cartTotal}}</div>
             <form action="#" class="userForm">
                 <div class="title">Datos de Usuario</div>
-                <input type="text" placeholder="Nombre" v-model="userData.name" required>
-                <input type="text" placeholder="Direccion" v-model="userData.address"
+                <div class="required" >* Por favor llene los campos requeridos</div>
+                <input class="requiredInput" type="text" placeholder="Nombre" v-model="userData.name" required>
+                <input class="requiredInput" type="text" placeholder="Direccion" v-model="userData.address"
                     :disabled="userData.delivery == false" v-bind:class="{disabled:userData.delivery == false}">
-                <input type="tel" placeholder="Telefono" v-model="userData.phone" required>
+                <input class="requiredInput" type="tel" placeholder="Telefono" v-model="userData.phone" required>
                 <input type="email" placeholder="Correo" v-model="userData.email" required>
                 <div class="delivery">
                     <label for="delivery" value="Retiro en local" class="label" @click="disabled = !disabled">Entrega a

@@ -107,6 +107,7 @@ var app = new Vue({
         cart: [],
         cartItems: 0,
         saleComplete: false,
+        fieldsMissing: true,
         userData: {
             name: "",
             address: "",
@@ -182,7 +183,7 @@ var app = new Vue({
         },
         removeItem: function (item) {
             this.getTotal();
-            
+
             if (item.amount > 0) {
                 item.amount--;
             }
@@ -206,48 +207,68 @@ var app = new Vue({
             this.getTotal();
         },
         saveSale: function (cart) {
-            var today = new Date().toLocaleDateString('es-GB', {
-                day: 'numeric',
-                month: 'numeric',
-                year: 'numeric'
-            }).split('/').join('-');
 
-            var sale = [{
-                date: today,
-                name: this.userData.name,
-                address: this.userData.address,
-                phone: this.userData.phone,
-                email: this.userData.email,
-                delivery: this.userData.delivery,
-                total: this.cartTotal
-            }];
-
-            for (var item in cart) {
-                sale.push({
-                    variedad: cart[item].name,
-                    cantidad: cart[item].amount,
-                    precio: cart[item].price || this.price,
-                    pago: cart[item].total
-                })
+            if (this.userData.name == "" || this.userData.phone == "") {
+                this.fieldsMissing = true;
+                console.log(this.fieldsMissing)
+            }
+            if (this.userData.delivery == true && this.userData.address == "") {
+                this.fieldsMissing = true;
+                console.log(this.fieldsMissing)
+            }
+            else {
+                this.fieldsMissing = false;
             }
 
-            var self = this;
+            console.log(this.fieldsMissing)
 
-            database.ref('/sales/' + today).push(sale, function (error) {
-                if (error) {
-                    console.log(error)
-                } else {
-                    self.saleComplete = true;
-                }
-            });
+            if (this.fieldsMissing == false) {
 
-            database.ref('/salesArchive/' + today).push(sale, function (error) {
-                if (error) {
-                    console.log(error)
-                } else {
-                    self.saleComplete = true;
+                console.log("Entered sales block")
+
+                var today = new Date().toLocaleDateString('es-GB', {
+                    day: 'numeric',
+                    month: 'numeric',
+                    year: 'numeric'
+                }).split('/').join('-');
+
+                var sale = [{
+                    date: today,
+                    name: this.userData.name,
+                    address: this.userData.address,
+                    phone: this.userData.phone,
+                    email: this.userData.email,
+                    delivery: this.userData.delivery,
+                    total: this.cartTotal
+                }];
+
+                for (var item in cart) {
+                    sale.push({
+                        variedad: cart[item].name,
+                        cantidad: cart[item].amount,
+                        precio: cart[item].price || this.price,
+                        pago: cart[item].total
+                    })
                 }
-            });
+
+                var self = this;
+
+                database.ref('/sales/' + today).push(sale, function (error) {
+                    if (error) {
+                        console.log(error)
+                    } else {
+                        self.saleComplete = true;
+                    }
+                });
+
+                database.ref('/salesArchive/' + today).push(sale, function (error) {
+                    if (error) {
+                        console.log(error)
+                    } else {
+                        self.saleComplete = true;
+                    }
+                });
+            }
         },
         setVisibility: function (type) {
             this.search = "";
