@@ -1,3 +1,4 @@
+HEAD
 
 let discounts = [
     { amount: "1", price: 55 },
@@ -101,6 +102,8 @@ let products = [
 ]
 
 products = products.sort()
+//vrde.club
+a45c6bb52486948d2a82c61fa24655ccf43ed2b0
 
 var app = new Vue({
     el: '#app',
@@ -113,6 +116,7 @@ var app = new Vue({
         cart: [],
         cartItems: 0,
         saleComplete: false,
+        fieldsMissing: true,
         userData: {
             name: "",
             address: "",
@@ -135,7 +139,6 @@ var app = new Vue({
     methods: {
         getTotal: function () {
 
-            console.log("Get Total Price:", this.price)
             var self = this;
             this.cartTotal = 0;
             this.cartItems = 0;
@@ -149,6 +152,7 @@ var app = new Vue({
                     this.cartItems += this.cart[item].amount;
             }
 
+            // add discount by tier
             if (this.cartItems <= 1) { this.price = 55 }
             else if (this.cartItems == 2) { this.price = 52.50 }
             else if (this.cartItems == 3) { this.price = 50 }
@@ -188,6 +192,7 @@ var app = new Vue({
         },
         removeItem: function (item) {
             this.getTotal();
+
             if (item.amount > 0) {
                 item.amount--;
             }
@@ -211,49 +216,68 @@ var app = new Vue({
             this.getTotal();
         },
         saveSale: function (cart) {
-            var today = new Date().toLocaleDateString('es-GB', {
-                day: 'numeric',
-                month: 'numeric',
-                year: 'numeric'
-            }).split('/').join('-');
 
-            var sale = [{
-                date: today,
-                name: this.userData.name,
-                address: this.userData.address,
-                phone: this.userData.phone,
-                email: this.userData.email,
-                delivery: this.userData.delivery,
-                total: this.cartTotal
-            }];
-
-            for (var item in cart) {
-                sale.push({
-                    variedad: cart[item].name,
-                    cantidad: cart[item].amount,
-                    precio: cart[item].price || this.price,
-                    pago: cart[item].total
-                })
+            // form validation
+            if (this.userData.name == "" || this.userData.phone == "") {
+                this.fieldsMissing = true;
+                console.log(this.fieldsMissing)
+            }
+            if (this.userData.delivery == true && this.userData.address == "") {
+                this.fieldsMissing = true;
+                console.log(this.fieldsMissing)
+            }
+            else {
+                this.fieldsMissing = false;
             }
 
-            var self = this;
+            if (this.fieldsMissing == false) {
 
-            database.ref('/sales/' + today).push(sale, function (error) {
-                if (error) {
-                    console.log(error)
-                } else {
-                    self.saleComplete = true;
-                }
-            });
+                // send to firebase
+                var today = new Date().toLocaleDateString('es-GB', {
+                    day: 'numeric',
+                    month: 'numeric',
+                    year: 'numeric'
+                }).split('/').join('-');
 
-            database.ref('/salesArchive/' + today).push(sale, function (error) {
-                if (error) {
-                    console.log(error)
-                } else {
-                    self.saleComplete = true;
+                var sale = [{
+                    date: today,
+                    name: this.userData.name,
+                    address: this.userData.address,
+                    phone: this.userData.phone,
+                    email: this.userData.email,
+                    delivery: this.userData.delivery,
+                    total: this.cartTotal
+                }];
+
+                for (var item in cart) {
+                    sale.push({
+                        variedad: cart[item].name,
+                        cantidad: cart[item].amount,
+                        precio: cart[item].price || this.price,
+                        pago: cart[item].total
+                    })
                 }
-            });
+
+                var self = this;
+
+                database.ref('/sales/' + today).push(sale, function (error) {
+                    if (error) {
+                        console.log(error)
+                    } else {
+                        self.saleComplete = true;
+                    }
+                });
+
+                database.ref('/salesArchive/' + today).push(sale, function (error) {
+                    if (error) {
+                        console.log(error)
+                    } else {
+                        self.saleComplete = true;
+                    }
+                });
+            }
         },
+        //toggle category buttons
         setVisibility: function (type) {
             this.search = "";
             for (var t in this.active) {
@@ -270,6 +294,7 @@ var app = new Vue({
 
     },
     computed: {
+        // returns filtered list by search term or category
         filteredItems: function () {
             var self = this;
             var newList = this.productList.sort().filter(function (item) {
