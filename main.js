@@ -87,7 +87,7 @@ let products = [
     { name: 'Granola (500 g)', amount: 0, url: 'images/granola.jpg', type: 'meal', price: 75 },
     { name: 'Hamburguesas veganas de lenteja y berenjena (x3)', amount: 0, url: 'images/hamburguesaquinoa.jpg', type: 'meal', price: 100 },
     { name: 'Hamburguesas veganas de porotos adzuki y quinoa (x3)', amount: 0, url: 'images/hamburguesaquinoa.jpg', type: 'meal', price: 100 },
-    { name: 'Hamburguesas veganas de garbanzo y calabaza (x3)', amount: 0, url: 'images/hamburguesaquinoa.jpg', type: 'meal', price: 100 },
+    // { name: 'Hamburguesas veganas de garbanzo y calabaza (x3)', amount: 0, url: 'images/hamburguesaquinoa.jpg', type: 'meal', price: 100 },
     // { name: 'Falafels de Garbanzos (x3)', amount: 0, url: 'images/falafelgarbanzo.jpg', type: 'meal', price: 100 },
     // { name: 'Helado banana y mango vegano (200cc)', amount: 0, url: 'images/heladomangobananavegano.jpg', type: 'meal', price: 60 },
     { name: 'Huevos (x12)', amount: 0, url: 'images/huevos.jpg', type: 'meal', price: 90 },
