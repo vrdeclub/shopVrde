@@ -21,7 +21,8 @@
                     <div class="searchLabel">
                         Que buscas?
                     </div>
-                    <input id="searchInput" v-on:input="scrollTop()" type="text" v-model="search" placeholder="Variedad">
+                    <input id="searchInput" v-on:input="scrollTop()" type="text" v-model="search"
+                        placeholder="Variedad">
                 </div>
                 <div class="filter">
                     <a class="button" v-bind:class="{active : active['veggie'].status}"
@@ -34,10 +35,11 @@
             </div>
             <div class="headerDisplay">
                 <div class="aviso">
-                    Las frutas y verduras llegan los viernes y sabados, podes pasarla a buscar o solicitar delivery // Los miercoles actualizamos la pagina con lo que va a llegar,
-                    si haces su pedido antes de la actualizacion, ciertos productos pueden no estar disponibles //  
-                    Las comidas, legumbres y huevos estan disponibles todos los dias en nuestro local !!  
-                    Ultima actualizacion: Miercoles 3/4 
+                    Las frutas y verduras llegan los viernes y sabados, podes pasarla a buscar o solicitar delivery -
+                    Los miercoles actualizamos la pagina con lo que va a llegar,
+                    si haces su pedido antes de la actualizacion, ciertos productos pueden no estar disponibles -
+                    Las comidas, legumbres y huevos estan disponibles todos los dias en nuestro local! Ultima
+                    actualizacion: Miercoles 27
 
                 </div>
             </div>
@@ -45,8 +47,9 @@
         <div class="products">
             <div v-cloak class="item" v-for="item in filteredItems">
                 <img :src="`${item.url}`" class="productImage">
-                <div class="title" v-if="item.type == 'veggie'" >{{item.name}} = ${{ price }}</div>
-                <div class="title" v-if="item.type == 'fruit' || item.type == 'meal'">{{item.name}} = ${{ item.price }}</div>
+                <div class="title" v-if="item.type == 'veggie'">{{item.name}} = ${{ price }}</div>
+                <div class="title" v-if="item.type == 'fruit' || item.type == 'meal'">{{item.name}} = ${{ item.price }}
+                </div>
                 <div class="setAmount">
                     <div class="remove" v-on:click="removeItem(item)">-</div>
                     <input type="number" step="any" class="amount" v-on:input="updateValue(item)"
@@ -128,10 +131,11 @@
             <div class="cartTotal">Total = ${{cartTotal}}</div>
             <form action="#" class="userForm">
                 <div class="title">Datos de Usuario</div>
-                <input type="text" placeholder="Nombre" v-model="userData.name" required>
-                <input type="text" placeholder="Direccion" v-model="userData.address"
+                <div class="required">* Por favor llene los campos requeridos</div>
+                <input class="requiredInput" type="text" placeholder="Nombre" v-model="userData.name" required>
+                <input class="requiredInput" type="tel" placeholder="Telefono" v-model="userData.phone" required>
+                <input class="requiredInput" type="text" placeholder="Direccion" v-model="userData.address"
                     :disabled="userData.delivery == false" v-bind:class="{disabled:userData.delivery == false}">
-                <input type="tel" placeholder="Telefono" v-model="userData.phone" required>
                 <input type="email" placeholder="Correo" v-model="userData.email" required>
                 <div class="delivery">
                     <label for="delivery" value="Retiro en local" class="label" @click="disabled = !disabled">Entrega a
@@ -165,6 +169,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="products.js"></script>
     <script src="main.js"></script>
     <script>
 
@@ -181,20 +186,6 @@
         firebase.initializeApp(config);
 
         var database = firebase.database();
-
-        window.addEventListener('scroll', function (evt) {
-
-            var distance_from_top = document.documentElement.scrollTop
-
-            if (distance_from_top === 0) {
-                document.getElementsByClassName("search")[0].classList.remove("fixed");
-            }
-
-            if (distance_from_top > 0) {
-                document.getElementsByClassName("search")[0].classList.add("fixed");
-            }
-
-        });
 
     </script>
 </body>

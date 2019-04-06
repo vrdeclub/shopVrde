@@ -73,7 +73,7 @@ body {
 .main {
     align-content: center;
     justify-content: center;
-    max-width:1080px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -215,11 +215,24 @@ body {
     border-width: 0px;
     padding: 9px;
     font-size: 16px;
-    margin: 2px;
+    margin: 5px 0px;
     min-width: 210px;
     background-color: #f0f0f0;
     flex: 1;
     color: #808080;
+    position: relative;
+}
+
+.userForm .required {
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #fe5046;
+}
+
+.userForm input.requiredInput {
+    /* border:0.5px solid red; */
+    box-shadow: 0px 0px 1px 0.5px #fe5046b0;
 }
 
 .userForm input.disabled {
@@ -632,10 +645,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #838587;
 }
 
 .main .cart .confirmSale .reload {
     margin-top: 10px;
+    width: 280px;
+    display: flex;
+    text-align: center;
+    background-color: #00cc65;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+    color: white;
+    margin: 20px 0px;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .footer {
