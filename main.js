@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 let discounts = [
     { amount: "1", price: 55 },
@@ -13,11 +14,11 @@ let discounts = [
 let products = [
     { name: 'Acelga (kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
     // { name: 'Achicoria (500g)', amount: 0, url: 'images/achicoria.jpg', type: 'veggie' },
-    { name: 'Aji Vinagre (1/2 kg)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
+    { name: 'Aji Vinagre (500g)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
     { name: 'Ajo (x3)', amount: 0, url: 'images/ajo.jpg', type: 'veggie' },
     { name: 'Albahaca (x2)', amount: 0, url: 'images/albahaca.jpg', type: 'veggie' },
     { name: 'Anco (kg)', amount: 0, url: 'images/anco.jpg', type: 'veggie' },
-    { name: 'Apio (kg)', amount: 0, url: 'images/apio.jpg', type: 'veggie' },
+    // { name: 'Apio (kg)', amount: 0, url: 'images/apio.jpg', type: 'veggie' },
     { name: 'Banana (kg)', amount: 0, url: 'images/banana.jpg', type: 'fruit', price: 55 },
     { name: 'Batata (kg)', amount: 0, url: 'images/batata.jpg', type: 'veggie' },
     // { name: 'Brocoli (kg)', amount: 0, url: 'images/brocoli.jpg', type: 'veggie' },
@@ -28,17 +29,17 @@ let products = [
     // { name: 'Cilantro (kg)', amount: 0, url: 'images/cilantro.jpg', type: 'veggie' },
     // { name: 'Ciruela (kg)', amount: 0, url: 'images/ciruela.jpg', type: 'fruit', price: 70 },
     // { name: 'Champiñon (150g)', amount: 0, url: 'images/champi.jpg', type: 'veggie' },
-    // { name: 'Choclo x 3', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
+    { name: 'Choclo x 3', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
     // { name: 'Coliflor (uni)', amount: 0, url: 'images/coliflor.jpg', type: 'veggie' },
     // { name: 'Durazno (kg)', amount: 0, url: 'images/durazno.jpg', type: 'fruit', price: 70 },
     // { name: 'Espinaca (500g)', amount: 0, url: 'images/espinaca.jpg', type: 'veggie' },
-    // { name: 'Hinojo (kg)', amount: 0, url: 'images/hinojo.jpg', type: 'veggie' },
-    { name: 'Garbanzo (1/2kg)', amount: 0, url: 'images/garbanzo.jpg', type: 'veggie' },
+    { name: 'Hinojo (Paq)', amount: 0, url: 'images/hinojo.jpg', type: 'veggie' },
+    { name: 'Garbanzo (500g)', amount: 0, url: 'images/garbanzo.jpg', type: 'veggie' },
     // { name: 'Kale Morado (500g)', amount: 0, url: 'images/kalemorado.jpg', type: 'veggie' },
     { name: 'Kale (500g)', amount: 0, url: 'images/kale.jpg', type: 'veggie' },
-    { name: 'Lechuga Crespa(1/2kg)', amount: 0, url: 'images/lechugamantecosa.jpg', type: 'veggie' },
+    { name: 'Lechuga Crespa(500g)', amount: 0, url: 'images/lechugamantecosa.jpg', type: 'veggie' },
     // { name: 'Lechuga Mantecosa (1/2kg)', amount: 0, url: 'images/lechugacrespa.jpg', type: 'veggie' },
-    { name: 'Lenteja (1/2kg)', amount: 0, url: 'images/lenteja.jpg', type: 'veggie' },
+    { name: 'Lenteja (500g)', amount: 0, url: 'images/lenteja.jpg', type: 'veggie' },
     // { name: 'Lima (1/2 kg)', amount: 0, url: 'images/lima.jpg', type: 'veggie' },
     { name: 'Limon (kg)', amount: 0, url: 'images/limon.jpg', type: 'fruit', price: 70 },
     { name: 'Melon (kg)', amount: 0, url: 'images/melon.jpg', type: 'fruit', price: 80 },
@@ -46,45 +47,49 @@ let products = [
     { name: 'Manzana (kg)', amount: 0, url: 'images/manzana.jpg', type: 'fruit', price: 65 },
     { name: 'Mandarina (kg)', amount: 0, url: 'images/mandarina.jpg', type: 'fruit', price: 65 },
     // { name: 'Maracuya (kg)', amount: 0, url: 'images/maracuya.jpg', type: 'fruit', price: 100 },
+    { name: 'Mijo (500g)', amount: 0, url: 'images/mijo.jpg', type: 'veggie' },
     // { name: 'Morron Verde(kg)', amount: 0, url: 'images/morron.jpg', type: 'veggie' },
     { name: 'Morron Rojo(kg)', amount: 0, url: 'images/morronrojo.jpg', type: 'veggie' },
     { name: 'Nabo (kg)', amount: 0, url: 'images/nabo.jpg', type: 'veggie' },
     // { name: 'Pack Choi (kg)', amount: 0, url: 'images/packchoi.jpg', type: 'veggie' },
-    { name: 'Palta (x2)', amount: 0, url: 'images/palta.jpg', type: 'fruit', price: 50 },
-    // { name: 'Papa (kg)', amount: 0, url: 'images/papa.jpg', type: 'veggie' },
-    { name: 'Papa Colorada (kg)', amount: 0, url: 'images/papacolorada.jpg', type: 'veggie' },
+    { name: 'Palta (500g)', amount: 0, url: 'images/palta.jpg', type: 'fruit', price: 50 },
+    { name: 'Papa (kg)', amount: 0, url: 'images/papa.jpg', type: 'veggie' },
+    // { name: 'Papa Colorada (kg)', amount: 0, url: 'images/papacolorada.jpg', type: 'veggie' },
     { name: 'Pomelo (kg)', amount: 0, url: 'images/pomelo.jpg', type: 'fruit', price: 70 },
-    { name: 'Poroto Adzuki (1/2kg)', amount: 0, url: 'images/poroto.jpg', type: 'veggie' },
+    { name: 'Poroto Adzuki (500g)', amount: 0, url: 'images/poroto.jpg', type: 'veggie' },
     // { name: 'Pelon (kg)', amount: 0, url: 'images/pelon.jpg', type: 'fruit', price: 75 },
     { name: 'Pepino (kg)', amount: 0, url: 'images/pepino.jpg', type: 'veggie' },
     // { name: 'Pera (kg)', amount: 0, url: 'images/pera.jpg', type: 'fruit', price: 70 },
     // { name: 'Perejil (400g)', amount: 0, url: 'images/perejil.jpg', type: 'veggie' },
-    { name: 'Puerro (PAQ)', amount: 0, url: 'images/puerro.jpg', type: 'veggie' },
-    // { name: 'Rabanito (500g)', amount: 0, url: 'images/rabanito.jpg', type: 'veggie' },
+    // { name: 'Puerro (PAQ)', amount: 0, url: 'images/puerro.jpg', type: 'veggie' },
+    { name: 'Rabanito (500g)', amount: 0, url: 'images/rabanito.jpg', type: 'veggie' },
     // { name: 'Radicheta (500g)', amount: 0, url: 'images/radicheta.jpg', type: 'veggie' },
     // { name: 'Repollo (kg)', amount: 0, url: 'images/repollo.jpg', type: 'veggie' },
     { name: 'Remolacha (kg)', amount: 0, url: 'images/remolacha.jpg', type: 'veggie' },
     { name: 'Rucula (500g)', amount: 0, url: 'images/rucula.jpg', type: 'veggie' },
-    { name: 'Sandia (kg)', amount: 0, url: 'images/watermelon.jpg', type: 'fruit', price: 50 },
+    // { name: 'Sandia (kg)', amount: 0, url: 'images/watermelon.jpg', type: 'fruit', price: 50 },
     // { name: 'Tomate (kg)', amount: 0, url: 'images/tomato.jpg', type: 'veggie' },
-    // { name: 'Tomate Cherry (500g)', amount: 0, url: 'images/tomatecherry.jpg', type: 'veggie' },
+    { name: 'Tomate Cherry (500g)', amount: 0, url: 'images/tomatecherry.jpg', type: 'veggie' },
     // { name: 'Uva (kg)', amount: 0, url: 'images/uva.jpg', type: 'fruit', price: 100 },
     { name: 'Verdeo (500g)', amount: 0, url: 'images/verdeo.jpg', type: 'veggie' },
     { name: 'Zanahoria (kg)', amount: 0, url: 'images/zanahoria.jpg', type: 'veggie' },
     { name: 'Zapallito (kg)', amount: 0, url: 'images/zapallito.jpg', type: 'veggie' },
     // { name: 'Zuchinni (kg)', amount: 0, url: 'images/zuchinni.jpg', type: 'veggie' },
     { name: 'Arroz Organico (kg)', amount: 0, url: 'images/arrozorganico.jpg', type: 'meal', price: 100 },
-    { name: 'Aceit Verdes (100g)', amount: 0, url: 'images/aceitunaverde.jpg', type: 'meal', price: 25 },
-    { name: 'Aceit Negras (100g)', amount: 0, url: 'images/aceitunanegra.jpg', type: 'meal', price: 25 },
-    { name: 'Aceit Griegas (100g)', amount: 0, url: 'images/aceitunagriega.jpg', type: 'meal', price: 25 },
-    { name: 'Aceite de Oliva (1L)', amount: 0, url: 'images/aceiteoliva.jpg', type: 'meal', price: 350 },
+    { name: 'Aceit Verdes "Simone" (100g)', amount: 0, url: 'images/aceitunaverdekilo.jpeg', type: 'meal', price: 25 },
+    { name: 'Aceit Verdes "Simone" (1Kg)', amount: 0, url: 'images/aceitunaverdekilo.jpeg', type: 'meal', price: 250 },
+    { name: 'Aceit Negras "Simone" (100g)', amount: 0, url: 'images/aceitunanegrakilo.jpeg', type: 'meal', price: 25 },
+    { name: 'Aceit Negras "Simone" (1Kg)', amount: 0, url: 'images/aceitunanegrakilo.jpeg', type: 'meal', price: 250 },
+    { name: 'Aceit Griegas "Simone" (100g)', amount: 0, url: 'images/aceitunagriegakilo.jpeg', type: 'meal', price: 25 },
+    { name: 'Aceit Griegas "Simone" (1Kg)', amount: 0, url: 'images/aceitunagriegakilo.jpeg', type: 'meal', price: 250 },
+    { name: 'Aceite de Oliva "Simone" (1L)', amount: 0, url: 'images/aceiteoliva.jpg', type: 'meal', price: 350 },
     { name: 'Barrita de cereal vegana x3', amount: 0, url: 'images/barritacereal.jpg', type: 'meal', price: 100 },
     // { name: 'Budin banana y frutos rojos', amount: 0, url: 'images/budinbananafrutosrojos.jpg', type: 'meal', price: 90 },
     // { name: 'Budin banana y pera', amount: 0, url: 'images/budinbananapera.jpg', type: 'meal', price: 90 },
     // { name: 'Budin cacao amargo y frutos secos', amount: 0, url: 'images/cacaoamargo.jpg', type: 'meal', price: 90 },
-    { name: 'Berenjenas al Escabeche (440 grs)', amount: 0, url: 'images/berenjenasescabeche.jpg', type: 'meal', price: 120 },
+    { name: 'Berenjenas al Escabeche (440g)', amount: 0, url: 'images/berenjenasescabeche.jpg', type: 'meal', price: 120 },
     // { name: 'Chucrut (400 cm2)', amount: 0, url: 'images/chucrut.jpg', type: 'meal', price: 100 },
-    { name: 'Granola (500 g)', amount: 0, url: 'images/granola.jpg', type: 'meal', price: 75 },
+    { name: 'Granola (500g)', amount: 0, url: 'images/granola.jpg', type: 'meal', price: 75 },
     { name: 'Hamburguesas veganas de lenteja y berenjena (x3)', amount: 0, url: 'images/hamburguesaquinoa.jpg', type: 'meal', price: 100 },
     { name: 'Hamburguesas veganas de porotos adzuki y quinoa (x3)', amount: 0, url: 'images/hamburguesaquinoa.jpg', type: 'meal', price: 100 },
     // { name: 'Hamburguesas veganas de garbanzo y calabaza (x3)', amount: 0, url: 'images/hamburguesaquinoa.jpg', type: 'meal', price: 100 },
@@ -97,7 +102,7 @@ let products = [
     { name: 'Miel Pura (500g)', amount: 0, url: 'images/mielpura.jpg', type: 'meal', price: 150 },
     // { name: 'Mermelada de ciruela (400cc)', amount: 0, url: 'images/mermelada.jpg', type: 'meal', price: 120 },
     { name: 'Milanesas de berenjenas (x6)', amount: 0, url: 'images/milanesaberenjena.jpg', type: 'meal', price: 150 },
-    { name: 'Morrones verdes en almibar (830g)', amount: 0, url: 'images/morronalmibar.jpg', type: 'meal', price: 130 },
+    { name: 'Morrones verdes en almibar (830g)', amount: 0, url: 'images/morronalmibar2.jpeg', type: 'meal', price: 100 },
     { name: 'Pastel de Batata y Lentejas (700g)', amount: 0, url: 'images/pastelbatata.jpg', type: 'meal', price: 150 },
     // { name: 'Tarta de berenjena', amount: 0, url: 'images/tartavariedad.jpg', type: 'meal', price: 110 },
     // { name: 'Tarta de zapallito y puerro', amount: 0, url: 'images/tartavariedad.jpg', type: 'meal', price: 110 },
@@ -106,6 +111,9 @@ let products = [
 ]
 
 products = products.sort()
+=======
+//vrde.club
+>>>>>>> 16d1cabb42ca06f4ab097f56b4ef27aad9864cb4
 
 var app = new Vue({
     el: '#app',
@@ -118,6 +126,7 @@ var app = new Vue({
         cart: [],
         cartItems: 0,
         saleComplete: false,
+        fieldsMissing: true,
         userData: {
             name: "",
             address: "",
@@ -140,7 +149,6 @@ var app = new Vue({
     methods: {
         getTotal: function () {
 
-            console.log("Get Total Price:", this.price)
             var self = this;
             this.cartTotal = 0;
             this.cartItems = 0;
@@ -154,6 +162,7 @@ var app = new Vue({
                     this.cartItems += this.cart[item].amount;
             }
 
+            // add discount by tier
             if (this.cartItems <= 1) { this.price = 55 }
             else if (this.cartItems == 2) { this.price = 52.50 }
             else if (this.cartItems == 3) { this.price = 50 }
@@ -193,6 +202,7 @@ var app = new Vue({
         },
         removeItem: function (item) {
             this.getTotal();
+
             if (item.amount > 0) {
                 item.amount--;
             }
@@ -216,49 +226,68 @@ var app = new Vue({
             this.getTotal();
         },
         saveSale: function (cart) {
-            var today = new Date().toLocaleDateString('es-GB', {
-                day: 'numeric',
-                month: 'numeric',
-                year: 'numeric'
-            }).split('/').join('-');
 
-            var sale = [{
-                date: today,
-                name: this.userData.name,
-                address: this.userData.address,
-                phone: this.userData.phone,
-                email: this.userData.email,
-                delivery: this.userData.delivery,
-                total: this.cartTotal
-            }];
-
-            for (var item in cart) {
-                sale.push({
-                    variedad: cart[item].name,
-                    cantidad: cart[item].amount,
-                    precio: cart[item].price || this.price,
-                    pago: cart[item].total
-                })
+            // form validation
+            if (this.userData.name == "" || this.userData.phone == "") {
+                this.fieldsMissing = true;
+                console.log(this.fieldsMissing)
+            }
+            if (this.userData.delivery == true && this.userData.address == "") {
+                this.fieldsMissing = true;
+                console.log(this.fieldsMissing)
+            }
+            else {
+                this.fieldsMissing = false;
             }
 
-            var self = this;
+            if (this.fieldsMissing == false) {
 
-            database.ref('/sales/' + today).push(sale, function (error) {
-                if (error) {
-                    console.log(error)
-                } else {
-                    self.saleComplete = true;
-                }
-            });
+                // send to firebase
+                var today = new Date().toLocaleDateString('es-GB', {
+                    day: 'numeric',
+                    month: 'numeric',
+                    year: 'numeric'
+                }).split('/').join('-');
 
-            database.ref('/salesArchive/' + today).push(sale, function (error) {
-                if (error) {
-                    console.log(error)
-                } else {
-                    self.saleComplete = true;
+                var sale = [{
+                    date: today,
+                    name: this.userData.name,
+                    address: this.userData.address,
+                    phone: this.userData.phone,
+                    email: this.userData.email,
+                    delivery: this.userData.delivery,
+                    total: this.cartTotal
+                }];
+
+                for (var item in cart) {
+                    sale.push({
+                        variedad: cart[item].name,
+                        cantidad: cart[item].amount,
+                        precio: cart[item].price || this.price,
+                        pago: cart[item].total
+                    })
                 }
-            });
+
+                var self = this;
+
+                database.ref('/sales/' + today).push(sale, function (error) {
+                    if (error) {
+                        console.log(error)
+                    } else {
+                        self.saleComplete = true;
+                    }
+                });
+
+                database.ref('/salesArchive/' + today).push(sale, function (error) {
+                    if (error) {
+                        console.log(error)
+                    } else {
+                        self.saleComplete = true;
+                    }
+                });
+            }
         },
+        //toggle category buttons
         setVisibility: function (type) {
             this.search = "";
             for (var t in this.active) {
@@ -275,6 +304,7 @@ var app = new Vue({
 
     },
     computed: {
+        // returns filtered list by search term or category
         filteredItems: function () {
             var self = this;
             var newList = this.productList.sort().filter(function (item) {
