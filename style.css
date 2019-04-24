@@ -173,6 +173,7 @@ table {
     background-color: #3c3c3c;
     min-width: 340px;
     padding: 20px;
+    position: relative;
 }
 
 .home .tiles .section .text {
