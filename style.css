@@ -194,6 +194,7 @@ table {
 .home .tiles .section.productores {
     background-image: url(images/productores.jpg);
     background-size: cover;
+    background-blend-mode: soft-light;
 }
 
 .home .tiles .section.vrde {}
@@ -201,10 +202,14 @@ table {
 .home .tiles .section.cocina {
     background-image: url('images/cocina.jpeg');
     background-size: cover;
+    background-blend-mode: soft-light;
 }
 
 .home .tiles .section.delivery {}
 
-.home .tiles .section.huertas {}
+.home .tiles .section.huertas {
+    background-image: url('images/huerta.jpg');
+    background-blend-mode: soft-light;
+}
 
 .home .tiles .section.eventos {}
