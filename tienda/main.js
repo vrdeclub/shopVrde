@@ -155,7 +155,7 @@ var app = new Vue({
 
                 var self = this;
 
-                database.ref('/sales/' + today).push(sale, function (error) {
+                database.ref('sales' + today).push(sale, function (error) {
                     if (error) {
                         console.log(error)
                     } else {
@@ -163,13 +163,35 @@ var app = new Vue({
                     }
                 });
 
-                database.ref('/salesArchive/' + today).push(sale, function (error) {
+                database.ref('salesArchive' + today).push(sale, function (error) {
                     if (error) {
                         console.log(error)
                     } else {
                         self.saleComplete = true;
                     }
                 });
+                
+                
+                ref.child("users").orderByChild("name").equalTo(sale.name).once("value",snapshot => {
+                    if (snapshot.exists()){
+                    //   const userData = snapshot.val();
+                      var userReg = {
+                          name: sale.name,
+                          address: sale.address,
+                          phone: sale.phone
+                      }
+                      database.ref('users').push(userReg, function(){
+                          if (error) {
+                              console.log(error)
+                          } else {
+                              console.log('User already exists') 
+                          }
+                      })
+                    } else {
+                        console.log("exists!", userData);
+                    }
+                });
+
             }
         },
         //toggle category buttons
