@@ -155,7 +155,7 @@ var app = new Vue({
 
                 var self = this;
 
-                database.ref('sales' + today).push(sale, function (error) {
+                database.ref('sales/' + today).push(sale, function (error) {
                     if (error) {
                         console.log(error)
                     } else {
@@ -163,7 +163,7 @@ var app = new Vue({
                     }
                 });
 
-                database.ref('salesArchive' + today).push(sale, function (error) {
+                database.ref('salesArchive/' + today).push(sale, function (error) {
                     if (error) {
                         console.log(error)
                     } else {
