@@ -198,7 +198,11 @@ table {
     background-blend-mode: soft-light;
 }
 
-.home .tiles .section.vrde {}
+.home .tiles .section.vrde {
+    background-image: url('images/campo5.jpg');
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
 
 .home .tiles .section.cocina {
     background-image: url('images/cocina.jpeg');
@@ -206,14 +210,21 @@ table {
     background-blend-mode: soft-light;
 }
 
-.home .tiles .section.delivery {}
+.home .tiles .section.delivery {
+    background-image: url('images/delivery.jpg');
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
 
 .home .tiles .section.huertas {
     background-image: url('images/huerta.jpg');
     background-blend-mode: soft-light;
 }
 
-.home .tiles .section.eventos {}
+.home .tiles .section.eventos {
+    background-image: url('images/feria3.jpg');
+    background-blend-mode: soft-light;
+}
 
 .hyperspan
 {
