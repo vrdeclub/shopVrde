@@ -42,17 +42,7 @@ var app = new Vue({
                 return item.total > 0;
             });
 
-            for (var item in this.cart) {
-                if (this.cart[item].type == 'veggie')
-                    this.cartItems += this.cart[item].amount;
-            }
-
-            // add discount by tier
-            if (this.cartItems <= 1) { this.price = 55 }
-            else if (this.cartItems == 2) { this.price = 52.50 }
-            else if (this.cartItems == 3) { this.price = 50 }
-            else if (this.cartItems == 4) { this.price = 47.50 }
-            else if (this.cartItems >= 5 && this.cartItems) { this.price = 45 }
+            
 
             for (var item in this.cart) {
                 if (this.cart[item].type == 'fruit') {

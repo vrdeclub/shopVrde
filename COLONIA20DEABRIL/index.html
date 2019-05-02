@@ -14,7 +14,7 @@
 <body>
     <div class="main" id="app">
         <div class="header">
-            <img src="./images/logoMainIcon.png" alt="" class="logo">
+            <img src="./images/iconocolonia.jpg" alt="" class="logo">
             <div class="contain">
                 <div class="search">
                     <div class="searchLabel">
@@ -24,26 +24,17 @@
                         placeholder="Variedad">
                 </div>
                 <div class="filter">
-                    <a class="button" v-bind:class="{active : active['veggie'].status}"
-                        @click="setVisibility('veggie');">Verduras</a>
-                    <a class="button" v-bind:class="{active : active['fruit'].status}"
-                        @click="setVisibility('fruit');">Frutas</a>
-                    <a class="button" v-bind:class="{active : active['meal'].status}"
-                        @click="setVisibility('meal');">Comidas</a>
+                   
+                
                 </div>
             </div>
             <div class="headerDisplay">
                 <div class="aviso">
-                    Hola! Gracias por visitarnos, te dejo una información sobre como funcionamos:
+                    Bienvenido/a a la sección de pedidos de la Colonia 20 de Abril de Jauregui
                     <br />
-                    * Los viernes a las 15 hrs llegamos a nuestro local ubicado en ANCHORENA 684, LA LUCILA
-                    con todo recien cosechado
-                    * Hacemos deliverys Viernes y Sábados. 
+                    Para el cuidado de la comida que producimos utilizamos todos productos orgánicos que preparamos.
                     <br />
-                    * Los Miércoles actualizamos la página con todo lo que va a haber.
-                    <br />
-                    Nos podes visitar de lunes a sábados de 10 a 18 hrs (horarios hippies) Última actualización: Miercoles 24/4
-        
+                    En lo posible realizá tu pedido con 48 hrs de anticipación, gracias.
                 </div>
             </div>
         </div>
@@ -64,38 +55,28 @@
         <div class="cart">
             <div class="head">
                 <div class="discounts">
-                    <div class="discountTitle">Precios de las verduras.
+                    <div class="discountTitle">
                         <div class="subtitle">
-                            Cuantos más kgs o paquetes lleves, menos pagas!.
                             <br />
                             <br />
-                            Llevando 1kg o paq. $55 <br />
-                            Llevando 2kg o 2paqs. $52,50 cu <br />
-                            Llevando 3kg o 3 paqs. $50 cu <br />
-                            Llevando 4kg o 4 paqs. $47,50 cu <br />
-                            Llevando 5kg o 5paqs. $45 cu !! <br />
                         </div>
                     </div>
                 </div>
                 <div class="schedule">
                     <div class="title">Horarios</div>
-                    <div class="day">Viernes pickup de 15 a 20 hrs. <br />
-                        Viernes envios de 17 a 22 hrs ( Zona Norte y alrededores ) desde $50.
+                    <div class="day">Lunes a Sábado de 8 a 17 hrs <br />
                     </div>
-                    <div class="day">Sabado pickup de 10 a 18 hrs</div>
                 </div>
             </div>
             <div class="veggieCart" v-if="cartHas.veggie == true" v-cloak>
                 <div class="veggies">Verduras</div>
-                <div class="price">Precio por unidad = ${{this.price}}</div>
-                <div class="price">Unidades = {{this.cartItems}}</div>
-                <div class="item" v-for="item in cart" v-if="item.type == 'veggie'">
+               <div class="item" v-for="item in cart" v-if="item.type == 'veggie'">
                     <img :src="`${item.url}`" alt="" class="img">
                     <div class="itemName">
                         <div class="name">{{item.name}}</div>
                         <div class="itemTotal">
-                            <div class="amount">${{item.price}} * {{item.amount}}</div>
-                            <div class="equals"> = </div>
+                            <div class="amount">${{ item.price }} * {{item.amount}}</div>
+                            <div class="equals">=</div>
                             <div class="total"> ${{item.total}}</div>
                         </div>
                     </div>
@@ -117,7 +98,7 @@
             </div>
             <div class="mealCart" v-if="cartHas.meal == true">
                 <div class="fruits">Comidas
-                    <div class="subtitle">Realizadas con todas verduras y frutas agroecologicas</div>
+                    <div class="subtitle">Realizadas con todas verduras y frutas agroecológicas</div>
                 </div>
                 <div class="item" v-for="item in cart" v-if="item.type == 'meal'">
                     <img :src="`${item.url}`" alt="" class="img">
@@ -137,16 +118,9 @@
                 <div class="required">* Por favor llene los campos requeridos</div>
                 <input class="requiredInput" type="text" placeholder="Nombre" v-model="userData.name" required>
                 <input class="requiredInput" type="tel" placeholder="Telefono" v-model="userData.phone" required>
-                <input class="requiredInput" type="text" placeholder="Direccion" v-model="userData.address"
-                    :disabled="userData.delivery == false" v-bind:class="{disabled:userData.delivery == false}">
-                <input type="email" placeholder="Correo" v-model="userData.email" required>
-                <div class="delivery">
-                    <label for="delivery" value="Retiro en local" class="label" @click="disabled = !disabled">Entrega a
-                        tu casa <br>
-                        <div class="small">* Consulte costo de envio</div>
-                    </label>
-                    <input id="delivery" type="checkbox" v-model="userData.delivery">
-                </div>
+                
+                <input type="datetime-local" placeholder="¿Cuándo retiras?" v-model="userData.email" required>
+                
             </form>
             <div class="confirm" v-on:click="saveSale(cart)" v-show="saleComplete == false">Realizar Pedido</div>
             <div class="confirmSale" v-show="saleComplete == true">
@@ -154,16 +128,15 @@
                 <a class="reload" href="/">Realizar otro pedido</a>
             </div>
             <div class="footer">
-                <img src="images/logoMainIconOnly.png" alt="" class="footerLogo">
+                <img src="images/iconocolonia.jpg" alt="" class="footerLogo">
                 <div class="social">
                     <div class="link">
-                        <img src="images/fb.png" alt="" class="fb">
-                        <img src="images/insta.png" alt="" class="insta">
-                        / vrde . club
                     </div>
                     <div class="contact">
-                        <img src="images/phone.png" alt="" class="phone">
-                        Juan Pablo 1562220308
+                        <img src="images/phone.png" alt="" class="phone">Ante consultas comunicarse con
+                        
+                        <br />
+                    </div >Marcos    15 5840 0139
                     </div>
                 </div>
             </div>
@@ -178,12 +151,13 @@
 
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyAKajq835OuZXDij4kZfUT7PjRXzNpVd-U",
-              authDomain: "vrde-club.firebaseapp.com",
-             databaseURL: "https://vrde-club.firebaseio.com",
-            projectId: "vrde-club",
-           storageBucket: "vrde-club.appspot.com",
-            messagingSenderId: "835566805443"
+            apiKey: "AIzaSyCHGrlddEgqbj3WAa9SeY9dXOGOHA8x3uo",
+            authDomain: "colonia-20-de-abril.firebaseapp.com",
+            databaseURL: "https://colonia-20-de-abril.firebaseio.com",
+           projectId: "colonia-20-de-abril",
+           storageBucket: "colonia-20-de-abril.appspot.com",
+             messagingSenderId: "73383669903",
+           appId: "1:73383669903:web:714c025e9f012846"
         };
 
         firebase.initializeApp(config);
