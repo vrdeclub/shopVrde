@@ -16,7 +16,7 @@ let products = [
     { name: 'Cilantro (kg)', amount: 0, url: 'images/cilantro.jpg', type: 'veggie' },
     // { name: 'Ciruela (kg)', amount: 0, url: 'images/ciruela.jpg', type: 'fruit', price: 70 },
     { name: 'Champiñon (150g)', amount: 0, url: 'images/champi.jpg', type: 'veggie' },
-    { name: 'Choclo x 3', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
+    { name: 'Choclo x 2', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
     // { name: 'Coliflor (uni)', amount: 0, url: 'images/coliflor.jpg', type: 'veggie' },
     // { name: 'Durazno (kg)', amount: 0, url: 'images/durazno.jpg', type: 'fruit', price: 70 },
     // { name: 'Espinaca (500g)', amount: 0, url: 'images/espinaca.jpg', type: 'veggie' },
