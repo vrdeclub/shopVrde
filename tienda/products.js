@@ -13,7 +13,7 @@ let products = [
     // { name: 'Caboutie (kg)', amount: 0, url: 'images/caboutie.jpg', type: 'veggie' },
     { name: 'Cebolla (kg)', amount: 0, url: 'images/cebolla.jpg', type: 'veggie' },
     { name: 'Chaucha (kg)', amount: 0, url: 'images/chaucha.jpg', type: 'veggie' },
-    // { name: 'Cilantro (kg)', amount: 0, url: 'images/cilantro.jpg', type: 'veggie' },
+    { name: 'Cilantro (kg)', amount: 0, url: 'images/cilantro.jpg', type: 'veggie' },
     // { name: 'Ciruela (kg)', amount: 0, url: 'images/ciruela.jpg', type: 'fruit', price: 70 },
     { name: 'Champiñon (150g)', amount: 0, url: 'images/champi.jpg', type: 'veggie' },
     { name: 'Choclo x 2', amount: 0, url: 'images/choclo.jpg', type: 'veggie' },
