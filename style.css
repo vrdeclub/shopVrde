@@ -87,7 +87,7 @@ table {
 }
 
 .home .header .headerContent .headerText {
-    color: #cccccc;
+    color: #012506;
     font-family: Ubuntu;
     text-align: center;
     /* margin-top: 30px; */
@@ -114,7 +114,7 @@ table {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 20px;
-    color: #ccc;
+    color: rgb(204, 204, 204);
     font-family: Ubuntu;
     align-items: center;
 }
