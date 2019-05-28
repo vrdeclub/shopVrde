@@ -78,125 +78,122 @@
                             Llevando 3kg o 3 paqs. $50 cu <br />
                             Llevando 4kg o 4 paqs. $47,50 cu <br />
                             Llevando 5kg o 5paqs. $45 cu !! <br />
-                            <br />
-                            ESCANEÁ EL SIGUIENTE CÓDIGO PARA PAGAR CON MERCADO PAGO Y OBTENÉ UN 20% DE DESCUENTO
-                            <br />
-                        </div>
-                        <div class="schedule">
-                            <div class="scheduleheader">
-                                <img src="./images/qr.jpg" alt="" class="logoMainIcon"></div>
-                           
                         </div>
                     </div>
-                    <div class="veggieCart" v-if="cartHas.veggie == true" v-cloak>
-                        <div class="veggies">Verduras</div>
-                        <div class="price">Precio por unidad = ${{this.price}}</div>
-                        <div class="price">Unidades = {{this.cartItems}}</div>
-                        <div class="item" v-for="item in cart" v-if="item.type == 'veggie'">
-                            <img :src="`${item.url}`" alt="" class="img">
-                            <div class="itemName">
-                                <div class="name">{{item.name}}</div>
-                                <div class="itemTotal">
-                                    <div class="amount">${{item.price}} * {{item.amount}}</div>
-                                    <div class="equals"> = </div>
-                                    <div class="total"> ${{item.total}}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fruitCart" v-if="cartHas.fruit == true">
-                        <div class="fruits">Frutas</div>
-                        <div class="item" v-for="item in cart" v-if="item.type == 'fruit'">
-                            <img :src="`${item.url}`" alt="" class="img">
-                            <div class="itemName">
-                                <div class="name">{{item.name}}</div>
-                                <div class="itemTotal">
-                                    <div class="amount">${{ item.price }} * {{item.amount}}</div>
-                                    <div class="equals">=</div>
-                                    <div class="total"> ${{item.total}}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mealCart" v-if="cartHas.meal == true">
-                        <div class="fruits">Otros
-                            <div class="subtitle">Todos estos productos son agroecológicos también</div>
-                        </div>
-                        <div class="item" v-for="item in cart" v-if="item.type == 'meal'">
-                            <img :src="`${item.url}`" alt="" class="img">
-                            <div class="itemName">
-                                <div class="name">{{item.name}}</div>
-                                <div class="itemTotal">
-                                    <div class="amount">${{ item.price }} * {{item.amount}}</div>
-                                    <div class="equals">=</div>
-                                    <div class="total"> ${{item.total}}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cartTotal">Total = ${{cartTotal}}</div>
-                    <form action="#" class="userForm">
-                        <div class="title">Datos de Usuario</div>
-                        <div class="required">* Por favor llene los campos requeridos</div>
-                        <input class="requiredInput" type="text" placeholder="Nombre" v-model="userData.name" required>
-                        <input class="requiredInput" type="tel" placeholder="Telefono" v-model="userData.phone"
-                            required>
-                        <input class="requiredInput" type="text" placeholder="Direccion" v-model="userData.address"
-                            :disabled="userData.delivery == false" v-bind:class="{disabled:userData.delivery == false}">
-                        <input type="email" placeholder="Correo" v-model="userData.email" required>
-                        <div class="delivery">
-                            <label for="delivery" value="Retiro en local" class="label"
-                                @click="disabled = !disabled">Entrega a
-                                tu casa <br>
-                                <div class="small">* Consulte costo de envio</div>
-                            </label>
-                            <input id="delivery" type="checkbox" v-model="userData.delivery">
-                        </div>
                 </div>
-                </form>
-                <div class="confirm" v-on:click="saveSale(cart)" v-show="saleComplete == false">Realizar Pedido</div>
-                <div class="confirmSale" v-show="saleComplete == true">
-                    Su pedido se ha realizado con exito!
-                    <a class="reload" href="/">Realizar otro pedido</a>
+                <div class="schedule">
+                    <div class="title">
+                        ESCANEÁ EL SIGUIENTE CÓDIGO PARA PAGAR CON MERCADO PAGO Y OBTENÉ UN 20% DE DESCUENTO
+                    </div>
+                    <img src="./images/qr.jpg" alt="" class="logoMainIcon">
                 </div>
-                <div class="footer">
-                    <img src="images/logoMainIconOnly.png" alt="" class="footerLogo">
-                    <div class="social">
-                        <div class="link">
-                            <img src="images/fb.png" alt="" class="fb">
-                            <img src="images/insta.png" alt="" class="insta">
-                            Seguinos en Instagram /vrde.club
+                <div class="veggieCart" v-if="cartHas.veggie == true" v-cloak>
+                    <div class="veggies">Verduras</div>
+                    <div class="price">Precio por unidad = ${{this.price}}</div>
+                    <div class="price">Unidades = {{this.cartItems}}</div>
+                    <div class="item" v-for="item in cart" v-if="item.type == 'veggie'">
+                        <img :src="`${item.url}`" alt="" class="img">
+                        <div class="itemName">
+                            <div class="name">{{item.name}}</div>
+                            <div class="itemTotal">
+                                <div class="amount">${{item.price}} * {{item.amount}}</div>
+                                <div class="equals"> = </div>
+                                <div class="total"> ${{item.total}}</div>
+                            </div>
                         </div>
-                        <div class="contact">
-                            <img src="images/phone.png" alt="" class="phone">
-                            Dudas y consultas llamanos: 15 6222 0308
+                    </div>
+                </div>
+                <div class="fruitCart" v-if="cartHas.fruit == true">
+                    <div class="fruits">Frutas</div>
+                    <div class="item" v-for="item in cart" v-if="item.type == 'fruit'">
+                        <img :src="`${item.url}`" alt="" class="img">
+                        <div class="itemName">
+                            <div class="name">{{item.name}}</div>
+                            <div class="itemTotal">
+                                <div class="amount">${{ item.price }} * {{item.amount}}</div>
+                                <div class="equals">=</div>
+                                <div class="total"> ${{item.total}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mealCart" v-if="cartHas.meal == true">
+                    <div class="fruits">Otros
+                        <div class="subtitle">Todos estos productos son agroecológicos también</div>
+                    </div>
+                    <div class="item" v-for="item in cart" v-if="item.type == 'meal'">
+                        <img :src="`${item.url}`" alt="" class="img">
+                        <div class="itemName">
+                            <div class="name">{{item.name}}</div>
+                            <div class="itemTotal">
+                                <div class="amount">${{ item.price }} * {{item.amount}}</div>
+                                <div class="equals">=</div>
+                                <div class="total"> ${{item.total}}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="cartTotal">Total = ${{cartTotal}}</div>
+            <form action="#" class="userForm">
+                <div class="title">Datos de Usuario</div>
+                <div class="required">* Por favor llene los campos requeridos</div>
+                <input class="requiredInput" type="text" placeholder="Nombre" v-model="userData.name" required>
+                <input class="requiredInput" type="tel" placeholder="Telefono" v-model="userData.phone" required>
+                <input class="requiredInput" type="text" placeholder="Direccion" v-model="userData.address"
+                    :disabled="userData.delivery == false" v-bind:class="{disabled:userData.delivery == false}">
+                <input type="email" placeholder="Correo" v-model="userData.email" required>
+                <div class="delivery">
+                    <label for="delivery" value="Retiro en local" class="label" @click="disabled = !disabled">Entrega a
+                        tu casa <br>
+                        <div class="small">* Consulte costo de envio</div>
+                    </label>
+                    <input id="delivery" type="checkbox" v-model="userData.delivery">
+                </div>
+            </form>
+            <div class="confirm" v-on:click="saveSale(cart)" v-show="saleComplete == false">Realizar Pedido</div>
+            <div class="confirmSale" v-show="saleComplete == true">
+                Su pedido se ha realizado con exito!
+                <a class="reload" href="/">Realizar otro pedido</a>
+            </div>
+            <div class="footer">
+                <img src="images/logoMainIconOnly.png" alt="" class="footerLogo">
+                <div class="social">
+                    <div class="link">
+                        <img src="images/fb.png" alt="" class="fb">
+                        <img src="images/insta.png" alt="" class="insta">
+                        Seguinos en Instagram /vrde.club
+                    </div>
+                    <div class="contact">
+                        <img src="images/phone.png" alt="" class="phone">
+                        Dudas y consultas llamanos: 15 6222 0308
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
-        <script src="products.js"></script>
-        <script src="main.js"></script>
-        <script>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="products.js"></script>
+    <script src="main.js"></script>
+    <script>
 
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyAKajq835OuZXDij4kZfUT7PjRXzNpVd-U",
-                authDomain: "vrde-club.firebaseapp.com",
-                databaseURL: "https://vrde-club.firebaseio.com",
-                projectId: "vrde-club",
-                storageBucket: "vrde-club.appspot.com",
-                messagingSenderId: "835566805443"
-            };
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAKajq835OuZXDij4kZfUT7PjRXzNpVd-U",
+            authDomain: "vrde-club.firebaseapp.com",
+            databaseURL: "https://vrde-club.firebaseio.com",
+            projectId: "vrde-club",
+            storageBucket: "vrde-club.appspot.com",
+            messagingSenderId: "835566805443"
+        };
 
-            firebase.initializeApp(config);
+        firebase.initializeApp(config);
 
-            var database = firebase.database();
+        var database = firebase.database();
 
-        </script>
+    </script>
 </body>
 
 </html>
