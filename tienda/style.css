@@ -380,7 +380,10 @@ body {
     margin-top: 30px;
     margin: 0px 20px;
 }
+.schedule .scheduleheader .logomainicon {
+    width: 10px;
 
+}
 .main .products {
     display: flex;
     justify-content: center;

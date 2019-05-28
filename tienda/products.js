@@ -1,4 +1,4 @@
-let products = [
+let products = [ 
     { name: 'Acelga (kg)', amount: 0, url: 'images/acelga.jpg', type: 'veggie' },
     // { name: 'Achicoria (500g)', amount: 0, url: 'images/achicoria.jpg', type: 'veggie' },
     // { name: 'Aji Vinagre (500g)', amount: 0, url: 'images/ajivinagre.jpg', type: 'veggie' },
