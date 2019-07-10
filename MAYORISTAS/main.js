@@ -41,22 +41,18 @@ var app = new Vue({
                 if (this.cart[item].type == 'veggie')
                     this.cartItems += this.cart[item].amount;
             }
-            
-            
+
+
             for (var item in this.cart) {
+                this.cart[item].total = this.cart[item].amount * this.cart[item].price;
+                this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                 if (this.cart[item].type == 'fruit') {
-                    this.cart[item].total = this.cart[item].amount * this.cart[item].price;
-                    this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                     this.cartHas.fruit = true;
                 }
                 if (this.cart[item].type == 'veggie') {
-                    this.cart[item].total = this.cart[item].amount * this.cart[item].price;
-                    this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                     this.cartHas.veggie = true;
                 }
                 if (this.cart[item].type == "meal") {
-                    this.cart[item].total = this.cart[item].amount * this.cart[item].price;
-                    this.cart[item].total = parseFloat(this.cart[item].total.toFixed(2))
                     this.cartHas.meal = true;
                 }
                 this.cartTotal += this.cart[item].total;
@@ -66,10 +62,10 @@ var app = new Vue({
         addItem: function (item) {
             item.amount++;
             // if (item.price && item.type != "veggie") {
-                item.total = item.amount * item.price;
+            item.total = item.amount * item.price;
             // } else {
-             //    item.total = item.amount * this.price;
-            
+            //    item.total = item.amount * this.price;
+            // }
             this.getTotal();
         },
         removeItem: function (item) {
@@ -77,22 +73,22 @@ var app = new Vue({
             if (item.amount > 0) {
                 item.amount--;
             }
-            if (item.price && item.type != "veggie") {
-                item.total = item.amount * item.price;
-            } else {
-                item.price = this.price;
-                item.total = item.amount * this.price;
-            }
+            item.total = item.amount * item.price;
+            // if (item.price && item.type != "veggie") {
+            // } else {
+            //     item.price = this.price;
+            //     item.total = item.amount * this.price;
+            // }
             this.getTotal();
         },
         updateValue: function (item) {
             if (item.amount == "" || parseFloat(item.amount) == NaN) { item.amount = 0 }
             else (item.amount = parseFloat(item.amount))
-            if (item.price) {
-                item.total = item.amount * item.price;
-            } else {
-                item.total = item.amount * this.price;
-            }
+            item.total = item.amount * item.price;
+            // if (item.price) {
+            // } else {
+            //     item.total = item.amount * this.price;
+            // }
             this.getTotal();
         },
         saveSale: function (cart) {
@@ -151,7 +147,7 @@ var app = new Vue({
                         self.saleComplete = true;
                     }
                 });
-                
+
                 // ref.child("users").orderByChild("name").equalTo(sale.name).once("value",snapshot => {
                 //     if (snapshot.exists()){
                 //     const userData = snapshot.val();
