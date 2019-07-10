@@ -35,11 +35,6 @@ var app = new Vue({
             this.cart = this.productList.filter(function (item) {
                 return item.total > 0;
             });
-            for (var item in this.cart) {
-                if (this.cart[item].type == 'veggie')
-                    this.cartItems += this.cart[item].amount;
-            }
-
 
             for (var item in this.cart) {
                 this.cart[item].total = this.cart[item].amount * this.cart[item].price;
