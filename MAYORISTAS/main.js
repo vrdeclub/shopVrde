@@ -3,7 +3,7 @@ var app = new Vue({
     el: '#app',
     data: {
         search: "",
-        price: 55,
+        // price: 55,
         discounts: discounts,
         productList: products,
         cartTotal: 0,
@@ -126,7 +126,7 @@ var app = new Vue({
                     sale.push({
                         variedad: cart[item].name,
                         cantidad: cart[item].amount,
-                        precio: cart[item].price || this.price,
+                        precio: cart[item].price,
                         pago: cart[item].total
                     })
                 }
@@ -147,27 +147,6 @@ var app = new Vue({
                         self.saleComplete = true;
                     }
                 });
-
-                // ref.child("users").orderByChild("name").equalTo(sale.name).once("value",snapshot => {
-                //     if (snapshot.exists()){
-                //     const userData = snapshot.val();
-                //       var userReg = {
-                //           name: sale.name,
-                //           address: sale.address,
-                //           phone: sale.phone
-                //       }
-                //       database.ref('users').push(userReg, function(){
-                //           if (error) {
-                //               console.log(error)
-                //           } else {
-                //               console.log('User already exists') 
-                //           }
-                //       })
-                //     } else {
-                //         console.log("exists!", userData);
-                //     }
-                // });
-
             }
         },
 
