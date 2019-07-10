@@ -3,8 +3,6 @@ var app = new Vue({
     el: '#app',
     data: {
         search: "",
-        // price: 55,
-        discounts: discounts,
         productList: products,
         cartTotal: 0,
         cart: [],
