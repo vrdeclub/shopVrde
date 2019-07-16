@@ -13,6 +13,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .aviso {
     padding: 20px;
+    height: 50px;
     color: #636363;
     font-size: 12px;
     font-family: Ubuntu;

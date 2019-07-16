@@ -3,6 +3,7 @@ var app = new Vue({
     el: '#app',
     data: {
         search: "",
+        price: 0,
         productList: products,
         cartTotal: 0,
         cart: [],
@@ -125,7 +126,7 @@ var app = new Vue({
                 }
 
                 var self = this;
-                database.ref('sales/' + today).push(sale, function (error) {
+                database.ref('salesMayorista/' + today).push(sale, function (error) {
                     if (error) {
                         console.log(error)
                     } else {
@@ -133,7 +134,7 @@ var app = new Vue({
                     }
                 });
 
-                database.ref('salesArchive/' + today).push(sale, function (error) {
+                database.ref('salesMayoristaArchive/' + today).push(sale, function (error) {
                     if (error) {
                         console.log(error)
                     } else {
