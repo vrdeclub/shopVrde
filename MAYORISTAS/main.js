@@ -55,11 +55,7 @@ var app = new Vue({
         },
         addItem: function (item) {
             item.amount++;
-            // if (item.price && item.type != "veggie") {
             item.total = item.amount * item.price;
-            // } else {
-            //    item.total = item.amount * this.price;
-            // }
             this.getTotal();
         },
         removeItem: function (item) {
@@ -68,21 +64,12 @@ var app = new Vue({
                 item.amount--;
             }
             item.total = item.amount * item.price;
-            // if (item.price && item.type != "veggie") {
-            // } else {
-            //     item.price = this.price;
-            //     item.total = item.amount * this.price;
-            // }
             this.getTotal();
         },
         updateValue: function (item) {
             if (item.amount == "" || parseFloat(item.amount) == NaN) { item.amount = 0 }
             else (item.amount = parseFloat(item.amount))
             item.total = item.amount * item.price;
-            // if (item.price) {
-            // } else {
-            //     item.total = item.amount * this.price;
-            // }
             this.getTotal();
         },
         saveSale: function (cart) {
